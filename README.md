@@ -1,5 +1,5 @@
 # GRAFCET instances
-A library containing IEC 60848 GRAFCET example instances according to the [meta-model] (https://github.com/Project-AGRAFE/GRAFCET-meta-model) proposed by [1].
+A library containing IEC 60848 GRAFCET example instances according to the [meta-model](https://github.com/Project-AGRAFE/GRAFCET-meta-model) proposed by [1].
 
 ## Usage
 .grafcet files contain GRAFCET instances in [XMI](https://www.omg.org/spec/XMI) format according to a proposed [GRAFCET meta-model](https://github.com/Project-AGRAFE/GRAFCET-meta-model).
