@@ -1,15 +1,15 @@
 # GRAFCET instances
-A library containing IEC 60848 GRAFCET example instances according to the [meta-model] proposed by [1](https://github.com/Project-AGRAFE/GRAFCET-meta-model).
+A library containing IEC 60848 GRAFCET example instances according to the [meta-model] (https://github.com/Project-AGRAFE/GRAFCET-meta-model) proposed by [1].
 
 ## Usage
-.grafcet-files are GRAFCET-instances in [XMI](https://www.omg.org/spec/XMI)-format according to the corresponding [GRAFCET meta-model](https://github.com/Project-AGRAFE/GRAFCET-meta-model).
-They were created using a [Sirius](https://www.eclipse.org/sirius/)-based graphical editor, wich can be found [here](http://example.com/tbd) soon.
+.grafcet files contain GRAFCET instances in [XMI](https://www.omg.org/spec/XMI) format according to a proposed [GRAFCET meta-model](https://github.com/Project-AGRAFE/GRAFCET-meta-model).
+The instances were created using a [Sirius](https://www.eclipse.org/sirius/)-based graphical editor, wich can be found [here](http://example.com/tbd) soon.
 
 ## Description of instances
 
 |  GRAFCET instance | description  |
 | :-: | :-: |
-|  [Quality control plant by Schumacher](./qualityControlPlantSchumacher) | A plant for quality control of electricmechanical parts proposed by Schumacher [2]  |
+|  [Quality control plant by Schumacher](./qualityControlPlantSchumacher) | Specification of the control code proposed by Schumacher [2] for an industrial plant for quality control of electromechanical parts |
 | *tbd* | *tbd* |
 
 
