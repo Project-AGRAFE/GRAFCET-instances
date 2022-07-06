@@ -1,0 +1,12 @@
+Result of rule based check for GRAFCET-File plant:
+
+Result of condition classification check for GRAFCET-File plant:
+
+
+
+Result of partial order check:
+Partial order of Grafcet contains no cycles. 
+Partial order of Grafcet: [([GlobalGrafcet<1>], [])]
+
+Result of check for connected Grafcets for GRAFCET-File plant:
+
