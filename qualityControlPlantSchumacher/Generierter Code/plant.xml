@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="" productName="CODESYS" productVersion="CODESYS V3.5 SP7 Patch 2" creationDateTime="2018-07-08T13:58:46.9898301" />
+  <contentHeader name="PLCOpen_Leer.project" modificationDateTime="2018-07-08T13:57:47.963454">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+
+
+		  <pou name="Grafcet_Control" pouType="functionBlock">
+		    <interface>
+		  	  <inputVars>
+		  	  	<variable name="Enable">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="Init">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="End">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	    </inputVars>
+		  	  <localVars>
+		  	  	<variable name="StableState">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="TranLoops">
+		  	  	  <type>
+		  	  		  <INT />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="0" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="NumTran">
+		  	  	  <type>
+		  	  		  <INT />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="0" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	    </localVars>
+		  	
+		    </interface>
+		    <body>
+		  	<ST>
+		  	  <xhtml xmlns="http://www.w3.org/1999/xhtml">
+		  		IF Init THEN
+		  		END_IF
+		  		IF End THEN
+		  		END_IF
+		  		IF (Enable) THEN
+		  			TranLoops := (0);
+		  			StableState := true;
+		  			WHILE ((StableState)AND(TranLoops&lt;NumTran)) DO
+		  			StableState := false;
+		  			TranLoops := (TranLoops+1);
+		  			IF ((INIT=FALSE)AND(END=FALSE)) THEN
+		  			END_IF
+		  			END_WHILE;
+		  		END_IF
+		  		
+		  	  </xhtml>
+		  	</ST>
+		    </body>  	  <addData>
+		<data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+	  	  <ObjectId>bb10cf5f-d44b-48bf-ad52-f1059f71047f</ObjectId>
+		</data>
+  	  </addData>
+	  </pou>
+		  <pou name="GlobalGrafcet" pouType="functionBlock">
+		    <interface>
+		  	  <inputVars>
+		  	  	<variable name="Enable">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="Init">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="End">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="Activate">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="Freeze">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	    </inputVars>
+		  	  <localVars>
+		  	  	<variable name="StableState">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="TranLoops">
+		  	  	  <type>
+		  	  		  <INT />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="0" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="NumTran">
+		  	  	  <type>
+		  	  		  <INT />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="8" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_1">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_2">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_3">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_5">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_6">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_4">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_8">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_7">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	    </localVars>
+		  	
+		    </interface>
+		    <body>
+		  	<ST>
+		  	  <xhtml xmlns="http://www.w3.org/1999/xhtml">
+		  		IF Init THEN
+		  			Step_1 := true;
+		  			actStep_1 := false;
+		  			deactStep_1 := false;
+		  			Step_2 := false;
+		  			actStep_2 := false;
+		  			deactStep_2 := false;
+		  			EncStep_3 := false;
+		  			actEncStep_3 := false;
+		  			deactEncStep_3 := false;
+		  			EncStep_4 := false;
+		  			actEncStep_4 := false;
+		  			deactEncStep_4 := false;
+		  		END_IF
+		  		IF Activate THEN
+		  			Step_1 := false;
+		  			actStep_1 := false;
+		  			deactStep_1 := false;
+		  			Step_2 := false;
+		  			actStep_2 := false;
+		  			deactStep_2 := false;
+		  			EncStep_3 := false;
+		  			actEncStep_3 := false;
+		  			deactEncStep_3 := false;
+		  			EncStep_4 := false;
+		  			actEncStep_4 := false;
+		  			deactEncStep_4 := false;
+		  		END_IF
+		  		IF End THEN
+		  			Step_1 := false;
+		  			actStep_1 := false;
+		  			deactStep_1 := false;
+		  			Step_2 := false;
+		  			actStep_2 := false;
+		  			deactStep_2 := false;
+		  			EncStep_3 := false;
+		  			actEncStep_3 := false;
+		  			deactEncStep_3 := false;
+		  			EncStep_4 := false;
+		  			actEncStep_4 := false;
+		  			deactEncStep_4 := false;
+		  		END_IF
+		  		IF (Enable) THEN
+		  			TranLoops := (0);
+		  			StableState := true;
+		  			WHILE ((StableState)AND(TranLoops&lt;NumTran)) DO
+		  			StableState := false;
+		  			TranLoops := (TranLoops+1);
+		  			IF ((INIT=FALSE)AND(END=FALSE)) THEN
+		  				T_1 := (Step_1)AND(Freeze=FALSE);
+		  				T_2 := (Step_2)AND(Freeze=FALSE);
+		  				T_3 := (Step_2)AND(Freeze=FALSE);
+		  				T_5 := (EncStep_3)AND(Freeze=FALSE);
+		  				T_6 := (EncStep_3)AND(Freeze=FALSE);
+		  				T_4 := (Step_2)AND(Freeze=FALSE);
+		  				T_8 := (EncStep_4)AND(Freeze=FALSE);
+		  				T_7 := (EncStep_4)AND(Freeze=FALSE);
+		  				IF ((( NOT NOTAUS) AND ( NOT Motorschutzschalter))AND(T_1)) THEN
+		  					StableState := true;
+		  					Step_1 := false;
+		  					actStep_1 := false;
+		  					deactStep_1 := true;
+		  					Step_2 := true;
+		  					actStep_2 := true;
+		  					deactStep_2 := false;
+		  				END_IF
+		  				IF ((Start AND (TellerAutomatik AND ( NOT TellerHand)))AND(T_2)) THEN
+		  					StableState := true;
+		  					Step_2 := false;
+		  					actStep_2 := false;
+		  					deactStep_2 := true;
+		  					EncStep_3 := true;
+		  					actEncStep_3 := true;
+		  					deactEncStep_3 := false;
+		  				END_IF
+		  				IF ((Start AND (( NOT TellerAutomatik) AND TellerHand))AND(T_3)) THEN
+		  					StableState := true;
+		  					Step_2 := false;
+		  					actStep_2 := false;
+		  					deactStep_2 := true;
+		  					EncStep_4 := true;
+		  					actEncStep_4 := true;
+		  					deactEncStep_4 := false;
+		  				END_IF
+		  				IF ((Stopp AND (TellerHand AND ( NOT NOTAUS)))AND(T_5)) THEN
+		  					StableState := true;
+		  					EncStep_3 := false;
+		  					actEncStep_3 := false;
+		  					deactEncStep_3 := true;
+		  					Step_2 := true;
+		  					actStep_2 := true;
+		  					deactStep_2 := false;
+		  				END_IF
+		  				IF ((NOTAUS)AND(T_6)) THEN
+		  					StableState := true;
+		  					EncStep_3 := false;
+		  					actEncStep_3 := false;
+		  					deactEncStep_3 := true;
+		  					Step_1 := true;
+		  					actStep_1 := true;
+		  					deactStep_1 := false;
+		  				END_IF
+		  				IF ((NOTAUS)AND(T_4)) THEN
+		  					StableState := true;
+		  					Step_2 := false;
+		  					actStep_2 := false;
+		  					deactStep_2 := true;
+		  					Step_1 := true;
+		  					actStep_1 := true;
+		  					deactStep_1 := false;
+		  				END_IF
+		  				IF ((NOTAUS)AND(T_8)) THEN
+		  					StableState := true;
+		  					EncStep_4 := false;
+		  					actEncStep_4 := false;
+		  					deactEncStep_4 := true;
+		  					Step_1 := true;
+		  					actStep_1 := true;
+		  					deactStep_1 := false;
+		  				END_IF
+		  				IF ((Stopp AND (TellerHand AND ( NOT NOTAUS)))AND(T_7)) THEN
+		  					StableState := true;
+		  					EncStep_4 := false;
+		  					actEncStep_4 := false;
+		  					deactEncStep_4 := true;
+		  					Step_2 := true;
+		  					actStep_2 := true;
+		  					deactStep_2 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actStep_1)OR(Step_1)OR(deactStep_1) THEN
+		  				IF actStep_1 THEN
+		  					actStep_1 := false;
+		  					Foerderband := FALSE;
+		  				END_IF
+		  				IF Step_1 THEN
+		  				END_IF
+		  				IF deactStep_1 THEN
+		  					deactStep_1 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actStep_2)OR(Step_2)OR(deactStep_2) THEN
+		  				IF actStep_2 THEN
+		  					actStep_2 := false;
+		  				END_IF
+		  				IF Step_2 THEN
+		  				END_IF
+		  				IF deactStep_2 THEN
+		  					deactStep_2 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actEncStep_3)OR(EncStep_3)OR(deactEncStep_3) THEN
+		  				IF actEncStep_3 THEN
+		  					actEncStep_3 := false;
+		  					PartialGrafcet_G0(Enable := false, Init := false, Activate := true, End := false);
+		  				END_IF
+		  				IF EncStep_3 THEN
+		  					PartialGrafcet_G0(Enable := true, Init := false, Activate := false, End := false);
+		  				END_IF
+		  				IF deactEncStep_3 THEN
+		  					deactEncStep_3 := false;
+		  					PartialGrafcet_G0(Enable := false, Init := false, Activate := false, End := true);
+		  				END_IF
+		  			END_IF
+		  			IF (actEncStep_4)OR(EncStep_4)OR(deactEncStep_4) THEN
+		  				IF actEncStep_4 THEN
+		  					actEncStep_4 := false;
+		  				END_IF
+		  				IF EncStep_4 THEN
+		  				END_IF
+		  				IF deactEncStep_4 THEN
+		  					deactEncStep_4 := false;
+		  				END_IF
+		  			END_IF
+		  			END_WHILE;
+		  		END_IF
+		  		
+		  	  </xhtml>
+		  	</ST>
+		    </body>  	  <addData>
+		<data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+	  	  <ObjectId>bb10cf5f-d44b-48bf-ad52-f1059f71047f</ObjectId>
+		</data>
+  	  </addData>
+	  </pou>
+		  <pou name="G0" pouType="functionBlock">
+		    <interface>
+		  	  <inputVars>
+		  	  	<variable name="Enable">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="Init">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="End">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="Activate">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="Freeze">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	    </inputVars>
+		  	  <localVars>
+		  	  	<variable name="StableState">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="TranLoops">
+		  	  	  <type>
+		  	  		  <INT />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="0" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="NumTran">
+		  	  	  <type>
+		  	  		  <INT />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="8" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_10">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_11">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_12">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_13">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_14">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_15">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_16">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	  	<variable name="T_17">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
+		  	    </localVars>
+		  	
+		    </interface>
+		    <body>
+		  	<ST>
+		  	  <xhtml xmlns="http://www.w3.org/1999/xhtml">
+		  		IF Init THEN
+		  			Step_10 := false;
+		  			actStep_10 := false;
+		  			deactStep_10 := false;
+		  			EncStep_11 := false;
+		  			actEncStep_11 := false;
+		  			deactEncStep_11 := false;
+		  			EncStep_12 := false;
+		  			actEncStep_12 := false;
+		  			deactEncStep_12 := false;
+		  			EncStep_13 := false;
+		  			actEncStep_13 := false;
+		  			deactEncStep_13 := false;
+		  			EncStep_14 := false;
+		  			actEncStep_14 := false;
+		  			deactEncStep_14 := false;
+		  			EncStep_15 := false;
+		  			actEncStep_15 := false;
+		  			deactEncStep_15 := false;
+		  			EncStep_16 := false;
+		  			actEncStep_16 := false;
+		  			deactEncStep_16 := false;
+		  			Step_17 := false;
+		  			actStep_17 := false;
+		  			deactStep_17 := false;
+		  			Step_18 := false;
+		  			actStep_18 := false;
+		  			deactStep_18 := false;
+		  			Step_19 := false;
+		  			actStep_19 := false;
+		  			deactStep_19 := false;
+		  			Step_20 := false;
+		  			actStep_20 := false;
+		  			deactStep_20 := false;
+		  			Step_21 := false;
+		  			actStep_21 := false;
+		  			deactStep_21 := false;
+		  			Step_22 := false;
+		  			actStep_22 := false;
+		  			deactStep_22 := false;
+		  		END_IF
+		  		IF Activate THEN
+		  			Step_10 := true;
+		  			actStep_10 := true;
+		  			deactStep_10 := false;
+		  			EncStep_11 := false;
+		  			actEncStep_11 := false;
+		  			deactEncStep_11 := false;
+		  			EncStep_12 := false;
+		  			actEncStep_12 := false;
+		  			deactEncStep_12 := false;
+		  			EncStep_13 := false;
+		  			actEncStep_13 := false;
+		  			deactEncStep_13 := false;
+		  			EncStep_14 := false;
+		  			actEncStep_14 := false;
+		  			deactEncStep_14 := false;
+		  			EncStep_15 := false;
+		  			actEncStep_15 := false;
+		  			deactEncStep_15 := false;
+		  			EncStep_16 := false;
+		  			actEncStep_16 := false;
+		  			deactEncStep_16 := false;
+		  			Step_17 := false;
+		  			actStep_17 := false;
+		  			deactStep_17 := false;
+		  			Step_18 := false;
+		  			actStep_18 := false;
+		  			deactStep_18 := false;
+		  			Step_19 := false;
+		  			actStep_19 := false;
+		  			deactStep_19 := false;
+		  			Step_20 := false;
+		  			actStep_20 := false;
+		  			deactStep_20 := false;
+		  			Step_21 := false;
+		  			actStep_21 := false;
+		  			deactStep_21 := false;
+		  			Step_22 := false;
+		  			actStep_22 := false;
+		  			deactStep_22 := false;
+		  		END_IF
+		  		IF End THEN
+		  			Step_10 := false;
+		  			actStep_10 := false;
+		  			deactStep_10 := false;
+		  			EncStep_11 := false;
+		  			actEncStep_11 := false;
+		  			deactEncStep_11 := false;
+		  			EncStep_12 := false;
+		  			actEncStep_12 := false;
+		  			deactEncStep_12 := false;
+		  			EncStep_13 := false;
+		  			actEncStep_13 := false;
+		  			deactEncStep_13 := false;
+		  			EncStep_14 := false;
+		  			actEncStep_14 := false;
+		  			deactEncStep_14 := false;
+		  			EncStep_15 := false;
+		  			actEncStep_15 := false;
+		  			deactEncStep_15 := false;
+		  			EncStep_16 := false;
+		  			actEncStep_16 := false;
+		  			deactEncStep_16 := false;
+		  			Step_17 := false;
+		  			actStep_17 := false;
+		  			deactStep_17 := false;
+		  			Step_18 := false;
+		  			actStep_18 := false;
+		  			deactStep_18 := false;
+		  			Step_19 := false;
+		  			actStep_19 := false;
+		  			deactStep_19 := false;
+		  			Step_20 := false;
+		  			actStep_20 := false;
+		  			deactStep_20 := false;
+		  			Step_21 := false;
+		  			actStep_21 := false;
+		  			deactStep_21 := false;
+		  			Step_22 := false;
+		  			actStep_22 := false;
+		  			deactStep_22 := false;
+		  		END_IF
+		  		IF (Enable) THEN
+		  			TranLoops := (0);
+		  			StableState := true;
+		  			WHILE ((StableState)AND(TranLoops&lt;NumTran)) DO
+		  			StableState := false;
+		  			TranLoops := (TranLoops+1);
+		  			IF ((INIT=FALSE)AND(END=FALSE)) THEN
+		  				T_10 := (Step_10)AND(Freeze=FALSE);
+		  				T_11 := (EncStep_11)AND(Freeze=FALSE);
+		  				T_12 := (EncStep_12)AND(Freeze=FALSE);
+		  				T_13 := (EncStep_13)AND(Freeze=FALSE);
+		  				T_14 := (EncStep_14)AND(Freeze=FALSE);
+		  				T_15 := (EncStep_15)AND(Freeze=FALSE);
+		  				T_16 := (EncStep_16)AND(Freeze=FALSE);
+		  				T_17 := (Step_17)AND(Step_18)AND(Step_19)AND(Step_20)AND(Step_21)AND(Step_22)AND(Freeze=FALSE);
+		  				IF ((TellerInPosition AND TellerDreht)AND(T_10)) THEN
+		  					StableState := true;
+		  					Step_10 := false;
+		  					actStep_10 := false;
+		  					deactStep_10 := true;
+		  					EncStep_11 := true;
+		  					actEncStep_11 := true;
+		  					deactEncStep_11 := false;
+		  					EncStep_12 := true;
+		  					actEncStep_12 := true;
+		  					deactEncStep_12 := false;
+		  					EncStep_13 := true;
+		  					actEncStep_13 := true;
+		  					deactEncStep_13 := false;
+		  					EncStep_14 := true;
+		  					actEncStep_14 := true;
+		  					deactEncStep_14 := false;
+		  					EncStep_15 := true;
+		  					actEncStep_15 := true;
+		  					deactEncStep_15 := false;
+		  					EncStep_16 := true;
+		  					actEncStep_16 := true;
+		  					deactEncStep_16 := false;
+		  				END_IF
+		  				IF ((Station1_fertig)AND(T_11)) THEN
+		  					StableState := true;
+		  					EncStep_11 := false;
+		  					actEncStep_11 := false;
+		  					deactEncStep_11 := true;
+		  					Step_17 := true;
+		  					actStep_17 := true;
+		  					deactStep_17 := false;
+		  				END_IF
+		  				IF ((Station2_fertig)AND(T_12)) THEN
+		  					StableState := true;
+		  					EncStep_12 := false;
+		  					actEncStep_12 := false;
+		  					deactEncStep_12 := true;
+		  					Step_18 := true;
+		  					actStep_18 := true;
+		  					deactStep_18 := false;
+		  				END_IF
+		  				IF ((Station3_fertig)AND(T_13)) THEN
+		  					StableState := true;
+		  					EncStep_13 := false;
+		  					actEncStep_13 := false;
+		  					deactEncStep_13 := true;
+		  					Step_19 := true;
+		  					actStep_19 := true;
+		  					deactStep_19 := false;
+		  				END_IF
+		  				IF ((Station5_fertig)AND(T_14)) THEN
+		  					StableState := true;
+		  					EncStep_14 := false;
+		  					actEncStep_14 := false;
+		  					deactEncStep_14 := true;
+		  					Step_20 := true;
+		  					actStep_20 := true;
+		  					deactStep_20 := false;
+		  				END_IF
+		  				IF ((Station6_fertig)AND(T_15)) THEN
+		  					StableState := true;
+		  					EncStep_15 := false;
+		  					actEncStep_15 := false;
+		  					deactEncStep_15 := true;
+		  					Step_21 := true;
+		  					actStep_21 := true;
+		  					deactStep_21 := false;
+		  				END_IF
+		  				IF ((Station7_fertig)AND(T_16)) THEN
+		  					StableState := true;
+		  					EncStep_16 := false;
+		  					actEncStep_16 := false;
+		  					deactEncStep_16 := true;
+		  					Step_22 := true;
+		  					actStep_22 := true;
+		  					deactStep_22 := false;
+		  				END_IF
+		  				IF (((Station1_fertig AND Station2_fertig) AND ((Station3_fertig AND Station5_fertig) AND (Station6_fertig AND Station7_fertig)))AND(T_17)) THEN
+		  					StableState := true;
+		  					Step_17 := false;
+		  					actStep_17 := false;
+		  					deactStep_17 := true;
+		  					Step_18 := false;
+		  					actStep_18 := false;
+		  					deactStep_18 := true;
+		  					Step_19 := false;
+		  					actStep_19 := false;
+		  					deactStep_19 := true;
+		  					Step_20 := false;
+		  					actStep_20 := false;
+		  					deactStep_20 := true;
+		  					Step_21 := false;
+		  					actStep_21 := false;
+		  					deactStep_21 := true;
+		  					Step_22 := false;
+		  					actStep_22 := false;
+		  					deactStep_22 := true;
+		  					Step_10 := true;
+		  					actStep_10 := true;
+		  					deactStep_10 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actStep_10)OR(Step_10)OR(deactStep_10) THEN
+		  				IF actStep_10 THEN
+		  					actStep_10 := false;
+		  					Foerderband := TRUE;
+		  				END_IF
+		  				IF Step_10 THEN
+		  					StartTeller := true;
+		  				END_IF
+		  				IF deactStep_10 THEN
+		  					deactStep_10 := false;
+		  					StartTeller := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actEncStep_11)OR(EncStep_11)OR(deactEncStep_11) THEN
+		  				IF actEncStep_11 THEN
+		  					actEncStep_11 := false;
+		  				END_IF
+		  				IF EncStep_11 THEN
+		  				END_IF
+		  				IF deactEncStep_11 THEN
+		  					deactEncStep_11 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actEncStep_12)OR(EncStep_12)OR(deactEncStep_12) THEN
+		  				IF actEncStep_12 THEN
+		  					actEncStep_12 := false;
+		  				END_IF
+		  				IF EncStep_12 THEN
+		  				END_IF
+		  				IF deactEncStep_12 THEN
+		  					deactEncStep_12 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actEncStep_13)OR(EncStep_13)OR(deactEncStep_13) THEN
+		  				IF actEncStep_13 THEN
+		  					actEncStep_13 := false;
+		  				END_IF
+		  				IF EncStep_13 THEN
+		  				END_IF
+		  				IF deactEncStep_13 THEN
+		  					deactEncStep_13 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actEncStep_14)OR(EncStep_14)OR(deactEncStep_14) THEN
+		  				IF actEncStep_14 THEN
+		  					actEncStep_14 := false;
+		  				END_IF
+		  				IF EncStep_14 THEN
+		  				END_IF
+		  				IF deactEncStep_14 THEN
+		  					deactEncStep_14 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actEncStep_15)OR(EncStep_15)OR(deactEncStep_15) THEN
+		  				IF actEncStep_15 THEN
+		  					actEncStep_15 := false;
+		  				END_IF
+		  				IF EncStep_15 THEN
+		  				END_IF
+		  				IF deactEncStep_15 THEN
+		  					deactEncStep_15 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actEncStep_16)OR(EncStep_16)OR(deactEncStep_16) THEN
+		  				IF actEncStep_16 THEN
+		  					actEncStep_16 := false;
+		  				END_IF
+		  				IF EncStep_16 THEN
+		  				END_IF
+		  				IF deactEncStep_16 THEN
+		  					deactEncStep_16 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actStep_17)OR(Step_17)OR(deactStep_17) THEN
+		  				IF actStep_17 THEN
+		  					actStep_17 := false;
+		  				END_IF
+		  				IF Step_17 THEN
+		  				END_IF
+		  				IF deactStep_17 THEN
+		  					deactStep_17 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actStep_18)OR(Step_18)OR(deactStep_18) THEN
+		  				IF actStep_18 THEN
+		  					actStep_18 := false;
+		  				END_IF
+		  				IF Step_18 THEN
+		  				END_IF
+		  				IF deactStep_18 THEN
+		  					deactStep_18 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actStep_19)OR(Step_19)OR(deactStep_19) THEN
+		  				IF actStep_19 THEN
+		  					actStep_19 := false;
+		  				END_IF
+		  				IF Step_19 THEN
+		  				END_IF
+		  				IF deactStep_19 THEN
+		  					deactStep_19 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actStep_20)OR(Step_20)OR(deactStep_20) THEN
+		  				IF actStep_20 THEN
+		  					actStep_20 := false;
+		  				END_IF
+		  				IF Step_20 THEN
+		  				END_IF
+		  				IF deactStep_20 THEN
+		  					deactStep_20 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actStep_21)OR(Step_21)OR(deactStep_21) THEN
+		  				IF actStep_21 THEN
+		  					actStep_21 := false;
+		  				END_IF
+		  				IF Step_21 THEN
+		  				END_IF
+		  				IF deactStep_21 THEN
+		  					deactStep_21 := false;
+		  				END_IF
+		  			END_IF
+		  			IF (actStep_22)OR(Step_22)OR(deactStep_22) THEN
+		  				IF actStep_22 THEN
+		  					actStep_22 := false;
+		  				END_IF
+		  				IF Step_22 THEN
+		  				END_IF
+		  				IF deactStep_22 THEN
+		  					deactStep_22 := false;
+		  				END_IF
+		  			END_IF
+		  			END_WHILE;
+		  		END_IF
+		  		
+		  	  </xhtml>
+		  	</ST>
+		    </body>  	  <addData>
+		<data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+	  	  <ObjectId>bb10cf5f-d44b-48bf-ad52-f1059f71047f</ObjectId>
+		</data>
+  	  </addData>
+	  </pou>    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+	<addData>
+<data name="http://www.3s-software.com/plcopenxml/globalvars" handleUnknown="implementation">
+		  	<globalVars name="Global_GrafcetVars">
+			  <variable name="actStep_1">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactStep_1">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Step_1">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actStep_2">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactStep_2">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Step_2">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actEncStep_3">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactEncStep_3">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="EncStep_3">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actEncStep_4">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactEncStep_4">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="EncStep_4">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actStep_10">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactStep_10">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Step_10">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actEncStep_11">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactEncStep_11">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="EncStep_11">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actEncStep_12">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactEncStep_12">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="EncStep_12">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actEncStep_13">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactEncStep_13">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="EncStep_13">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actEncStep_14">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactEncStep_14">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="EncStep_14">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actEncStep_15">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactEncStep_15">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="EncStep_15">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actEncStep_16">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactEncStep_16">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="EncStep_16">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actStep_17">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactStep_17">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Step_17">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actStep_18">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactStep_18">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Step_18">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actStep_19">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactStep_19">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Step_19">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actStep_20">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactStep_20">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Step_20">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actStep_21">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactStep_21">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Step_21">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="actStep_22">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="deactStep_22">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Step_22">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Foerderband">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Motorschutzschalter">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="NOTAUS">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="TellerAutomatik">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="TellerHand">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Start">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Stopp">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="TellerInPosition">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="TellerDreht">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="StartTeller">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Station1_fertig">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Station2_fertig">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Station3_fertig">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Station5_fertig">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Station6_fertig">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+			  <variable name="Station7_fertig">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
+              <addData>
+              	<data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>1d145e5f-1b71-4724-a8b2-1526a73ee712</ObjectId>
+              	</data>
+              </addData>
+          	</globalVars>
+		  </data>
+
+		  <data name="http://www.3s-software.com/plcopenxml/globalvars" handleUnknown="implementation">
+		  	<globalVars name="Global_GrafcetParts">
+			  <variable name="Global_Grafcet">
+			    <type>
+			  	  <derived name="Grafcet_Control" />
+			    </type>
+			  </variable>
+			  
+			  <variable name="PartialGrafcet_GlobalGrafcet">
+			    <type>
+			  	  <derived name="GlobalGrafcet" />
+			    </type>
+			  </variable>
+			  
+			  <variable name="PartialGrafcet_G0">
+			    <type>
+			  	  <derived name="G0" />
+			    </type>
+			  </variable>
+			  
+              <addData>
+              	<data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>1d145e5f-1b71-4724-a8b2-1526a73ee712</ObjectId>
+              	</data>
+              </addData>
+          	</globalVars>
+		  </data>
+      <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      	<ProjectStructure>
+
+
+          <Object Name="Global_GrafcetVars" ObjectId="1d145e5f-1b71-4724-a8b2-1526a73ee712" />
+
+          <Object Name="Global_GrafcetParts" ObjectId="1d145e5f-1b71-4724-a8b2-1526a73ee712" />
+
+
+		  <Object Name="Grafcet_Control" ObjectId="bb10cf5f-d44b-48bf-ad52-f1059f71047f" />
+
+		  <Object Name="GlobalGrafcet" ObjectId="bb10cf5f-d44b-48bf-ad52-f1059f71047f" />
+
+		  <Object Name="G0" ObjectId="bb10cf5f-d44b-48bf-ad52-f1059f71047f" />
+
+      	</ProjectStructure>
+      </data>
+  	</addData>
+</project>

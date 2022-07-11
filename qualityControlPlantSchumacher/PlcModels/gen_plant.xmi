@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="ASCII"?>
+<plccode:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:plccode="platform:/plugin/org.emftext.language.plccode/metamodel/plccode.ecore" name="plant">
+  <units xsi:type="plccode:FunctionBlock" name="Grafcet_Control">
+    <interface>
+      <inputVars>
+        <vars name="Enable">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="Init">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="End">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+      </inputVars>
+      <localVars>
+        <vars name="StableState">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="TranLoops">
+          <type xsi:type="plccode:INT"/>
+          <initialValue value="0"/>
+        </vars>
+        <vars name="NumTran">
+          <type xsi:type="plccode:INT"/>
+          <initialValue value="0"/>
+        </vars>
+      </localVars>
+    </interface>
+    <specification xsi:type="plccode:StructuredText">
+      <embeddedStatements xsi:type="plccode:If">
+        <condition term="Init"/>
+      </embeddedStatements>
+      <embeddedStatements xsi:type="plccode:If">
+        <condition term="End"/>
+      </embeddedStatements>
+      <embeddedStatements xsi:type="plccode:If">
+        <embeddedStatements xsi:type="plccode:Assignment" value="(0)" variable="TranLoops"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+        <embeddedStatements xsi:type="plccode:While">
+          <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="StableState"/>
+          <embeddedStatements xsi:type="plccode:Assignment" value="(TranLoops+1)" variable="TranLoops"/>
+          <embeddedStatements xsi:type="plccode:If">
+            <condition term="((INIT=FALSE)AND(END=FALSE))"/>
+          </embeddedStatements>
+          <breakCondition term="((StableState)AND(TranLoops&lt;NumTran))"/>
+        </embeddedStatements>
+        <condition term="(Enable)"/>
+      </embeddedStatements>
+    </specification>
+  </units>
+  <units xsi:type="plccode:FunctionBlock" name="GlobalGrafcet">
+    <interface>
+      <inputVars>
+        <vars name="Enable">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="Init">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="End">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="Activate">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="Freeze">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+      </inputVars>
+      <localVars>
+        <vars name="StableState">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="TranLoops">
+          <type xsi:type="plccode:INT"/>
+          <initialValue value="0"/>
+        </vars>
+        <vars name="NumTran">
+          <type xsi:type="plccode:INT"/>
+          <initialValue value="8"/>
+        </vars>
+        <vars name="T_1">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_2">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_3">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_5">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_6">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_4">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_8">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_7">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+      </localVars>
+    </interface>
+    <specification xsi:type="plccode:StructuredText">
+      <embeddedStatements xsi:type="plccode:If">
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_1"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_1"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_1"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_2"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_2"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_2"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_3"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_3"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_3"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_4"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_4"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_4"/>
+        <condition term="Init"/>
+      </embeddedStatements>
+      <embeddedStatements xsi:type="plccode:If">
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_1"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_1"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_1"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_2"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_2"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_2"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_3"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_3"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_3"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_4"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_4"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_4"/>
+        <condition term="Activate"/>
+      </embeddedStatements>
+      <embeddedStatements xsi:type="plccode:If">
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_1"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_1"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_1"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_2"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_2"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_2"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_3"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_3"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_3"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_4"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_4"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_4"/>
+        <condition term="End"/>
+      </embeddedStatements>
+      <embeddedStatements xsi:type="plccode:If">
+        <embeddedStatements xsi:type="plccode:Assignment" value="(0)" variable="TranLoops"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+        <embeddedStatements xsi:type="plccode:While">
+          <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="StableState"/>
+          <embeddedStatements xsi:type="plccode:Assignment" value="(TranLoops+1)" variable="TranLoops"/>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:Assignment" value="(Step_1)AND(Freeze=FALSE)" variable="T_1"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(Step_2)AND(Freeze=FALSE)" variable="T_2"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(Step_2)AND(Freeze=FALSE)" variable="T_3"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_3)AND(Freeze=FALSE)" variable="T_5"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_3)AND(Freeze=FALSE)" variable="T_6"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(Step_2)AND(Freeze=FALSE)" variable="T_4"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_4)AND(Freeze=FALSE)" variable="T_8"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_4)AND(Freeze=FALSE)" variable="T_7"/>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_1"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_1"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_1"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_2"/>
+              <condition term="((( NOT NOTAUS) AND ( NOT Motorschutzschalter))AND(T_1))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="EncStep_3"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actEncStep_3"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_3"/>
+              <condition term="((Start AND (TellerAutomatik AND ( NOT TellerHand)))AND(T_2))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="EncStep_4"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actEncStep_4"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_4"/>
+              <condition term="((Start AND (( NOT TellerAutomatik) AND TellerHand))AND(T_3))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_3"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_3"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_3"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_2"/>
+              <condition term="((Stopp AND (TellerHand AND ( NOT NOTAUS)))AND(T_5))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_3"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_3"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_3"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_1"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_1"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_1"/>
+              <condition term="((NOTAUS)AND(T_6))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_1"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_1"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_1"/>
+              <condition term="((NOTAUS)AND(T_4))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_4"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_4"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_4"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_1"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_1"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_1"/>
+              <condition term="((NOTAUS)AND(T_8))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_4"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_4"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_4"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_2"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_2"/>
+              <condition term="((Stopp AND (TellerHand AND ( NOT NOTAUS)))AND(T_7))"/>
+            </embeddedStatements>
+            <condition term="((INIT=FALSE)AND(END=FALSE))"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_1"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="FALSE" variable="Foerderband"/>
+              <condition term="actStep_1"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="Step_1"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_1"/>
+              <condition term="deactStep_1"/>
+            </embeddedStatements>
+            <condition term="(actStep_1)OR(Step_1)OR(deactStep_1)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_2"/>
+              <condition term="actStep_2"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="Step_2"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_2"/>
+              <condition term="deactStep_2"/>
+            </embeddedStatements>
+            <condition term="(actStep_2)OR(Step_2)OR(deactStep_2)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_3"/>
+              <embeddedStatements xsi:type="plccode:Call" instanceName="PartialGrafcet_G0">
+                <instanceVars xsi:type="plccode:BooleanAssignment" variable="Enable"/>
+                <instanceVars xsi:type="plccode:BooleanAssignment" variable="Init"/>
+                <instanceVars xsi:type="plccode:BooleanAssignment" value="true" variable="Activate"/>
+                <instanceVars xsi:type="plccode:BooleanAssignment" variable="End"/>
+              </embeddedStatements>
+              <condition term="actEncStep_3"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:Call" instanceName="PartialGrafcet_G0">
+                <instanceVars xsi:type="plccode:BooleanAssignment" value="true" variable="Enable"/>
+                <instanceVars xsi:type="plccode:BooleanAssignment" variable="Init"/>
+                <instanceVars xsi:type="plccode:BooleanAssignment" variable="Activate"/>
+                <instanceVars xsi:type="plccode:BooleanAssignment" variable="End"/>
+              </embeddedStatements>
+              <condition term="EncStep_3"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_3"/>
+              <embeddedStatements xsi:type="plccode:Call" instanceName="PartialGrafcet_G0">
+                <instanceVars xsi:type="plccode:BooleanAssignment" variable="Enable"/>
+                <instanceVars xsi:type="plccode:BooleanAssignment" variable="Init"/>
+                <instanceVars xsi:type="plccode:BooleanAssignment" variable="Activate"/>
+                <instanceVars xsi:type="plccode:BooleanAssignment" value="true" variable="End"/>
+              </embeddedStatements>
+              <condition term="deactEncStep_3"/>
+            </embeddedStatements>
+            <condition term="(actEncStep_3)OR(EncStep_3)OR(deactEncStep_3)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_4"/>
+              <condition term="actEncStep_4"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="EncStep_4"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_4"/>
+              <condition term="deactEncStep_4"/>
+            </embeddedStatements>
+            <condition term="(actEncStep_4)OR(EncStep_4)OR(deactEncStep_4)"/>
+          </embeddedStatements>
+          <breakCondition term="((StableState)AND(TranLoops&lt;NumTran))"/>
+        </embeddedStatements>
+        <condition term="(Enable)"/>
+      </embeddedStatements>
+    </specification>
+  </units>
+  <units xsi:type="plccode:FunctionBlock" name="G0">
+    <interface>
+      <inputVars>
+        <vars name="Enable">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="Init">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="End">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="Activate">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="Freeze">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+      </inputVars>
+      <localVars>
+        <vars name="StableState">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="TranLoops">
+          <type xsi:type="plccode:INT"/>
+          <initialValue value="0"/>
+        </vars>
+        <vars name="NumTran">
+          <type xsi:type="plccode:INT"/>
+          <initialValue value="8"/>
+        </vars>
+        <vars name="T_10">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_11">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_12">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_13">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_14">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_15">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_16">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+        <vars name="T_17">
+          <type xsi:type="plccode:BOOL"/>
+          <initialValue value="false"/>
+        </vars>
+      </localVars>
+    </interface>
+    <specification xsi:type="plccode:StructuredText">
+      <embeddedStatements xsi:type="plccode:If">
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_10"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_10"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_10"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_11"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_11"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_11"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_12"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_12"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_12"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_13"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_13"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_13"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_14"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_14"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_14"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_15"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_15"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_15"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_16"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_16"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_16"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_17"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_17"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_17"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_18"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_18"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_18"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_19"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_19"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_19"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_20"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_20"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_20"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_21"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_21"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_21"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_22"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_22"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_22"/>
+        <condition term="Init"/>
+      </embeddedStatements>
+      <embeddedStatements xsi:type="plccode:If">
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_10"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_10"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_10"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_11"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_11"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_11"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_12"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_12"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_12"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_13"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_13"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_13"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_14"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_14"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_14"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_15"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_15"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_15"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_16"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_16"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_16"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_17"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_17"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_17"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_18"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_18"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_18"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_19"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_19"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_19"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_20"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_20"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_20"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_21"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_21"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_21"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_22"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_22"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_22"/>
+        <condition term="Activate"/>
+      </embeddedStatements>
+      <embeddedStatements xsi:type="plccode:If">
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_10"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_10"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_10"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_11"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_11"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_11"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_12"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_12"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_12"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_13"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_13"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_13"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_14"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_14"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_14"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_15"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_15"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_15"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_16"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_16"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_16"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_17"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_17"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_17"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_18"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_18"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_18"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_19"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_19"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_19"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_20"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_20"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_20"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_21"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_21"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_21"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_22"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_22"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_22"/>
+        <condition term="End"/>
+      </embeddedStatements>
+      <embeddedStatements xsi:type="plccode:If">
+        <embeddedStatements xsi:type="plccode:Assignment" value="(0)" variable="TranLoops"/>
+        <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+        <embeddedStatements xsi:type="plccode:While">
+          <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="StableState"/>
+          <embeddedStatements xsi:type="plccode:Assignment" value="(TranLoops+1)" variable="TranLoops"/>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:Assignment" value="(Step_10)AND(Freeze=FALSE)" variable="T_10"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_11)AND(Freeze=FALSE)" variable="T_11"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_12)AND(Freeze=FALSE)" variable="T_12"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_13)AND(Freeze=FALSE)" variable="T_13"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_14)AND(Freeze=FALSE)" variable="T_14"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_15)AND(Freeze=FALSE)" variable="T_15"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(EncStep_16)AND(Freeze=FALSE)" variable="T_16"/>
+            <embeddedStatements xsi:type="plccode:Assignment" value="(Step_17)AND(Step_18)AND(Step_19)AND(Step_20)AND(Step_21)AND(Step_22)AND(Freeze=FALSE)" variable="T_17"/>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_10"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_10"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_10"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="EncStep_11"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actEncStep_11"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_11"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="EncStep_12"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actEncStep_12"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_12"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="EncStep_13"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actEncStep_13"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_13"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="EncStep_14"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actEncStep_14"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_14"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="EncStep_15"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actEncStep_15"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_15"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="EncStep_16"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actEncStep_16"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_16"/>
+              <condition term="((TellerInPosition AND TellerDreht)AND(T_10))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_11"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_11"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_11"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_17"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_17"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_17"/>
+              <condition term="((Station1_fertig)AND(T_11))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_12"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_12"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_12"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_18"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_18"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_18"/>
+              <condition term="((Station2_fertig)AND(T_12))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_13"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_13"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_13"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_19"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_19"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_19"/>
+              <condition term="((Station3_fertig)AND(T_13))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_14"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_14"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_14"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_20"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_20"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_20"/>
+              <condition term="((Station5_fertig)AND(T_14))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_15"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_15"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_15"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_21"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_21"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_21"/>
+              <condition term="((Station6_fertig)AND(T_15))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="EncStep_16"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_16"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactEncStep_16"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_22"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_22"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_22"/>
+              <condition term="((Station7_fertig)AND(T_16))"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StableState"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_17"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_17"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_17"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_18"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_18"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_18"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_19"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_19"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_19"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_20"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_20"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_20"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_21"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_21"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_21"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_22"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_22"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_22"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_10"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_10"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_10"/>
+              <condition term="(((Station1_fertig AND Station2_fertig) AND ((Station3_fertig AND Station5_fertig) AND (Station6_fertig AND Station7_fertig)))AND(T_17))"/>
+            </embeddedStatements>
+            <condition term="((INIT=FALSE)AND(END=FALSE))"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_10"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Foerderband"/>
+              <condition term="actStep_10"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="StartTeller"/>
+              <condition term="Step_10"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_10"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="StartTeller"/>
+              <condition term="deactStep_10"/>
+            </embeddedStatements>
+            <condition term="(actStep_10)OR(Step_10)OR(deactStep_10)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_11"/>
+              <condition term="actEncStep_11"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="EncStep_11"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_11"/>
+              <condition term="deactEncStep_11"/>
+            </embeddedStatements>
+            <condition term="(actEncStep_11)OR(EncStep_11)OR(deactEncStep_11)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_12"/>
+              <condition term="actEncStep_12"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="EncStep_12"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_12"/>
+              <condition term="deactEncStep_12"/>
+            </embeddedStatements>
+            <condition term="(actEncStep_12)OR(EncStep_12)OR(deactEncStep_12)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_13"/>
+              <condition term="actEncStep_13"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="EncStep_13"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_13"/>
+              <condition term="deactEncStep_13"/>
+            </embeddedStatements>
+            <condition term="(actEncStep_13)OR(EncStep_13)OR(deactEncStep_13)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_14"/>
+              <condition term="actEncStep_14"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="EncStep_14"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_14"/>
+              <condition term="deactEncStep_14"/>
+            </embeddedStatements>
+            <condition term="(actEncStep_14)OR(EncStep_14)OR(deactEncStep_14)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_15"/>
+              <condition term="actEncStep_15"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="EncStep_15"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_15"/>
+              <condition term="deactEncStep_15"/>
+            </embeddedStatements>
+            <condition term="(actEncStep_15)OR(EncStep_15)OR(deactEncStep_15)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_16"/>
+              <condition term="actEncStep_16"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="EncStep_16"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_16"/>
+              <condition term="deactEncStep_16"/>
+            </embeddedStatements>
+            <condition term="(actEncStep_16)OR(EncStep_16)OR(deactEncStep_16)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_17"/>
+              <condition term="actStep_17"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="Step_17"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_17"/>
+              <condition term="deactStep_17"/>
+            </embeddedStatements>
+            <condition term="(actStep_17)OR(Step_17)OR(deactStep_17)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_18"/>
+              <condition term="actStep_18"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="Step_18"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_18"/>
+              <condition term="deactStep_18"/>
+            </embeddedStatements>
+            <condition term="(actStep_18)OR(Step_18)OR(deactStep_18)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_19"/>
+              <condition term="actStep_19"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="Step_19"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_19"/>
+              <condition term="deactStep_19"/>
+            </embeddedStatements>
+            <condition term="(actStep_19)OR(Step_19)OR(deactStep_19)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_20"/>
+              <condition term="actStep_20"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="Step_20"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_20"/>
+              <condition term="deactStep_20"/>
+            </embeddedStatements>
+            <condition term="(actStep_20)OR(Step_20)OR(deactStep_20)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_21"/>
+              <condition term="actStep_21"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="Step_21"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_21"/>
+              <condition term="deactStep_21"/>
+            </embeddedStatements>
+            <condition term="(actStep_21)OR(Step_21)OR(deactStep_21)"/>
+          </embeddedStatements>
+          <embeddedStatements xsi:type="plccode:If">
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_22"/>
+              <condition term="actStep_22"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <condition term="Step_22"/>
+            </embeddedStatements>
+            <embeddedStatements xsi:type="plccode:If">
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_22"/>
+              <condition term="deactStep_22"/>
+            </embeddedStatements>
+            <condition term="(actStep_22)OR(Step_22)OR(deactStep_22)"/>
+          </embeddedStatements>
+          <breakCondition term="((StableState)AND(TranLoops&lt;NumTran))"/>
+        </embeddedStatements>
+        <condition term="(Enable)"/>
+      </embeddedStatements>
+    </specification>
+  </units>
+  <globalVars name="Global_GrafcetVars">
+    <vars name="actStep_1">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactStep_1">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Step_1">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actStep_2">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactStep_2">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Step_2">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actEncStep_3">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactEncStep_3">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="EncStep_3">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actEncStep_4">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactEncStep_4">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="EncStep_4">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actStep_10">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactStep_10">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Step_10">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actEncStep_11">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactEncStep_11">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="EncStep_11">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actEncStep_12">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactEncStep_12">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="EncStep_12">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actEncStep_13">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactEncStep_13">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="EncStep_13">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actEncStep_14">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactEncStep_14">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="EncStep_14">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actEncStep_15">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactEncStep_15">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="EncStep_15">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actEncStep_16">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactEncStep_16">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="EncStep_16">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actStep_17">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactStep_17">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Step_17">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actStep_18">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactStep_18">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Step_18">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actStep_19">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactStep_19">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Step_19">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actStep_20">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactStep_20">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Step_20">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actStep_21">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactStep_21">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Step_21">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="actStep_22">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="deactStep_22">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Step_22">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Foerderband">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Motorschutzschalter">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="NOTAUS">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="TellerAutomatik">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="TellerHand">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Start">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Stopp">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="TellerInPosition">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="TellerDreht">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="StartTeller">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Station1_fertig">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Station2_fertig">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Station3_fertig">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Station5_fertig">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Station6_fertig">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+    <vars name="Station7_fertig">
+      <type xsi:type="plccode:BOOL"/>
+      <initialValue value="false"/>
+    </vars>
+  </globalVars>
+  <globalVars name="Global_GrafcetParts">
+    <vars name="Global_Grafcet">
+      <type xsi:type="plccode:Derived" name="Grafcet_Control"/>
+    </vars>
+    <vars name="PartialGrafcet_GlobalGrafcet">
+      <type xsi:type="plccode:Derived" name="GlobalGrafcet"/>
+    </vars>
+    <vars name="PartialGrafcet_G0">
+      <type xsi:type="plccode:Derived" name="G0"/>
+    </vars>
+  </globalVars>
+</plccode:Project>
