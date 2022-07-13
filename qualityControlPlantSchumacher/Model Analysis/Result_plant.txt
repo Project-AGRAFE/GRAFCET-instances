@@ -6,26 +6,7 @@ Result of condition classification check for GRAFCET-File plant:
 
 Result of partial order check:
 Partial order of Grafcet contains no cycles. 
-Partial order of Grafcet: [([G0<2>, GlobalGrafcet<1>, G1<3>], [(GlobalGrafcet<1> : G0<2> : ENCLOSING_STEP)=(GlobalGrafcet<1>,G0<2>), (G0<2> : G1<3> : ENCLOSING_STEP)=(G0<2>,G1<3>)])]
+Partial order of Grafcet: [([G2<3>, G0<2>, G1<3>, GlobalGrafcet<1>], [(GlobalGrafcet<1> : G0<2> : ENCLOSING_STEP)=(GlobalGrafcet<1>,G0<2>), (G0<2> : G1<3> : ENCLOSING_STEP)=(G0<2>,G1<3>), (G0<2> : G2<3> : ENCLOSING_STEP)=(G0<2>,G2<3>)])]
 
 Result of check for connected Grafcets for GRAFCET-File plant:
-
-The following connected Grafcet(s) is (are) not initializable: 
- Step 101
- Step 103
- Step 104
- Step 105
- Step 106
- Step 107
- Step 108
- Step 109
- Step 110
-
-
-
-
-
-
-
-
 

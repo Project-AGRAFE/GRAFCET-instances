@@ -6,7 +6,7 @@
     <semanticResources>Generierter%20Code/plant.xml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_RLylAPz6EeyHg6tzDpx_zw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_S-YkAPz6EeyHg6tzDpx_zw" name="plantSchumacherDiagram" repPath="#_S-R2UPz6EeyHg6tzDpx_zw" changeId="f5837fbc-ad7a-4046-81c7-b5d36f0f40be">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_S-YkAPz6EeyHg6tzDpx_zw" name="plantSchumacherDiagram" repPath="#_S-R2UPz6EeyHg6tzDpx_zw" changeId="f89ad332-e0af-4b42-acae-abd11e285715">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']"/>
         <target xmi:type="grafcet:Grafcet" href="plant.grafcet#/"/>
       </ownedRepresentationDescriptors>
@@ -615,6 +615,10 @@
             <children xmi:type="notation:Node" xmi:id="_KEEmEAJ5Ee2jEP7dJmpLlw" type="3010" element="_KDwdAAJ5Ee2jEP7dJmpLlw">
               <styles xmi:type="notation:FontStyle" xmi:id="_KEEmEQJ5Ee2jEP7dJmpLlw" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_KEEmEgJ5Ee2jEP7dJmpLlw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_551dAAKBEe2jEP7dJmpLlw" type="3010" element="_55mzgAKBEe2jEP7dJmpLlw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_551dAQKBEe2jEP7dJmpLlw" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_551dAgKBEe2jEP7dJmpLlw"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_cCRmYfz6EeyHg6tzDpx_zw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_cCRmYvz6EeyHg6tzDpx_zw"/>
@@ -2122,7 +2126,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_E0Ng5gJ3Ee2jEP7dJmpLlw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_E0Ng4QJ3Ee2jEP7dJmpLlw" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E0Ng4gJ3Ee2jEP7dJmpLlw" x="685" y="920" height="10"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E0Ng4gJ3Ee2jEP7dJmpLlw" x="685" y="920" width="159" height="10"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_sj1egAJ8Ee2jEP7dJmpLlw" type="3007" element="_sjncEAJ8Ee2jEP7dJmpLlw">
               <children xmi:type="notation:Node" xmi:id="_sj2FkAJ8Ee2jEP7dJmpLlw" type="5003">
@@ -4062,7 +4066,7 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_E0OvAgJ3Ee2jEP7dJmpLlw" fontName="Segoe UI" fontHeight="12"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E0OvAwJ3Ee2jEP7dJmpLlw" points="[25, -1, -97, 0]$[48, -1, -74, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E0P9IAJ3Ee2jEP7dJmpLlw" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E0P9IQJ3Ee2jEP7dJmpLlw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E0P9IQJ3Ee2jEP7dJmpLlw" id="(0.4713375796178344,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_7dnrUAJ-Ee2jEP7dJmpLlw" type="4001" element="_7dZo-AJ-Ee2jEP7dJmpLlw" source="_qtaXIAJ2Ee2jEP7dJmpLlw" target="_xDfIYAJ2Ee2jEP7dJmpLlw">
           <children xmi:type="notation:Node" xmi:id="_7dnrVAJ-Ee2jEP7dJmpLlw" type="6001">
@@ -5100,7 +5104,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DDi_EAJ4Ee2jEP7dJmpLlw" name="Stoerung2">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DDi_EAJ4Ee2jEP7dJmpLlw" name="StoerungQuittiert">
         <target xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.31"/>
         <semanticElements xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.31"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_DDi_EQJ4Ee2jEP7dJmpLlw" labelSize="12" showIcon="false" labelPosition="node">
@@ -5108,7 +5112,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_F4ImkAJ4Ee2jEP7dJmpLlw" name="K2">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_F4ImkAJ4Ee2jEP7dJmpLlw" name="Stoerung2">
         <target xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.32"/>
         <semanticElements xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.32"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_F4ImkQJ4Ee2jEP7dJmpLlw" labelSize="12" showIcon="false" labelPosition="node">
@@ -5116,7 +5120,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Nh-s0AJ4Ee2jEP7dJmpLlw" name="Eindruecken2">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Nh-s0AJ4Ee2jEP7dJmpLlw" name="K2">
         <target xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.33"/>
         <semanticElements xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.33"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_Nh_T4AJ4Ee2jEP7dJmpLlw" labelSize="12" showIcon="false" labelPosition="node">
@@ -5124,10 +5128,18 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_KDwdAAJ5Ee2jEP7dJmpLlw" name="2s/X202">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_KDwdAAJ5Ee2jEP7dJmpLlw" name="Eindruecken2">
         <target xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.34"/>
         <semanticElements xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.34"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_KDxEEAJ5Ee2jEP7dJmpLlw" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_55mzgAKBEe2jEP7dJmpLlw" name="2s/X202">
+        <target xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.35"/>
+        <semanticElements xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.35"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_55mzgQKBEe2jEP7dJmpLlw" labelSize="12" showIcon="false" labelPosition="node">
           <description xmi:type="style:BundledImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
@@ -7645,7 +7657,7 @@
           </ownedDiagramElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_E0B6zwJ3Ee2jEP7dJmpLlw" name="Stoerung2" incomingEdges="_E0GziAJ3Ee2jEP7dJmpLlw" height="1">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_E0B6zwJ3Ee2jEP7dJmpLlw" name="StoerungQuittiert" incomingEdges="_E0GziAJ3Ee2jEP7dJmpLlw" height="1">
         <target xmi:type="terms:Variable" href="plant.grafcet#//@partialGrafcets.3/@transitions.5/@term"/>
         <semanticElements xmi:type="terms:Variable" href="plant.grafcet#//@partialGrafcets.3/@transitions.5/@term"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
