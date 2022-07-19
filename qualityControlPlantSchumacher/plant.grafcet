@@ -193,6 +193,15 @@
     <variableDeclarations name="K52" variableDeclarationType="internal">
       <sort xsi:type="terms:Integer" id="90064"/>
     </variableDeclarations>
+    <variableDeclarations name="StempelHinten6">
+      <sort xsi:type="terms:Bool" id="90065"/>
+    </variableDeclarations>
+    <variableDeclarations name="StempelVorne6">
+      <sort xsi:type="terms:Bool" id="90066"/>
+    </variableDeclarations>
+    <variableDeclarations name="StempelIn6" variableDeclarationType="output">
+      <sort xsi:type="terms:Bool" id="90067"/>
+    </variableDeclarations>
   </variableDeclarationContainer>
   <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="GlobalGrafcet">
     <steps xsi:type="grafcet:Step" id="1" initial="true"/>
@@ -307,7 +316,7 @@
     <steps xsi:type="grafcet:EnclosingStep" id="12" partialGrafcets="//@partialGrafcets.3"/>
     <steps xsi:type="grafcet:EnclosingStep" id="13" partialGrafcets="//@partialGrafcets.4"/>
     <steps xsi:type="grafcet:EnclosingStep" id="14" partialGrafcets="//@partialGrafcets.5"/>
-    <steps xsi:type="grafcet:EnclosingStep" id="15"/>
+    <steps xsi:type="grafcet:EnclosingStep" id="15" partialGrafcets="//@partialGrafcets.5"/>
     <steps xsi:type="grafcet:EnclosingStep" id="16"/>
     <steps xsi:type="grafcet:Step" id="17"/>
     <steps xsi:type="grafcet:Step" id="18"/>
@@ -1045,5 +1054,33 @@
     <actionLinks step="//@partialGrafcets.5/@steps.8" actionType="//@partialGrafcets.5/@actionTypes.10"/>
     <actionLinks step="//@partialGrafcets.5/@steps.8" actionType="//@partialGrafcets.5/@actionTypes.12"/>
     <actionLinks step="//@partialGrafcets.5/@steps.10" actionType="//@partialGrafcets.5/@actionTypes.11"/>
+  </partialGrafcets>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G6" enclosingStep="//@partialGrafcets.1/@steps.5">
+    <steps xsi:type="grafcet:Step" id="601"/>
+    <steps xsi:type="grafcet:Step" id="602" activationLink="true"/>
+    <steps xsi:type="grafcet:Step" id="603"/>
+    <transitions id="601">
+      <term xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.64/@sort" id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.64"/>
+    </transitions>
+    <transitions id="602">
+      <term xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.61/@sort" id="21" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.61"/>
+    </transitions>
+    <transitions id="603">
+      <term xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.65/@sort" id="31" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.65"/>
+    </transitions>
+    <arcs source="//@partialGrafcets.6/@steps.0" target="//@partialGrafcets.6/@transitions.0"/>
+    <arcs source="//@partialGrafcets.6/@transitions.0" target="//@partialGrafcets.6/@steps.1"/>
+    <arcs source="//@partialGrafcets.6/@steps.1" target="//@partialGrafcets.6/@transitions.1"/>
+    <arcs source="//@partialGrafcets.6/@transitions.1" target="//@partialGrafcets.6/@steps.2"/>
+    <arcs source="//@partialGrafcets.6/@steps.2" target="//@partialGrafcets.6/@transitions.2"/>
+    <arcs source="//@partialGrafcets.6/@transitions.2" target="//@partialGrafcets.6/@steps.0"/>
+    <actionTypes xsi:type="grafcet:ContinuousAction" id="61">
+      <variable sort="//@variableDeclarationContainer/@variableDeclarations.14/@sort" id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.14"/>
+    </actionTypes>
+    <actionTypes xsi:type="grafcet:ContinuousAction" id="62">
+      <variable sort="//@variableDeclarationContainer/@variableDeclarations.66/@sort" id="21" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.66"/>
+    </actionTypes>
+    <actionLinks step="//@partialGrafcets.6/@steps.0" actionType="//@partialGrafcets.6/@actionTypes.0"/>
+    <actionLinks step="//@partialGrafcets.6/@steps.2" actionType="//@partialGrafcets.6/@actionTypes.1"/>
   </partialGrafcets>
 </grafcet:Grafcet>

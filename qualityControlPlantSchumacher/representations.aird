@@ -6,7 +6,7 @@
     <semanticResources>Generierter%20Code/plant.xml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_RLylAPz6EeyHg6tzDpx_zw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_S-YkAPz6EeyHg6tzDpx_zw" name="plantSchumacherDiagram" repPath="#_S-R2UPz6EeyHg6tzDpx_zw" changeId="a10cf8e4-af23-4d89-85c4-e8849e1602a7">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_S-YkAPz6EeyHg6tzDpx_zw" name="plantSchumacherDiagram" repPath="#_S-R2UPz6EeyHg6tzDpx_zw" changeId="ea07bc74-b68e-4141-8231-36b95b547ddd">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']"/>
         <target xmi:type="grafcet:Grafcet" href="plant.grafcet#/"/>
       </ownedRepresentationDescriptors>
@@ -731,6 +731,18 @@
             <children xmi:type="notation:Node" xmi:id="_-N518AQQEe27m7XHcrfQEA" type="3010" element="_-NmT8AQQEe27m7XHcrfQEA">
               <styles xmi:type="notation:FontStyle" xmi:id="_-N518QQQEe27m7XHcrfQEA" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_-N518gQQEe27m7XHcrfQEA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_MuhlgAcsEe24JJntWnk4vQ" type="3010" element="_MuGuwAcsEe24JJntWnk4vQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_MuhlgQcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_MuhlggcsEe24JJntWnk4vQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_PF2pQAcsEe24JJntWnk4vQ" type="3010" element="_PFfc4AcsEe24JJntWnk4vQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_PF2pQQcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_PF2pQgcsEe24JJntWnk4vQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_RgOZ8AcsEe24JJntWnk4vQ" type="3010" element="_Rf3NkAcsEe24JJntWnk4vQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_RgOZ8QcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_RgOZ8gcsEe24JJntWnk4vQ"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_cCRmYfz6EeyHg6tzDpx_zw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_cCRmYvz6EeyHg6tzDpx_zw"/>
@@ -3962,6 +3974,130 @@
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_xE6gEQQIEe27m7XHcrfQEA" fontName="Segoe UI" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xE6gEgQIEe27m7XHcrfQEA" x="3648" y="1890" width="1460" height="1946"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_6wFU4AcpEe24JJntWnk4vQ" type="2002" element="_6umuMAcpEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_6wjO8AcpEe24JJntWnk4vQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_6wj2AAcpEe24JJntWnk4vQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_5-dYwAcrEe24JJntWnk4vQ" type="3007" element="_59kn8AcrEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="_5-d_0AcrEe24JJntWnk4vQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_5-d_0QcrEe24JJntWnk4vQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_5-f1AAcrEe24JJntWnk4vQ" type="3005" element="_59lPAAcrEe24JJntWnk4vQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_5-gcEAcrEe24JJntWnk4vQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5-gcEQcrEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5-dYwQcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5-dYwgcrEe24JJntWnk4vQ" x="248" y="74" width="50" height="50"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_6-fSYAcrEe24JJntWnk4vQ" type="3007" element="_691yIAcrEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="_6-f5cAcrEe24JJntWnk4vQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_6-f5cQcrEe24JJntWnk4vQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_6-huoAcrEe24JJntWnk4vQ" type="3005" element="_691yIQcrEe24JJntWnk4vQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_6-huoQcrEe24JJntWnk4vQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6-huogcrEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_6-fSYQcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6-fSYgcrEe24JJntWnk4vQ" x="248" y="294" width="50" height="50"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_8d3acAcrEe24JJntWnk4vQ" type="3007" element="_8dUA0AcrEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="_8d3acwcrEe24JJntWnk4vQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_8d3adAcrEe24JJntWnk4vQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_8d4okAcrEe24JJntWnk4vQ" type="3005" element="_8dUA0QcrEe24JJntWnk4vQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_8d4okQcrEe24JJntWnk4vQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8d4okgcrEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_8d3acQcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8d3acgcrEe24JJntWnk4vQ" x="248" y="514" width="50" height="50"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9pTS0AcrEe24JJntWnk4vQ" type="3007" element="_9ov5MAcrEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="_9pT54AcrEe24JJntWnk4vQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_9pT54QcrEe24JJntWnk4vQ" x="3" y="13"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_9pdq4AcrEe24JJntWnk4vQ" type="3005" element="_9ov5MQcrEe24JJntWnk4vQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_9pdq4QcrEe24JJntWnk4vQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9pdq4gcrEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9pTS0QcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="11"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9pTS0gcrEe24JJntWnk4vQ" x="248" y="203" width="50" height="12"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9pb1sAcrEe24JJntWnk4vQ" type="3008" element="_9pAYCAcrEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="_9pccwAcrEe24JJntWnk4vQ" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_9pdD0AcrEe24JJntWnk4vQ" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_9pdD0QcrEe24JJntWnk4vQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_9pdD0gcrEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9pb1sQcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9pb1sgcrEe24JJntWnk4vQ" x="343" y="203" height="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-4PyMAcrEe24JJntWnk4vQ" type="3007" element="_-3xREAcrEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="_-4PyMwcrEe24JJntWnk4vQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_-4PyNAcrEe24JJntWnk4vQ" x="4" y="13"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_-4TclAcrEe24JJntWnk4vQ" type="3005" element="_-3xREQcrEe24JJntWnk4vQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_-4TclQcrEe24JJntWnk4vQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4TclgcrEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_-4PyMQcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="11"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4PyMgcrEe24JJntWnk4vQ" x="248" y="423" width="50" height="12"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-4S1gAcrEe24JJntWnk4vQ" type="3008" element="_-4BIsgcrEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="_-4TckAcrEe24JJntWnk4vQ" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_-4TckQcrEe24JJntWnk4vQ" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_-4TckgcrEe24JJntWnk4vQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_-4TckwcrEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_-4S1gQcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4S1ggcrEe24JJntWnk4vQ" x="350" y="423" height="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__9-EIAcrEe24JJntWnk4vQ" type="3007" element="__9gxIAcrEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="__9-EIwcrEe24JJntWnk4vQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="__9-EJAcrEe24JJntWnk4vQ" x="2" y="13"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="__-BHdAcrEe24JJntWnk4vQ" type="3005" element="__9gxIQcrEe24JJntWnk4vQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="__-BHdQcrEe24JJntWnk4vQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="__-BHdgcrEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__9-EIQcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="11"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__9-EIgcrEe24JJntWnk4vQ" x="248" y="644" width="50" height="12"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__-AgYAcrEe24JJntWnk4vQ" type="3008" element="__9wBtAcrEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="__-BHcAcrEe24JJntWnk4vQ" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="__-BHcQcrEe24JJntWnk4vQ" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="__-BHcgcrEe24JJntWnk4vQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="__-BHcwcrEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__-AgYQcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__-AgYgcrEe24JJntWnk4vQ" x="343" y="644" height="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_cjZzgAcsEe24JJntWnk4vQ" type="3007" element="_cjAK4AcsEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="_cjaakAcsEe24JJntWnk4vQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cjaakQcsEe24JJntWnk4vQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cjc20AcsEe24JJntWnk4vQ" type="3005" element="_cjAx8AcsEe24JJntWnk4vQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_cjc20QcsEe24JJntWnk4vQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cjc20gcsEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_cjZzgQcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cjZzggcsEe24JJntWnk4vQ" x="354" y="75" width="139" height="48"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_dcv2UAcsEe24JJntWnk4vQ" type="3007" element="_dcWNsAcsEe24JJntWnk4vQ">
+              <children xmi:type="notation:Node" xmi:id="_dcv2UwcsEe24JJntWnk4vQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_dcv2VAcsEe24JJntWnk4vQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_dcxEcAcsEe24JJntWnk4vQ" type="3005" element="_dcWNsQcsEe24JJntWnk4vQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_dcxEcQcsEe24JJntWnk4vQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dcxEcgcsEe24JJntWnk4vQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_dcv2UQcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dcv2UgcsEe24JJntWnk4vQ" x="364" y="515" width="127" height="48"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_6wj2AQcpEe24JJntWnk4vQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_6wj2AgcpEe24JJntWnk4vQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_6wFU4QcpEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6wFU4gcpEe24JJntWnk4vQ" x="5142" y="1896" width="1506" height="1682"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_S-nNgvz6EeyHg6tzDpx_zw"/>
         <edges xmi:type="notation:Edge" xmi:id="_hcrkIPz7EeyHg6tzDpx_zw" type="4001" element="_hchMEPz7EeyHg6tzDpx_zw" source="_hchzIPz7EeyHg6tzDpx_zw" target="_hcpH4Pz7EeyHg6tzDpx_zw">
@@ -7548,6 +7684,182 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_e-QO8AZ0Ee2MMdP-vEMMuA" id="(0.48,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_e-QO8QZ0Ee2MMdP-vEMMuA" id="(0.5,1.0)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9pguMAcrEe24JJntWnk4vQ" type="4001" element="_9pGfLAcrEe24JJntWnk4vQ" source="_9pTS0AcrEe24JJntWnk4vQ" target="_9pb1sAcrEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_9phVQAcrEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9phVQQcrEe24JJntWnk4vQ" x="1" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9pijYAcrEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9pijYQcrEe24JJntWnk4vQ" x="-2" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9pjKcAcrEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9pjKcQcrEe24JJntWnk4vQ" x="-2" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9pguMQcrEe24JJntWnk4vQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9pguMgcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9pguMwcrEe24JJntWnk4vQ" points="[25, 1, -187, -8]$[70, 2, -142, -7]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9pm00AcrEe24JJntWnk4vQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9pm00QcrEe24JJntWnk4vQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-4VRwAcrEe24JJntWnk4vQ" type="4001" element="_-4GoQAcrEe24JJntWnk4vQ" source="_-4PyMAcrEe24JJntWnk4vQ" target="_-4S1gAcrEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_-4V40AcrEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4V40QcrEe24JJntWnk4vQ" x="5" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-4V40gcrEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4V40wcrEe24JJntWnk4vQ" x="4" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-4V41AcrEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4V41QcrEe24JJntWnk4vQ" x="-2" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-4VRwQcrEe24JJntWnk4vQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-4VRwgcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-4VRwwcrEe24JJntWnk4vQ" points="[25, 1, -194, -8]$[77, 3, -142, -6]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-4V41gcrEe24JJntWnk4vQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-4V41wcrEe24JJntWnk4vQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="__-C8oAcrEe24JJntWnk4vQ" type="4001" element="__906egcrEe24JJntWnk4vQ" source="__9-EIAcrEe24JJntWnk4vQ" target="__-AgYAcrEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="__-DjsAcrEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__-DjsQcrEe24JJntWnk4vQ" x="1" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__-DjsgcrEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__-DjswcrEe24JJntWnk4vQ" x="3" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__-DjtAcrEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__-DjtQcrEe24JJntWnk4vQ" x="1" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="__-C8oQcrEe24JJntWnk4vQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="__-C8ogcrEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__-C8owcrEe24JJntWnk4vQ" points="[25, 1, -187, -8]$[70, 2, -142, -7]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__-EKwAcrEe24JJntWnk4vQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__-EKwQcrEe24JJntWnk4vQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_qqu6kAcsEe24JJntWnk4vQ" type="4001" element="_qqS2KAcsEe24JJntWnk4vQ" source="_5-dYwAcrEe24JJntWnk4vQ" target="_cjZzgAcsEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_qqvhoAcsEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qqvhoQcsEe24JJntWnk4vQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qqvhogcsEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qqvhowcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qqvhpAcsEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qqvhpQcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_qqu6kQcsEe24JJntWnk4vQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_qqu6kgcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qqu6kwcsEe24JJntWnk4vQ" points="[0, 0, -56, 0]$[56, 0, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qqwIsAcsEe24JJntWnk4vQ" id="(1.0,0.52)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qqwIsQcsEe24JJntWnk4vQ" id="(0.0,0.49019607843137253)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_rITnYAcsEe24JJntWnk4vQ" type="4001" element="_rH3i3AcsEe24JJntWnk4vQ" source="_8d3acAcrEe24JJntWnk4vQ" target="_dcv2UAcsEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_rIUOcAcsEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rIUOcQcsEe24JJntWnk4vQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_rIUOcgcsEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rIUOcwcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_rIUOdAcsEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rIUOdQcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_rITnYQcsEe24JJntWnk4vQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_rITnYgcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rITnYwcsEe24JJntWnk4vQ" points="[0, 0, -66, 0]$[66, 0, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rIUOdgcsEe24JJntWnk4vQ" id="(1.0,0.46)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rIUOdwcsEe24JJntWnk4vQ" id="(0.0,0.46808510638297873)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_rpwHkAcsEe24JJntWnk4vQ" type="4001" element="_rpUp8gcsEe24JJntWnk4vQ" source="_5-dYwAcrEe24JJntWnk4vQ" target="_9pTS0AcrEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_rpwHlAcsEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rpwHlQcsEe24JJntWnk4vQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_rpwHlgcsEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rpwHlwcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_rpwHmAcsEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rpwHmQcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_rpwHkQcsEe24JJntWnk4vQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_rpwHkgcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rpwHkwcsEe24JJntWnk4vQ" points="[7, -2, 7, -81]$[7, 79, 7, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rpwuoAcsEe24JJntWnk4vQ" id="(0.44,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rpwuoQcsEe24JJntWnk4vQ" id="(0.44,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_sMr1gAcsEe24JJntWnk4vQ" type="4001" element="_sMQ-xAcsEe24JJntWnk4vQ" source="_9pTS0AcrEe24JJntWnk4vQ" target="_6-fSYAcrEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_sMr1hAcsEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sMr1hQcsEe24JJntWnk4vQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_sMr1hgcsEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sMr1hwcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_sMr1iAcsEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sMr1iQcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_sMr1gQcsEe24JJntWnk4vQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_sMr1ggcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sMr1gwcsEe24JJntWnk4vQ" points="[4, -2, 4, -81]$[4, 79, 4, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sMsckAcsEe24JJntWnk4vQ" id="(0.5,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sMsckQcsEe24JJntWnk4vQ" id="(0.5,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_st0MoAcsEe24JJntWnk4vQ" type="4001" element="_stYH0AcsEe24JJntWnk4vQ" source="_6-fSYAcrEe24JJntWnk4vQ" target="_-4PyMAcrEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_st0zsAcsEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_st0zsQcsEe24JJntWnk4vQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_st0zsgcsEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_st0zswcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_st0ztAcsEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_st0ztQcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_st0MoQcsEe24JJntWnk4vQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_st0MogcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_st0MowcsEe24JJntWnk4vQ" points="[0, 0, 0, -79]$[0, 79, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_st0ztgcsEe24JJntWnk4vQ" id="(0.5,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_st0ztwcsEe24JJntWnk4vQ" id="(0.5,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_tgQ9QAcsEe24JJntWnk4vQ" type="4001" element="_tf5K5AcsEe24JJntWnk4vQ" source="_-4PyMAcrEe24JJntWnk4vQ" target="_8d3acAcrEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_tgRkUAcsEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tgRkUQcsEe24JJntWnk4vQ" x="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_tgRkUgcsEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tgRkUwcsEe24JJntWnk4vQ" x="3" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_tgRkVAcsEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tgRkVQcsEe24JJntWnk4vQ" x="-3" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_tgQ9QQcsEe24JJntWnk4vQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_tgQ9QgcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tgQ9QwcsEe24JJntWnk4vQ" points="[18, -2, -7, -81]$[18, 79, -7, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tgRkVgcsEe24JJntWnk4vQ" id="(0.08,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tgRkVwcsEe24JJntWnk4vQ" id="(0.58,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_u_ZNsAcsEe24JJntWnk4vQ" type="4001" element="_u--W-AcsEe24JJntWnk4vQ" source="_8d3acAcrEe24JJntWnk4vQ" target="__9-EIAcrEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_u_ZNtAcsEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u_ZNtQcsEe24JJntWnk4vQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_u_Z0wAcsEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u_Z0wQcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_u_Z0wgcsEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u_Z0wwcsEe24JJntWnk4vQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_u_ZNsQcsEe24JJntWnk4vQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_u_ZNsgcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_u_ZNswcsEe24JJntWnk4vQ" points="[0, 0, 0, -80]$[0, 80, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u_Z0xAcsEe24JJntWnk4vQ" id="(0.44,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u_Z0xQcsEe24JJntWnk4vQ" id="(0.44,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_xi99sAcsEe24JJntWnk4vQ" type="4001" element="_xigEoAcsEe24JJntWnk4vQ" source="__9-EIAcrEe24JJntWnk4vQ" target="_5-dYwAcrEe24JJntWnk4vQ">
+          <children xmi:type="notation:Node" xmi:id="_xi99tAcsEe24JJntWnk4vQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xi99tQcsEe24JJntWnk4vQ" x="-6" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_xi-kwAcsEe24JJntWnk4vQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xi-kwQcsEe24JJntWnk4vQ" x="13" y="138"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_xi-kwgcsEe24JJntWnk4vQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xi-kwwcsEe24JJntWnk4vQ" y="164"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_xi99sQcsEe24JJntWnk4vQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_xi99sgcsEe24JJntWnk4vQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xi99swcsEe24JJntWnk4vQ" points="[0, 10, 0, 530]$[0, 60, 0, 580]$[-123, 60, -123, 580]$[-123, -607, -123, -87]$[0, -607, 0, -87]$[0, -570, 0, -50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xi-kxAcsEe24JJntWnk4vQ" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xi-kxQcsEe24JJntWnk4vQ" id="(0.5,1.0)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_S-3FIPz6EeyHg6tzDpx_zw" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -8572,6 +8884,30 @@
         <target xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.63"/>
         <semanticElements xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.63"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_-NmT8QQQEe27m7XHcrfQEA" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_MuGuwAcsEe24JJntWnk4vQ" name="StempelHinten6">
+        <target xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.64"/>
+        <semanticElements xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.64"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_MuGuwQcsEe24JJntWnk4vQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_PFfc4AcsEe24JJntWnk4vQ" name="StempelVorne6">
+        <target xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.65"/>
+        <semanticElements xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.65"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_PFgD8AcsEe24JJntWnk4vQ" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Rf3NkAcsEe24JJntWnk4vQ" name="StempelIn6">
+        <target xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.66"/>
+        <semanticElements xmi:type="terms:VariableDeclaration" href="plant.grafcet#//@variableDeclarationContainer/@variableDeclarations.66"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_Rf3NkQcsEe24JJntWnk4vQ" labelSize="12" showIcon="false" labelPosition="node">
           <description xmi:type="style:BundledImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
@@ -14020,6 +14356,213 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_e94cRQZ0Ee2MMdP-vEMMuA" size="2" routingStyle="manhattan" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_e94cRgZ0Ee2MMdP-vEMMuA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_6umuMAcpEe24JJntWnk4vQ" name="G6/X15">
+      <target xmi:type="grafcet:PartialGrafcet" href="plant.grafcet#//@partialGrafcets.6"/>
+      <semanticElements xmi:type="grafcet:PartialGrafcet" href="plant.grafcet#//@partialGrafcets.6"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_6unVQAcpEe24JJntWnk4vQ" labelSize="12" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='EnclosingStepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='EnclosingStepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_59kn8AcrEe24JJntWnk4vQ" name="601" outgoingEdges="_qqS2KAcsEe24JJntWnk4vQ _rpUp8gcsEe24JJntWnk4vQ" incomingEdges="_xigEoAcsEe24JJntWnk4vQ" width="5" height="5">
+        <target xmi:type="grafcet:Step" href="plant.grafcet#//@partialGrafcets.6/@steps.0"/>
+        <semanticElements xmi:type="grafcet:Step" href="plant.grafcet#//@partialGrafcets.6/@steps.0"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_59lPAAcrEe24JJntWnk4vQ" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.sirius.agrafe.grafcet.design/icons_svg/Step.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='StepNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='StepNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_691yIAcrEe24JJntWnk4vQ" name="* 602" outgoingEdges="_stYH0AcsEe24JJntWnk4vQ" incomingEdges="_sMQ-xAcsEe24JJntWnk4vQ" width="5" height="5">
+        <target xmi:type="grafcet:Step" href="plant.grafcet#//@partialGrafcets.6/@steps.1"/>
+        <semanticElements xmi:type="grafcet:Step" href="plant.grafcet#//@partialGrafcets.6/@steps.1"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_691yIQcrEe24JJntWnk4vQ" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.sirius.agrafe.grafcet.design/icons_svg/Step.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='StepNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='StepNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_8dUA0AcrEe24JJntWnk4vQ" name="603" outgoingEdges="_rH3i3AcsEe24JJntWnk4vQ _u--W-AcsEe24JJntWnk4vQ" incomingEdges="_tf5K5AcsEe24JJntWnk4vQ" width="5" height="5">
+        <target xmi:type="grafcet:Step" href="plant.grafcet#//@partialGrafcets.6/@steps.2"/>
+        <semanticElements xmi:type="grafcet:Step" href="plant.grafcet#//@partialGrafcets.6/@steps.2"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_8dUA0QcrEe24JJntWnk4vQ" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.sirius.agrafe.grafcet.design/icons_svg/Step.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='StepNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='StepNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_9ov5MAcrEe24JJntWnk4vQ" name="601" outgoingEdges="_9pGfLAcrEe24JJntWnk4vQ _sMQ-xAcsEe24JJntWnk4vQ" incomingEdges="_rpUp8gcsEe24JJntWnk4vQ" width="5" height="5">
+        <target xmi:type="grafcet:Transition" href="plant.grafcet#//@partialGrafcets.6/@transitions.0"/>
+        <semanticElements xmi:type="grafcet:Transition" href="plant.grafcet#//@partialGrafcets.6/@transitions.0"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_9ov5MQcrEe24JJntWnk4vQ" labelSize="11" showIcon="false" labelAlignment="LEFT" workspacePath="/org.eclipse.sirius.agrafe.grafcet.design/icons_svg/Transition.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='TransitionNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='TransitionNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_-3xREAcrEe24JJntWnk4vQ" name="602" outgoingEdges="_-4GoQAcrEe24JJntWnk4vQ _tf5K5AcsEe24JJntWnk4vQ" incomingEdges="_stYH0AcsEe24JJntWnk4vQ" width="5" height="5">
+        <target xmi:type="grafcet:Transition" href="plant.grafcet#//@partialGrafcets.6/@transitions.1"/>
+        <semanticElements xmi:type="grafcet:Transition" href="plant.grafcet#//@partialGrafcets.6/@transitions.1"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_-3xREQcrEe24JJntWnk4vQ" labelSize="11" showIcon="false" labelAlignment="LEFT" workspacePath="/org.eclipse.sirius.agrafe.grafcet.design/icons_svg/Transition.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='TransitionNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='TransitionNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="__9gxIAcrEe24JJntWnk4vQ" name="603" outgoingEdges="__906egcrEe24JJntWnk4vQ _xigEoAcsEe24JJntWnk4vQ" incomingEdges="_u--W-AcsEe24JJntWnk4vQ" width="5" height="5">
+        <target xmi:type="grafcet:Transition" href="plant.grafcet#//@partialGrafcets.6/@transitions.2"/>
+        <semanticElements xmi:type="grafcet:Transition" href="plant.grafcet#//@partialGrafcets.6/@transitions.2"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="__9gxIQcrEe24JJntWnk4vQ" labelSize="11" showIcon="false" labelAlignment="LEFT" workspacePath="/org.eclipse.sirius.agrafe.grafcet.design/icons_svg/Transition.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='TransitionNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='TransitionNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_9pAYCAcrEe24JJntWnk4vQ" name="StempelHinten6" incomingEdges="_9pGfLAcrEe24JJntWnk4vQ" height="1">
+        <target xmi:type="terms:Variable" href="plant.grafcet#//@partialGrafcets.6/@transitions.0/@term"/>
+        <semanticElements xmi:type="terms:Variable" href="plant.grafcet#//@partialGrafcets.6/@transitions.0/@term"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9pAYCQcrEe24JJntWnk4vQ" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='TermContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='TermContainer']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_-4BIsgcrEe24JJntWnk4vQ" name="GUTTEIL" incomingEdges="_-4GoQAcrEe24JJntWnk4vQ" height="1">
+        <target xmi:type="terms:Variable" href="plant.grafcet#//@partialGrafcets.6/@transitions.1/@term"/>
+        <semanticElements xmi:type="terms:Variable" href="plant.grafcet#//@partialGrafcets.6/@transitions.1/@term"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-4BIswcrEe24JJntWnk4vQ" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='TermContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='TermContainer']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="__9wBtAcrEe24JJntWnk4vQ" name="StempelVorne6" incomingEdges="__906egcrEe24JJntWnk4vQ" height="1">
+        <target xmi:type="terms:Variable" href="plant.grafcet#//@partialGrafcets.6/@transitions.2/@term"/>
+        <semanticElements xmi:type="terms:Variable" href="plant.grafcet#//@partialGrafcets.6/@transitions.2/@term"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__9wBtQcrEe24JJntWnk4vQ" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='TermContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='TermContainer']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_cjAK4AcsEe24JJntWnk4vQ" name="Station6_fertig" incomingEdges="_qqS2KAcsEe24JJntWnk4vQ" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="grafcet:ContinuousAction" href="plant.grafcet#//@partialGrafcets.6/@actionTypes.0"/>
+        <semanticElements xmi:type="grafcet:ContinuousAction" href="plant.grafcet#//@partialGrafcets.6/@actionTypes.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_cjAx8AcsEe24JJntWnk4vQ" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.sirius.agrafe.grafcet.design/icons_svg/ContinuousAction.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='ContinuousActionNode']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='ContinuousActionNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_dcWNsAcsEe24JJntWnk4vQ" name="StempelIn6" incomingEdges="_rH3i3AcsEe24JJntWnk4vQ" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="grafcet:ContinuousAction" href="plant.grafcet#//@partialGrafcets.6/@actionTypes.1"/>
+        <semanticElements xmi:type="grafcet:ContinuousAction" href="plant.grafcet#//@partialGrafcets.6/@actionTypes.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_dcWNsQcsEe24JJntWnk4vQ" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.sirius.agrafe.grafcet.design/icons_svg/ContinuousAction.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='ContinuousActionNode']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='ContinuousActionNode']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9pGfLAcrEe24JJntWnk4vQ" sourceNode="_9ov5MAcrEe24JJntWnk4vQ" targetNode="_9pAYCAcrEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:Transition" href="plant.grafcet#//@partialGrafcets.6/@transitions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9pHFkAcrEe24JJntWnk4vQ" lineStyle="dot" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='TermEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9pHFkQcrEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='TermEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-4GoQAcrEe24JJntWnk4vQ" sourceNode="_-3xREAcrEe24JJntWnk4vQ" targetNode="_-4BIsgcrEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:Transition" href="plant.grafcet#//@partialGrafcets.6/@transitions.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-4GoQQcrEe24JJntWnk4vQ" lineStyle="dot" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='TermEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-4GoQgcrEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='TermEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="__906egcrEe24JJntWnk4vQ" sourceNode="__9gxIAcrEe24JJntWnk4vQ" targetNode="__9wBtAcrEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:Transition" href="plant.grafcet#//@partialGrafcets.6/@transitions.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="__906ewcrEe24JJntWnk4vQ" lineStyle="dot" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='TermEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="__906fAcrEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='TermEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qqS2KAcsEe24JJntWnk4vQ" sourceNode="_59kn8AcrEe24JJntWnk4vQ" targetNode="_cjAK4AcsEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:ActionLink" href="plant.grafcet#//@partialGrafcets.6/@actionLinks.0"/>
+      <semanticElements xmi:type="grafcet:ActionLink" href="plant.grafcet#//@partialGrafcets.6/@actionLinks.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qqTcwAcsEe24JJntWnk4vQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ActionLinkElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qqTcwQcsEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ActionLinkElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rH3i3AcsEe24JJntWnk4vQ" sourceNode="_8dUA0AcrEe24JJntWnk4vQ" targetNode="_dcWNsAcsEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:ActionLink" href="plant.grafcet#//@partialGrafcets.6/@actionLinks.1"/>
+      <semanticElements xmi:type="grafcet:ActionLink" href="plant.grafcet#//@partialGrafcets.6/@actionLinks.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_rH3i3QcsEe24JJntWnk4vQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ActionLinkElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_rH3i3gcsEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ActionLinkElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rpUp8gcsEe24JJntWnk4vQ" sourceNode="_59kn8AcrEe24JJntWnk4vQ" targetNode="_9ov5MAcrEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.0"/>
+      <semanticElements xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_rpUp8wcsEe24JJntWnk4vQ" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_rpUp9AcsEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sMQ-xAcsEe24JJntWnk4vQ" sourceNode="_9ov5MAcrEe24JJntWnk4vQ" targetNode="_691yIAcrEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.1"/>
+      <semanticElements xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sMQ-xQcsEe24JJntWnk4vQ" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sMQ-xgcsEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_stYH0AcsEe24JJntWnk4vQ" sourceNode="_691yIAcrEe24JJntWnk4vQ" targetNode="_-3xREAcrEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.2"/>
+      <semanticElements xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_stYH0QcsEe24JJntWnk4vQ" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_stYH0gcsEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_tf5K5AcsEe24JJntWnk4vQ" sourceNode="_-3xREAcrEe24JJntWnk4vQ" targetNode="_8dUA0AcrEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.3"/>
+      <semanticElements xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_tf5K5QcsEe24JJntWnk4vQ" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_tf5K5gcsEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_u--W-AcsEe24JJntWnk4vQ" sourceNode="_8dUA0AcrEe24JJntWnk4vQ" targetNode="__9gxIAcrEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.4"/>
+      <semanticElements xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_u--W-QcsEe24JJntWnk4vQ" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_u--W-gcsEe24JJntWnk4vQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_xigEoAcsEe24JJntWnk4vQ" sourceNode="__9gxIAcrEe24JJntWnk4vQ" targetNode="_59kn8AcrEe24JJntWnk4vQ">
+      <target xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.5"/>
+      <semanticElements xmi:type="grafcet:Arc" href="plant.grafcet#//@partialGrafcets.6/@arcs.5"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_xigqsAcsEe24JJntWnk4vQ" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_xigqsQcsEe24JJntWnk4vQ" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.sirius.agrafe.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@edgeMappings[name='ArcElementEdge']"/>
     </ownedDiagramElements>
