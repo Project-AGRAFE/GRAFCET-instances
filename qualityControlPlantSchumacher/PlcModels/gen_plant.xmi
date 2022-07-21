@@ -821,7 +821,7 @@
           <embeddedStatements xsi:type="plccode:If">
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actEncStep_15"/>
-              <embeddedStatements xsi:type="plccode:Call" instanceName="PartialGrafcet_G5">
+              <embeddedStatements xsi:type="plccode:Call" instanceName="PartialGrafcet_G6">
                 <instanceVars xsi:type="plccode:BooleanAssignment" variable="Enable"/>
                 <instanceVars xsi:type="plccode:BooleanAssignment" variable="Init"/>
                 <instanceVars xsi:type="plccode:BooleanAssignment" value="true" variable="Activate"/>
@@ -830,7 +830,7 @@
               <condition term="actEncStep_15"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
-              <embeddedStatements xsi:type="plccode:Call" instanceName="PartialGrafcet_G5">
+              <embeddedStatements xsi:type="plccode:Call" instanceName="PartialGrafcet_G6">
                 <instanceVars xsi:type="plccode:BooleanAssignment" value="true" variable="Enable"/>
                 <instanceVars xsi:type="plccode:BooleanAssignment" variable="Init"/>
                 <instanceVars xsi:type="plccode:BooleanAssignment" variable="Activate"/>
@@ -840,7 +840,7 @@
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactEncStep_15"/>
-              <embeddedStatements xsi:type="plccode:Call" instanceName="PartialGrafcet_G5">
+              <embeddedStatements xsi:type="plccode:Call" instanceName="PartialGrafcet_G6">
                 <instanceVars xsi:type="plccode:BooleanAssignment" variable="Enable"/>
                 <instanceVars xsi:type="plccode:BooleanAssignment" variable="Init"/>
                 <instanceVars xsi:type="plccode:BooleanAssignment" variable="Activate"/>

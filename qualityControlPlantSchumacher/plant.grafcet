@@ -355,7 +355,7 @@
     <steps xsi:type="grafcet:EnclosingStep" id="12" partialGrafcets="//@partialGrafcets.3"/>
     <steps xsi:type="grafcet:EnclosingStep" id="13" partialGrafcets="//@partialGrafcets.4"/>
     <steps xsi:type="grafcet:EnclosingStep" id="14" partialGrafcets="//@partialGrafcets.5"/>
-    <steps xsi:type="grafcet:EnclosingStep" id="15" partialGrafcets="//@partialGrafcets.5"/>
+    <steps xsi:type="grafcet:EnclosingStep" id="15" partialGrafcets="//@partialGrafcets.6"/>
     <steps xsi:type="grafcet:EnclosingStep" id="16" partialGrafcets="//@partialGrafcets.7"/>
     <steps xsi:type="grafcet:Step" id="17"/>
     <steps xsi:type="grafcet:Step" id="18"/>
@@ -676,13 +676,13 @@
     <arcs source="//@partialGrafcets.3/@steps.1" target="//@partialGrafcets.3/@transitions.1"/>
     <arcs source="//@partialGrafcets.3/@transitions.1" target="//@partialGrafcets.3/@steps.2"/>
     <arcs source="//@partialGrafcets.3/@steps.2" target="//@partialGrafcets.3/@transitions.3"/>
-    <arcs source="//@partialGrafcets.3/@transitions.3" target="//@partialGrafcets.3/@steps.0"/>
     <arcs source="//@partialGrafcets.3/@steps.1" target="//@partialGrafcets.3/@transitions.2"/>
     <arcs source="//@partialGrafcets.3/@steps.2" target="//@partialGrafcets.3/@transitions.4"/>
     <arcs source="//@partialGrafcets.3/@transitions.4" target="//@partialGrafcets.3/@steps.3"/>
     <arcs source="//@partialGrafcets.3/@steps.3" target="//@partialGrafcets.3/@transitions.5"/>
     <arcs source="//@partialGrafcets.3/@transitions.5" target="//@partialGrafcets.3/@steps.0"/>
     <arcs source="//@partialGrafcets.3/@transitions.2" target="//@partialGrafcets.3/@steps.0"/>
+    <arcs source="//@partialGrafcets.3/@transitions.3" target="//@partialGrafcets.3/@steps.1"/>
     <actionTypes xsi:type="grafcet:ContinuousAction" id="201">
       <variable sort="//@variableDeclarationContainer/@variableDeclarations.11/@sort" id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.11"/>
     </actionTypes>

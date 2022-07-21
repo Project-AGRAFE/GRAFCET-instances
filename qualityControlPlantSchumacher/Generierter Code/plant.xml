@@ -916,14 +916,14 @@
 		  			IF (actEncStep_15)OR(EncStep_15)OR(deactEncStep_15) THEN
 		  				IF actEncStep_15 THEN
 		  					actEncStep_15 := false;
-		  					PartialGrafcet_G5(Enable := false, Init := false, Activate := true, End := false);
+		  					PartialGrafcet_G6(Enable := false, Init := false, Activate := true, End := false);
 		  				END_IF
 		  				IF EncStep_15 THEN
-		  					PartialGrafcet_G5(Enable := true, Init := false, Activate := false, End := false);
+		  					PartialGrafcet_G6(Enable := true, Init := false, Activate := false, End := false);
 		  				END_IF
 		  				IF deactEncStep_15 THEN
 		  					deactEncStep_15 := false;
-		  					PartialGrafcet_G5(Enable := false, Init := false, Activate := false, End := true);
+		  					PartialGrafcet_G6(Enable := false, Init := false, Activate := false, End := true);
 		  				END_IF
 		  			END_IF
 		  			IF (actEncStep_16)OR(EncStep_16)OR(deactEncStep_16) THEN
