@@ -314,8 +314,8 @@
     <transitions id="7">
       <term xsi:type="terms:And" sort="//@partialGrafcets.0/@transitions.7/@term/@output" id="71" input="//@variableDeclarationContainer/@variableDeclarations.6/@sort //@partialGrafcets.0/@transitions.7/@term/@subterm.1/@output">
         <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.6/@sort" id="712" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.6"/>
-        <subterm xsi:type="terms:And" sort="//@partialGrafcets.0/@transitions.7/@term/@subterm.1/@output" id="713" input="//@variableDeclarationContainer/@variableDeclarations.4/@sort //@partialGrafcets.0/@transitions.7/@term/@subterm.1/@subterm.1/@output">
-          <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.4/@sort" id="5132" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+        <subterm xsi:type="terms:And" sort="//@partialGrafcets.0/@transitions.7/@term/@subterm.1/@output" id="713" input="//@variableDeclarationContainer/@variableDeclarations.3/@sort //@partialGrafcets.0/@transitions.7/@term/@subterm.1/@subterm.1/@output">
+          <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.3/@sort" id="5132" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
           <subterm xsi:type="terms:Not" sort="//@partialGrafcets.0/@transitions.7/@term/@subterm.1/@subterm.1/@output" id="7133" input="//@variableDeclarationContainer/@variableDeclarations.2/@sort">
             <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.2/@sort" id="71332" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
             <output xsi:type="terms:Bool" id="71331"/>
