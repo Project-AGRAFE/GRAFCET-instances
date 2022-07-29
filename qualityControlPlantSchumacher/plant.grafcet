@@ -389,26 +389,29 @@
       <term xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.15/@sort" id="71" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.15"/>
     </transitions>
     <transitions id="17">
-      <term xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@output" id="81" input="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@output //@partialGrafcets.1/@transitions.7/@term/@subterm.1/@output">
-        <subterm xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@output" id="812" input="//@variableDeclarationContainer/@variableDeclarations.10/@sort //@variableDeclarationContainer/@variableDeclarations.11/@sort">
-          <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.10/@sort" id="8122" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.10"/>
-          <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.11/@sort" id="8123" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.11"/>
-          <output xsi:type="terms:Bool" id="8121"/>
-        </subterm>
-        <subterm xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@subterm.1/@output" id="813" input="//@partialGrafcets.1/@transitions.7/@term/@subterm.1/@subterm.0/@output //@partialGrafcets.1/@transitions.7/@term/@subterm.1/@subterm.1/@output">
-          <subterm xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@subterm.1/@subterm.0/@output" id="8132" input="//@variableDeclarationContainer/@variableDeclarations.12/@sort //@variableDeclarationContainer/@variableDeclarations.13/@sort">
-            <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.12/@sort" id="81322" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.12"/>
-            <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.13/@sort" id="81323" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.13"/>
-            <output xsi:type="terms:Bool" id="81321"/>
+      <term xsi:type="terms:RisingEdge" sort="//@partialGrafcets.1/@transitions.7/@term/@output" id="91" input="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@output">
+        <subterm xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@output" id="81" input="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@subterm.0/@output //@partialGrafcets.1/@transitions.7/@term/@subterm.0/@subterm.1/@output">
+          <subterm xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@subterm.0/@output" id="812" input="//@variableDeclarationContainer/@variableDeclarations.10/@sort //@variableDeclarationContainer/@variableDeclarations.11/@sort">
+            <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.10/@sort" id="8122" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.10"/>
+            <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.11/@sort" id="8123" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.11"/>
+            <output xsi:type="terms:Bool" id="8121"/>
           </subterm>
-          <subterm xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@subterm.1/@subterm.1/@output" id="8133" input="//@variableDeclarationContainer/@variableDeclarations.14/@sort //@variableDeclarationContainer/@variableDeclarations.15/@sort">
-            <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.14/@sort" id="81332" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.14"/>
-            <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.15/@sort" id="81333" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.15"/>
-            <output xsi:type="terms:Bool" id="81331"/>
+          <subterm xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@subterm.1/@output" id="813" input="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@subterm.1/@subterm.0/@output //@partialGrafcets.1/@transitions.7/@term/@subterm.0/@subterm.1/@subterm.1/@output">
+            <subterm xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@subterm.1/@subterm.0/@output" id="8132" input="//@variableDeclarationContainer/@variableDeclarations.12/@sort //@variableDeclarationContainer/@variableDeclarations.13/@sort">
+              <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.12/@sort" id="81322" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.12"/>
+              <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.13/@sort" id="81323" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.13"/>
+              <output xsi:type="terms:Bool" id="81321"/>
+            </subterm>
+            <subterm xsi:type="terms:And" sort="//@partialGrafcets.1/@transitions.7/@term/@subterm.0/@subterm.1/@subterm.1/@output" id="8133" input="//@variableDeclarationContainer/@variableDeclarations.14/@sort //@variableDeclarationContainer/@variableDeclarations.15/@sort">
+              <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.14/@sort" id="81332" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.14"/>
+              <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.15/@sort" id="81333" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.15"/>
+              <output xsi:type="terms:Bool" id="81331"/>
+            </subterm>
+            <output xsi:type="terms:Bool" id="8131"/>
           </subterm>
-          <output xsi:type="terms:Bool" id="8131"/>
+          <output xsi:type="terms:Bool" id="811"/>
         </subterm>
-        <output xsi:type="terms:Bool" id="811"/>
+        <output xsi:type="terms:Bool" id="911"/>
       </term>
     </transitions>
     <synchronizations/>
