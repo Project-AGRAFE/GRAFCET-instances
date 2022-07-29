@@ -263,7 +263,7 @@
               <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_2"/>
               <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_2"/>
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_2"/>
-              <condition term="((Stopp AND (TellerHand AND ( NOT NOTAUS)))AND(T_7))"/>
+              <condition term="((Stopp AND (TellerAutomatik AND ( NOT NOTAUS)))AND(T_7))"/>
             </embeddedStatements>
             <condition term="((INIT=FALSE)AND(END=FALSE))"/>
           </embeddedStatements>
@@ -677,6 +677,12 @@
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_10"/>
               <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Foerderband"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="FALSE" variable="Station1_fertig"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="FALSE" variable="Station2_fertig"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="FALSE" variable="Station3_fertig"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="FALSE" variable="Station5_fertig"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="FALSE" variable="Station6_fertig"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="FALSE" variable="Station7_fertig"/>
               <condition term="actStep_10"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
@@ -1276,15 +1282,14 @@
               <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Lineareinheit1"/>
               <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="VorVereinzelung1"/>
               <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Vereinzelung1"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Station1_fertig"/>
               <condition term="actStep_101"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Station1_fertig"/>
               <condition term="Step_101"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_101"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Station1_fertig"/>
               <condition term="deactStep_101"/>
             </embeddedStatements>
             <condition term="(actStep_101)OR(Step_101)OR(deactStep_101)"/>
@@ -1589,9 +1594,9 @@
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Step_203"/>
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_203"/>
               <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="deactStep_203"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_201"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_201"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_201"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Step_202"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="actStep_202"/>
+              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_202"/>
               <condition term="((EindrueckenOben2 AND (K2 &amp;lt; 3))AND(T_203))"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
@@ -1620,15 +1625,14 @@
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_201"/>
               <embeddedStatements xsi:type="plccode:Assignment" value="0" variable="K2"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Station2_fertig"/>
               <condition term="actStep_201"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Station2_fertig"/>
               <condition term="Step_201"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_201"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Station2_fertig"/>
               <condition term="deactStep_201"/>
             </embeddedStatements>
             <condition term="(actStep_201)OR(Step_201)OR(deactStep_201)"/>
@@ -1667,15 +1671,14 @@
           <embeddedStatements xsi:type="plccode:If">
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_204"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Stoerung2"/>
               <condition term="actStep_204"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Stoerung2"/>
               <condition term="Step_204"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_204"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Stoerung2"/>
               <condition term="deactStep_204"/>
             </embeddedStatements>
             <condition term="(actStep_204)OR(Step_204)OR(deactStep_204)"/>
@@ -1908,15 +1911,14 @@
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_301"/>
               <embeddedStatements xsi:type="plccode:Assignment" value="FALSE" variable="Spannen3"/>
               <embeddedStatements xsi:type="plccode:Assignment" value="0" variable="K3"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Station3_fertig"/>
               <condition term="actStep_301"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Station3_fertig"/>
               <condition term="Step_301"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_301"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Station3_fertig"/>
               <condition term="deactStep_301"/>
             </embeddedStatements>
             <condition term="(actStep_301)OR(Step_301)OR(deactStep_301)"/>
@@ -2421,15 +2423,14 @@
               <embeddedStatements xsi:type="plccode:Assignment" value="0" variable="K51"/>
               <embeddedStatements xsi:type="plccode:Assignment" value="0" variable="K52"/>
               <embeddedStatements xsi:type="plccode:Assignment" value="FALSE" variable="Spannen5"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Station5_fertig"/>
               <condition term="actStep_501"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Station5_fertig"/>
               <condition term="Step_501"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_501"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Station5_fertig"/>
               <condition term="deactStep_501"/>
             </embeddedStatements>
             <condition term="(actStep_501)OR(Step_501)OR(deactStep_501)"/>
@@ -2753,15 +2754,14 @@
           <embeddedStatements xsi:type="plccode:If">
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_601"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Station6_fertig"/>
               <condition term="actStep_601"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Station6_fertig"/>
               <condition term="Step_601"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_601"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Station6_fertig"/>
               <condition term="deactStep_601"/>
             </embeddedStatements>
             <condition term="(actStep_601)OR(Step_601)OR(deactStep_601)"/>
@@ -3142,16 +3142,15 @@
           <embeddedStatements xsi:type="plccode:If">
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="actStep_701"/>
+              <embeddedStatements xsi:type="plccode:Assignment" value="TRUE" variable="Station7_fertig"/>
               <condition term="actStep_701"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="Station7_fertig"/>
               <embeddedStatements xsi:type="plccode:BooleanAssignment" value="true" variable="LineareinheitVor7"/>
               <condition term="Step_701"/>
             </embeddedStatements>
             <embeddedStatements xsi:type="plccode:If">
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="deactStep_701"/>
-              <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="Station7_fertig"/>
               <embeddedStatements xsi:type="plccode:BooleanAssignment" variable="LineareinheitVor7"/>
               <condition term="deactStep_701"/>
             </embeddedStatements>

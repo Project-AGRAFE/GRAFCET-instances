@@ -387,7 +387,7 @@
 		  					actStep_1 := true;
 		  					deactStep_1 := false;
 		  				END_IF
-		  				IF ((Stopp AND (TellerHand AND ( NOT NOTAUS)))AND(T_7)) THEN
+		  				IF ((Stopp AND (TellerAutomatik AND ( NOT NOTAUS)))AND(T_7)) THEN
 		  					StableState := true;
 		  					EncStep_4 := false;
 		  					actEncStep_4 := false;
@@ -852,6 +852,12 @@
 		  				IF actStep_10 THEN
 		  					actStep_10 := false;
 		  					Foerderband := TRUE;
+		  					Station1_fertig := FALSE;
+		  					Station2_fertig := FALSE;
+		  					Station3_fertig := FALSE;
+		  					Station5_fertig := FALSE;
+		  					Station6_fertig := FALSE;
+		  					Station7_fertig := FALSE;
 		  				END_IF
 		  				IF Step_10 THEN
 		  					StartTeller := true;
@@ -1393,13 +1399,12 @@
 		  					Lineareinheit1 := TRUE;
 		  					VorVereinzelung1 := TRUE;
 		  					Vereinzelung1 := TRUE;
+		  					Station1_fertig := TRUE;
 		  				END_IF
 		  				IF Step_101 THEN
-		  					Station1_fertig := true;
 		  				END_IF
 		  				IF deactStep_101 THEN
 		  					deactStep_101 := false;
-		  					Station1_fertig := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_102)OR(Step_102)OR(deactStep_102) THEN
@@ -1738,9 +1743,9 @@
 		  					Step_203 := false;
 		  					actStep_203 := false;
 		  					deactStep_203 := true;
-		  					Step_201 := true;
-		  					actStep_201 := true;
-		  					deactStep_201 := false;
+		  					Step_202 := true;
+		  					actStep_202 := true;
+		  					deactStep_202 := false;
 		  				END_IF
 		  				IF ((EindrueckenOben2 AND (K2 = 3))AND(T_204)) THEN
 		  					StableState := true;
@@ -1765,13 +1770,12 @@
 		  				IF actStep_201 THEN
 		  					actStep_201 := false;
 		  					K2 := 0;
+		  					Station2_fertig := TRUE;
 		  				END_IF
 		  				IF Step_201 THEN
-		  					Station2_fertig := true;
 		  				END_IF
 		  				IF deactStep_201 THEN
 		  					deactStep_201 := false;
-		  					Station2_fertig := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_202)OR(Step_202)OR(deactStep_202) THEN
@@ -1800,13 +1804,12 @@
 		  			IF (actStep_204)OR(Step_204)OR(deactStep_204) THEN
 		  				IF actStep_204 THEN
 		  					actStep_204 := false;
+		  					Stoerung2 := TRUE;
 		  				END_IF
 		  				IF Step_204 THEN
-		  					Stoerung2 := true;
 		  				END_IF
 		  				IF deactStep_204 THEN
 		  					deactStep_204 := false;
-		  					Stoerung2 := false;
 		  				END_IF
 		  			END_IF
 		  			END_WHILE;
@@ -2109,13 +2112,12 @@
 		  					actStep_301 := false;
 		  					Spannen3 := FALSE;
 		  					K3 := 0;
+		  					Station3_fertig := TRUE;
 		  				END_IF
 		  				IF Step_301 THEN
-		  					Station3_fertig := true;
 		  				END_IF
 		  				IF deactStep_301 THEN
 		  					deactStep_301 := false;
-		  					Station3_fertig := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_302)OR(Step_302)OR(deactStep_302) THEN
@@ -2702,13 +2704,12 @@
 		  					K51 := 0;
 		  					K52 := 0;
 		  					Spannen5 := FALSE;
+		  					Station5_fertig := TRUE;
 		  				END_IF
 		  				IF Step_501 THEN
-		  					Station5_fertig := true;
 		  				END_IF
 		  				IF deactStep_501 THEN
 		  					deactStep_501 := false;
-		  					Station5_fertig := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_502)OR(Step_502)OR(deactStep_502) THEN
@@ -3038,13 +3039,12 @@
 		  			IF (actStep_601)OR(Step_601)OR(deactStep_601) THEN
 		  				IF actStep_601 THEN
 		  					actStep_601 := false;
+		  					Station6_fertig := TRUE;
 		  				END_IF
 		  				IF Step_601 THEN
-		  					Station6_fertig := true;
 		  				END_IF
 		  				IF deactStep_601 THEN
 		  					deactStep_601 := false;
-		  					Station6_fertig := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_602)OR(Step_602)OR(deactStep_602) THEN
@@ -3507,14 +3507,13 @@
 		  			IF (actStep_701)OR(Step_701)OR(deactStep_701) THEN
 		  				IF actStep_701 THEN
 		  					actStep_701 := false;
+		  					Station7_fertig := TRUE;
 		  				END_IF
 		  				IF Step_701 THEN
-		  					Station7_fertig := true;
 		  					LineareinheitVor7 := true;
 		  				END_IF
 		  				IF deactStep_701 THEN
 		  					deactStep_701 := false;
-		  					Station7_fertig := false;
 		  					LineareinheitVor7 := false;
 		  				END_IF
 		  			END_IF
