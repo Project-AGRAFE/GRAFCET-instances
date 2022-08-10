@@ -9,7 +9,7 @@ The instances were created using a [Sirius](https://www.eclipse.org/sirius/)-bas
 
 |  GRAFCET instance | description  |
 | :-: | :-: |
-|  [Quality control plant by Schumacher](./qualityControlPlantSchumacher) | Specification of the control code proposed by Schumacher [2] for an industrial plant for quality control of electromechanical parts |
+|  [Quality control plant by Schumacher](https://github.com/Project-AGRAFE/GRAFCET-instances/wiki/Quality-control-plant-by-Schumacher#description) | Specification of the control code proposed by Schumacher [2] for an industrial plant for quality control of electromechanical parts |
 | *tbd* | *tbd* |
 
 
