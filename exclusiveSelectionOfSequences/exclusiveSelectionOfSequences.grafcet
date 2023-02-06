@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="platform:/plugin/org.eclipse.gmf.grafcet/model/grafcet.ecore" xmlns:terms="platform:/plugin/org.eclipse.gmf.grafcet/model/terms.ecore">
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://www.example.org/grafcet" xmlns:terms="http://www.example.org/terms">
   <variableDeclarationContainer>
     <variableDeclarations name="e1">
       <sort xsi:type="terms:Integer" id="9001"/>

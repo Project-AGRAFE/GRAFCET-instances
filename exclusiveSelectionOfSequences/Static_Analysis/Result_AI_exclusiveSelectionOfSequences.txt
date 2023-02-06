@@ -1,0 +1,8 @@
+Concurrency Analysis: 
+Partial Grafcet de.hsu.grafcet.staticAnalysis.hypergraf.Subgraf@29e69a9c
+ Dependency: GlobalGrafcet - with initialization type initialStep: 
+reachable steps: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+concurrent steps: 
+
+
+Concurrency Analysis: 
