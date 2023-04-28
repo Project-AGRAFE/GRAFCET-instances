@@ -4,6 +4,7 @@ import de.hsu.grafcet.*;
 import terms.Addition;
 import terms.BooleanConstant;
 import terms.IntegerConstant;
+import terms.Sort;
 import terms.Term;
 import terms.TermsFactory;
 import terms.Variable;
@@ -44,7 +45,7 @@ public class GrafcetSerializer {
 	private void serializeInstance(GrafcetSerializerInstanceType instanceType) {
 		switch (instanceType) {
 		case BASIC_SEQUENCE: {
-			serializeBasicSequence(m);
+			serializeBasicSequence(m, createPartialgrafcet("G1"));
 			
 		} break;
 		case BASIC_PARALLEL: {
@@ -52,31 +53,32 @@ public class GrafcetSerializer {
 			
 		} break;
 		case BASIC_VARIABLES: {
-			throw new IllegalArgumentException("Unexpected value: " + instanceType);
+			serializeBasicVariables(m, n);
 	
 		} 
-//		break;
+		break;
 		case HIERARCHICAL_SEQUENCE: {
-			throw new IllegalArgumentException("Unexpected value: " + instanceType);
+			serializeHierarchicalSequence(m, n);
 	
 		} 
-//		break;
+		break;
 		case HIERARCHICAL_PARALLEL: {
-			throw new IllegalArgumentException("Unexpected value: " + instanceType);
+			serializeHierarchicalParallel(m, n);
 	
 		} 
-//		break;
+		break;
 		default:
 			throw new IllegalArgumentException("Unexpected value: " + instanceType);
 		}
 	}
 	
 	/**
-	 * creates a partial Grafcet with a simple loop with m steps in sequence
-	 * @param m
+	 * creates a simple loop with m steps in a sequence with one initial step and adds it to p 
+	 * @param m no of steps
+	 * @param p partial grafcet the loop is added to
 	 */
-	private void serializeBasicSequence(int m) {
-		PartialGrafcet p = createPartialgrafcet("G1");	
+	private void serializeBasicSequence(int m, PartialGrafcet p) {
+		//PartialGrafcet p = createPartialgrafcet("G1");	
 		
 		int scale = (int) Math.pow(10, String.valueOf(m).length());
 		
@@ -149,16 +151,140 @@ public class GrafcetSerializer {
 		}
 		return syncB;
 	}
+	/**
+	 * creates a partial grafcet with a simple loop of n steps. For every step it creates m actions for n different variables. 
+	 * The initial step sets the variables to zero and all other n-1 steps incremet the m variables.
+	 * n*m actions in total.
+	 * @param m no of variable declarations
+	 * @param n no of steps
+	 */
+	private void serializeBasicVariables(int m, int n) {
+		PartialGrafcet p = createPartialgrafcet("G1");	
+		serializeBasicSequence(n, p);
+		
+		for (int i = 1; i <= m; i++) {
+			VariableDeclaration varDecl = createVariableDeclaration("k" + i, facT.createInteger(), VariableDeclarationType.INTERNAL);
+			for(int j = 0; j < n; j++) {
+				Step step = (Step) p.getSteps().get(j);
+				if(step.isInitial()) {
+					createActionAndActionLink(varDecl, step, p, createVariableZero());
+				} else {
+					createActionAndActionLink(varDecl, step, p, createIncrement(varDecl));
+				}
+			}
+		}
+	}
 	
-	private void serializeBasicVariables() {
-		PartialGrafcet p = facG.createPartialGrafcet();
-		grafcet.getPartialGrafcets().add(p);
+	/**
+	 * creates m partial grafcets containing a simple loop of n steps with 1 initial step. n*m steps in total
+	 * @param m no of partial Grafcets
+	 * @param n no of steps per partial Grafcet
+	 */
+	private void serializeHierarchicalSequence(int m, int n) {
+		for (int i = 1; i <= m; i++) {
+			PartialGrafcet p = createPartialgrafcet("G" + i);
+			serializeBasicSequence(n, p);
+		}
 	}
-	private void serializeHierarchicalSequence() {
+	
+	
+	private void createEnclosingStepLoop(PartialGrafcet containingPG, boolean hasEnclosingStep, boolean hasInitialStep, boolean hasActivationLik, int noSteps, PartialGrafcet inferiorPartialGrafcet) {
+		Step s1;
+		if(hasActivationLik) {	
+			s1 = createStepWActivationLink(hasInitialStep, 1, containingPG);
+		} else {
+			s1 = createStep(hasInitialStep, 1, containingPG);
+		}
+		Transition t1 = createTransition(1, containingPG);
+		createArc(s1, t1, containingPG);
+		
+		Transition tUpstream = t1;
+		
+		for (int j = 2; j <= m - 1; j++) {
+			Step s = createStep(false, j, containingPG);
+			Transition t = createTransition(j, containingPG);
+			createArc(tUpstream, s, containingPG);
+			createArc(s, t, containingPG);
+			tUpstream = t;
+		}
+		
+		InitializableType e;
+		if(hasEnclosingStep) {
+			if (inferiorPartialGrafcet == null ) {
+				throw new IllegalArgumentException("inferiorpartialGrafcet == null");
+			}
+			e = createEnclosingStep(false, m, containingPG, inferiorPartialGrafcet);
+		} else {
+			e = createStep(false , m, containingPG);
+		}
+		createArc(tUpstream, e, containingPG);
+		Transition tb = createTransition(1, containingPG);
+		createArc(e, tb, containingPG);
+		createArc(tb, s1, containingPG);
+		
 		
 	}
-	private void serializeHierarchicalParallel() {
+	/**
+	 * creates m partial grafcets containing a loop of n steps. 
+	 * Enclosing steps induce hierarchical dependencies between partial Grafcet forming a hierarchical branch.
+	 * n * m steps;
+	 * @param m no partial Grafcets
+	 * @param n no steps per partial Grafcets
+	 */
+	private void serializeHierarchicalParallel(int m, int n) {
+		PartialGrafcet pm = createPartialgrafcet("G" + m);
+		createEnclosingStepLoop(pm, false, false, true, n, null);
+		PartialGrafcet inferior = pm;
+		for (int i = m - 1; i > 1; i--) {
+			PartialGrafcet p = createPartialgrafcet("G" + i);
+			createEnclosingStepLoop(p, true, false, true, n, inferior);
+			inferior = p;
+		}
+		PartialGrafcet p1 = createPartialgrafcet("G" + 1);
+		createEnclosingStepLoop(p1, true, true, false, n, inferior);
+	}
+
+	
+	private ActionLink createActionAndActionLink(VariableDeclaration var, Step associatedStep, PartialGrafcet containingPG, Term value) {
+		StoredAction a = facG.createStoredAction();
+		a.setVariable(createVariable(var));
+		a.setValue(value);
 		
+		containingPG.getActionTypes().add(a);
+		ActionLink al = facG.createActionLink();
+		al.setActionType(a);
+		al.setStep(associatedStep);
+		containingPG.getActionLinks().add(al);
+		return al;
+	}
+	
+	private Term createVariableZero() {
+		IntegerConstant i = facT.createIntegerConstant();
+		i.setValue(0);
+		return i;
+	}
+	
+	private Term createIncrement(VariableDeclaration varDecl) {
+		Addition value = facT.createAddition();
+		value.getSubterm().add(createVariable(varDecl));
+		IntegerConstant i = facT.createIntegerConstant();
+		i.setValue(1);
+		value.getSubterm().add(i);
+		return value;
+	}
+	private Variable createVariable(VariableDeclaration vd) {
+		Variable v = facT.createVariable();
+		v.setVariableDeclaration(vd);
+		return v;
+	}
+	
+	private VariableDeclaration createVariableDeclaration(String varName, Sort sort, VariableDeclarationType type) {
+		VariableDeclaration varDecl = facT.createVariableDeclaration();
+		varDecl.setName(varName);
+		varDecl.setSort(sort);
+		varDecl.setVariableDeclarationType(type);
+		grafcet.getVariableDeclarationContainer().getVariableDeclarations().add(varDecl);
+		return varDecl;
 	}
 	
 	/**
@@ -176,6 +302,12 @@ public class GrafcetSerializer {
 		return s;
 	}
 	
+	private Step createStepWActivationLink(boolean initial, int id, PartialGrafcet containingPG) {
+		Step s = createStep(initial, id, containingPG);
+		s.setActivationLink(true);
+		return s;
+	}
+	
 	/**
 	 * Creates transition and adds it to the transition list of containingPG
 	 * @param id
@@ -190,6 +322,14 @@ public class GrafcetSerializer {
 		t.setTerm(createTermTrue());
 		
 		return t;
+	}
+	private EnclosingStep createEnclosingStep(boolean initial, int id, PartialGrafcet containingPG, PartialGrafcet inferiorPG) {
+		EnclosingStep s = facG.createEnclosingStep();
+		s.setInitial(initial);
+		s.setId(id);
+		containingPG.getSteps().add(s);
+		s.getPartialGrafcets().add(inferiorPG);
+		return s;
 	}
 	
 	private Term createTermTrue() {

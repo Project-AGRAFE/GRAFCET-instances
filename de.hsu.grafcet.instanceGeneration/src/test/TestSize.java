@@ -4,6 +4,10 @@ public class TestSize {
 
 	public static void main(String[] args) {
 		
+		for(int j = 3; j <= 2; j++) {
+			System.out.println("''''''''''#######''''''''''''");
+		}
+		
 		
 		double result = 3;
 		int width = 3;

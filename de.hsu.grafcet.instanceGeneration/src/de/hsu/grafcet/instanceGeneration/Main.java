@@ -6,16 +6,23 @@ import de.hsu.grafcet.instanceGeneration.GrafcetSerializer.GrafcetSerializerInst
 public class Main {
 
 	public static void main(String[] args) {
-		serializePrallelInstances(4);
 		
+		serializeInstance(5, 3, GrafcetSerializerInstanceType.HIERARCHICAL_SEQUENCE);
 
 	}
 	
-	private static void serializePrallelInstances(int noOfInstances) {
-		for(int i = 1 ; i <= noOfInstances ; i ++) {
-			GrafcetSerializer serializer = new GrafcetSerializer(GrafcetSerializerInstanceType.BASIC_PARALLEL, i , 3);
-			Grafcet g = serializer.getGrafcet();
-			XMISerializer.serilizeGrafcetToXMI(g, "g_" + i);
+	private static void serializeInstance(int m, int n, GrafcetSerializerInstanceType type) {
+		GrafcetSerializer serializer = new GrafcetSerializer(type, m , n);
+		Grafcet g = serializer.getGrafcet();
+		XMISerializer.serilizeGrafcetToXMI(g, type.toString() + "_m" + m + "_n" + n);
+	}
+	private static void serializeInstances(int start_m, int end_m, int n) {
+		for(int i = start_m ; i <= end_m ; i ++) {
+			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_SEQUENCE);
+			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_PARALLEL);
+			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_VARIABLES);
+			serializeInstance(i, n, GrafcetSerializerInstanceType.HIERARCHICAL_SEQUENCE);
+			serializeInstance(i, n, GrafcetSerializerInstanceType.HIERARCHICAL_PARALLEL);
 		}
 	}
 
