@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: InstanceGeneration
+Bundle-SymbolicName: de.hsu.grafcet.instanceGeneration
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: de.hsu.grafcet;bundle-version="0.1.0"
+Import-Package: de.hsu.grafcet,
+ terms
+Automatic-Module-Name: de.hsu.grafcet.instanceGeneration
+Bundle-RequiredExecutionEnvironment: JavaSE-17

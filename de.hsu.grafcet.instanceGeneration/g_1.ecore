@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://www.example.org/grafcet" xmlns:terms="http://www.example.org/terms">
+  <variableDeclarationContainer/>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G1">
+    <steps xsi:type="grafcet:Step" id="1" initial="true"/>
+    <steps xsi:type="grafcet:Step" id="11"/>
+    <steps xsi:type="grafcet:Step" id="111"/>
+    <steps xsi:type="grafcet:Step" id="14"/>
+    <steps xsi:type="grafcet:Step" id="12"/>
+    <steps xsi:type="grafcet:Step" id="121"/>
+    <steps xsi:type="grafcet:Step" id="15"/>
+    <steps xsi:type="grafcet:Step" id="13"/>
+    <steps xsi:type="grafcet:Step" id="131"/>
+    <steps xsi:type="grafcet:Step" id="16"/>
+    <steps xsi:type="grafcet:Step" id="2"/>
+    <transitions id="1">
+      <term xsi:type="terms:BooleanConstant" value="true"/>
+    </transitions>
+    <transitions id="11">
+      <term xsi:type="terms:BooleanConstant" value="true"/>
+    </transitions>
+    <transitions id="14">
+      <term xsi:type="terms:BooleanConstant" value="true"/>
+    </transitions>
+    <transitions id="12">
+      <term xsi:type="terms:BooleanConstant" value="true"/>
+    </transitions>
+    <transitions id="15">
+      <term xsi:type="terms:BooleanConstant" value="true"/>
+    </transitions>
+    <transitions id="13">
+      <term xsi:type="terms:BooleanConstant" value="true"/>
+    </transitions>
+    <transitions id="16">
+      <term xsi:type="terms:BooleanConstant" value="true"/>
+    </transitions>
+    <transitions id="2">
+      <term xsi:type="terms:BooleanConstant" value="true"/>
+    </transitions>
+    <transitions id="3">
+      <term xsi:type="terms:BooleanConstant" value="true"/>
+    </transitions>
+    <synchronizations/>
+    <synchronizations/>
+    <arcs source="//@partialGrafcets.0/@steps.0" target="//@partialGrafcets.0/@transitions.0"/>
+    <arcs source="//@partialGrafcets.0/@transitions.0" target="//@partialGrafcets.0/@synchronizations.0"/>
+    <arcs source="//@partialGrafcets.0/@synchronizations.0" target="//@partialGrafcets.0/@steps.1"/>
+    <arcs source="//@partialGrafcets.0/@steps.1" target="//@partialGrafcets.0/@transitions.1"/>
+    <arcs source="//@partialGrafcets.0/@transitions.1" target="//@partialGrafcets.0/@steps.2"/>
+    <arcs source="//@partialGrafcets.0/@steps.2" target="//@partialGrafcets.0/@transitions.2"/>
+    <arcs source="//@partialGrafcets.0/@transitions.2" target="//@partialGrafcets.0/@steps.3"/>
+    <arcs source="//@partialGrafcets.0/@steps.3" target="//@partialGrafcets.0/@synchronizations.1"/>
+    <arcs source="//@partialGrafcets.0/@synchronizations.0" target="//@partialGrafcets.0/@steps.4"/>
+    <arcs source="//@partialGrafcets.0/@steps.4" target="//@partialGrafcets.0/@transitions.3"/>
+    <arcs source="//@partialGrafcets.0/@transitions.3" target="//@partialGrafcets.0/@steps.5"/>
+    <arcs source="//@partialGrafcets.0/@steps.5" target="//@partialGrafcets.0/@transitions.4"/>
+    <arcs source="//@partialGrafcets.0/@transitions.4" target="//@partialGrafcets.0/@steps.6"/>
+    <arcs source="//@partialGrafcets.0/@steps.6" target="//@partialGrafcets.0/@synchronizations.1"/>
+    <arcs source="//@partialGrafcets.0/@synchronizations.0" target="//@partialGrafcets.0/@steps.7"/>
+    <arcs source="//@partialGrafcets.0/@steps.7" target="//@partialGrafcets.0/@transitions.5"/>
+    <arcs source="//@partialGrafcets.0/@transitions.5" target="//@partialGrafcets.0/@steps.8"/>
+    <arcs source="//@partialGrafcets.0/@steps.8" target="//@partialGrafcets.0/@transitions.6"/>
+    <arcs source="//@partialGrafcets.0/@transitions.6" target="//@partialGrafcets.0/@steps.9"/>
+    <arcs source="//@partialGrafcets.0/@steps.9" target="//@partialGrafcets.0/@synchronizations.1"/>
+    <arcs source="//@partialGrafcets.0/@synchronizations.1" target="//@partialGrafcets.0/@transitions.7"/>
+    <arcs source="//@partialGrafcets.0/@transitions.7" target="//@partialGrafcets.0/@steps.10"/>
+    <arcs source="//@partialGrafcets.0/@steps.10" target="//@partialGrafcets.0/@transitions.8"/>
+    <arcs source="//@partialGrafcets.0/@transitions.8" target="//@partialGrafcets.0/@steps.0"/>
+  </partialGrafcets>
+</grafcet:Grafcet>
