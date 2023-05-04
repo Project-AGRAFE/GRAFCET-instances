@@ -37,6 +37,7 @@ public class GrafcetSerializer {
 		facT = TermsFactory.eINSTANCE;
 		grafcet = facG.createGrafcet();
 		grafcet.setVariableDeclarationContainer(facG.createVariableDeclarationContainer());
+		createVariableDeclaration("testDummy", facT.createInteger(), VariableDeclarationType.INTERNAL);
 	}
 	public Grafcet getGrafcet() {
 		return grafcet;
@@ -112,7 +113,15 @@ public class GrafcetSerializer {
 		Transition t1 = createTransition(1, p);
 		createArc(s1, t1, p);
 		
-		Node middleNode = recursionBasicParallel(t1, n, p, m, 1);
+		Node middleNode;
+		if (m > 0) {
+			middleNode = recursionBasicParallel(t1, n, p, m, 1);
+		} else if (m == 0) {
+			middleNode = createStep(false, 11, p);
+			createArc(t1, middleNode, p);
+		} else {
+			throw new IllegalArgumentException("Unexpected value for n: " + n);
+		}
 		
 		
 		Transition t2 = createTransition(2, p);

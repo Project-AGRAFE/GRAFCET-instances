@@ -7,7 +7,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		serializeInstance(5, 3, GrafcetSerializerInstanceType.HIERARCHICAL_SEQUENCE);
+//		serializeInstance(2, 2, GrafcetSerializerInstanceType.BASIC_VARIABLES);
+		serializeInstances(0, 15, 2);
 
 	}
 	
@@ -18,11 +19,11 @@ public class Main {
 	}
 	private static void serializeInstances(int start_m, int end_m, int n) {
 		for(int i = start_m ; i <= end_m ; i ++) {
-			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_SEQUENCE);
+//			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_SEQUENCE);
 			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_PARALLEL);
-			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_VARIABLES);
-			serializeInstance(i, n, GrafcetSerializerInstanceType.HIERARCHICAL_SEQUENCE);
-			serializeInstance(i, n, GrafcetSerializerInstanceType.HIERARCHICAL_PARALLEL);
+//			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_VARIABLES);
+//			serializeInstance(i, n, GrafcetSerializerInstanceType.HIERARCHICAL_SEQUENCE);
+//			serializeInstance(i, n, GrafcetSerializerInstanceType.HIERARCHICAL_PARALLEL);
 		}
 	}
 
