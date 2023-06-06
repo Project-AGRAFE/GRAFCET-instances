@@ -1,0 +1,14 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 21 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+No race conditions detected
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [1, 21, 2, 22]

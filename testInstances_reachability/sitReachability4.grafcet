@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://www.example.org/grafcet" xmlns:terms="http://www.example.org/terms" name="Global Grafcet">
+  <variableDeclarationContainer>
+    <variableDeclarations name="X1" variableDeclarationType="step" step="//@partialGrafcets.0/@steps.0">
+      <sort xsi:type="terms:Bool" id="9001"/>
+    </variableDeclarations>
+    <variableDeclarations name="X1" variableDeclarationType="step" step="//@partialGrafcets.1/@steps.0">
+      <sort xsi:type="terms:Bool" id="9002"/>
+    </variableDeclarations>
+    <variableDeclarations name="X1" variableDeclarationType="step" step="//@partialGrafcets.2/@steps.0">
+      <sort xsi:type="terms:Bool" id="9003"/>
+    </variableDeclarations>
+    <variableDeclarations name="dummy" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9004"/>
+    </variableDeclarations>
+  </variableDeclarationContainer>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G1">
+    <steps xsi:type="grafcet:Step" id="11" initial="true"/>
+    <steps xsi:type="grafcet:EnclosingStep" id="12" partialGrafcets="//@partialGrafcets.1"/>
+    <steps xsi:type="grafcet:EnclosingStep" id="13" partialGrafcets="//@partialGrafcets.2"/>
+    <transitions id="11">
+      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.0/@transitions.0/@term/@output" id="11" value="true">
+        <output xsi:type="terms:Bool" id="111"/>
+      </term>
+    </transitions>
+    <transitions id="12">
+      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.0/@transitions.1/@term/@output" id="21" value="true">
+        <output xsi:type="terms:Bool" id="211"/>
+      </term>
+    </transitions>
+    <arcs source="//@partialGrafcets.0/@steps.0" target="//@partialGrafcets.0/@transitions.0"/>
+    <arcs source="//@partialGrafcets.0/@transitions.0" target="//@partialGrafcets.0/@steps.1"/>
+    <arcs source="//@partialGrafcets.0/@steps.1" target="//@partialGrafcets.0/@transitions.1"/>
+    <arcs source="//@partialGrafcets.0/@transitions.1" target="//@partialGrafcets.0/@steps.2"/>
+  </partialGrafcets>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G10" enclosingStep="//@partialGrafcets.0/@steps.1">
+    <partialGrafcets xsi:type="grafcet:PartialGrafcet"/>
+    <partialGrafcets xsi:type="grafcet:PartialGrafcet"/>
+    <steps xsi:type="grafcet:Step" id="101" activationLink="true"/>
+  </partialGrafcets>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G2" enclosingStep="//@partialGrafcets.0/@steps.2">
+    <partialGrafcets xsi:type="grafcet:PartialGrafcet"/>
+    <steps xsi:type="grafcet:Step" id="21" activationLink="true"/>
+  </partialGrafcets>
+</grafcet:Grafcet>

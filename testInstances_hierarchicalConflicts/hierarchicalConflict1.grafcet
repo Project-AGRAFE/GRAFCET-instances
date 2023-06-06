@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://www.example.org/grafcet" xmlns:terms="http://www.example.org/terms">
+  <variableDeclarationContainer>
+    <variableDeclarations name="dummy" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9001"/>
+    </variableDeclarations>
+    <variableDeclarations name="x" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9007"/>
+    </variableDeclarations>
+    <variableDeclarations name="a">
+      <sort xsi:type="terms:Bool" id="9003"/>
+    </variableDeclarations>
+    <variableDeclarations name="b">
+      <sort xsi:type="terms:Bool" id="9004"/>
+    </variableDeclarations>
+  </variableDeclarationContainer>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G1">
+    <steps xsi:type="grafcet:Step" id="1" initial="true"/>
+    <steps xsi:type="grafcet:Step" id="2"/>
+    <steps xsi:type="grafcet:Step" id="3"/>
+    <steps xsi:type="grafcet:Step" id="5"/>
+    <steps xsi:type="grafcet:EnclosingStep" id="6" partialGrafcets="//@partialGrafcets.1"/>
+    <transitions id="1">
+      <term xsi:type="terms:Variable" id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+    </transitions>
+    <transitions id="2">
+      <term xsi:type="terms:Variable" id="21" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+    </transitions>
+    <transitions id="3">
+      <term xsi:type="terms:Variable" id="31" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+    </transitions>
+    <transitions id="4">
+      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.0/@transitions.3/@term/@output" id="41" value="true">
+        <output xsi:type="terms:Bool" id="411"/>
+      </term>
+    </transitions>
+    <synchronizations/>
+    <synchronizations/>
+    <arcs source="//@partialGrafcets.0/@synchronizations.0" target="//@partialGrafcets.0/@steps.1"/>
+    <arcs source="//@partialGrafcets.0/@synchronizations.0" target="//@partialGrafcets.0/@steps.4"/>
+    <arcs source="//@partialGrafcets.0/@steps.2" target="//@partialGrafcets.0/@synchronizations.1"/>
+    <arcs source="//@partialGrafcets.0/@steps.4" target="//@partialGrafcets.0/@synchronizations.1"/>
+    <arcs source="//@partialGrafcets.0/@steps.1" target="//@partialGrafcets.0/@transitions.0"/>
+    <arcs source="//@partialGrafcets.0/@transitions.0" target="//@partialGrafcets.0/@steps.3"/>
+    <arcs source="//@partialGrafcets.0/@steps.3" target="//@partialGrafcets.0/@transitions.1"/>
+    <arcs source="//@partialGrafcets.0/@transitions.1" target="//@partialGrafcets.0/@steps.2"/>
+    <arcs source="//@partialGrafcets.0/@synchronizations.1" target="//@partialGrafcets.0/@transitions.2"/>
+    <arcs source="//@partialGrafcets.0/@steps.0" target="//@partialGrafcets.0/@transitions.3"/>
+    <arcs source="//@partialGrafcets.0/@transitions.3" target="//@partialGrafcets.0/@synchronizations.0"/>
+    <actionTypes xsi:type="grafcet:ForcingOrder" id="1" partialGrafcet="//@partialGrafcets.1" forcedSteps="//@partialGrafcets.1/@steps.1"/>
+    <actionLinks step="//@partialGrafcets.0/@steps.3" actionType="//@partialGrafcets.0/@actionTypes.0"/>
+  </partialGrafcets>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G2" enclosingStep="//@partialGrafcets.0/@steps.4">
+    <steps xsi:type="grafcet:Step" id="21" activationLink="true"/>
+    <steps xsi:type="grafcet:Step" id="22"/>
+    <transitions id="21">
+      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.1/@transitions.0/@term/@output" id="11" value="true">
+        <output xsi:type="terms:Bool" id="111"/>
+      </term>
+    </transitions>
+    <arcs source="//@partialGrafcets.1/@steps.0" target="//@partialGrafcets.1/@transitions.0"/>
+    <arcs source="//@partialGrafcets.1/@transitions.0" target="//@partialGrafcets.1/@steps.1"/>
+  </partialGrafcets>
+</grafcet:Grafcet>

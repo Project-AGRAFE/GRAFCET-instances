@@ -1,0 +1,17 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 1 always fires.
+ERROR: Transition 2 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+The following race conditions were detected: 
+Action StAction [deactivation, val=IntegerConstantImpl, var=x, in=G1] is in conflict with StAction [activation, val=IntegerConstantImpl, var=x, in=G1]
+
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [2]

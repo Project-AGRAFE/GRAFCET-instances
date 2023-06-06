@@ -1,0 +1,32 @@
+
+
+
+#################  Final interfaces  ###############
+===== G1 =====
+===== G1 (0) =====
+Variables: 	dummy	
+===== G2 =====
+===== G2 (0) =====
+Variables: 	dummy	
+===== G10 =====
+===== G10 (0) =====
+Variables: 	dummy	
+
+
+#################  Final abstract values  ###############
+===== G1 =====
+===== G1 (0) =====
+Variables: 	dummy	
+Tran 11: 	[-0.0,0.0]	
+Step 13: 	[-0.0,0.0]	
+Step 11: 	[-0.0,0.0]	
+Step 12: 	[-0.0,0.0]	
+Tran 12: 	[-0.0,0.0]	
+===== G2 =====
+===== G2 (0) =====
+Variables: 	dummy	
+Step 21: 	[-0.0,0.0]	
+===== G10 =====
+===== G10 (0) =====
+Variables: 	dummy	
+Step 101: 	[-0.0,0.0]	

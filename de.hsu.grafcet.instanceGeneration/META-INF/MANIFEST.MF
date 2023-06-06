@@ -8,3 +8,4 @@ Import-Package: de.hsu.grafcet,
  terms
 Automatic-Module-Name: de.hsu.grafcet.instanceGeneration
 Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: de.hsu.grafcet.instanceGeneration

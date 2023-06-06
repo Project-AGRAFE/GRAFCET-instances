@@ -1,0 +1,29 @@
+
+
+
+#################  Final interfaces  ###############
+===== G2 =====
+===== G2 (0) =====
+Variables: 	dummy	x1	x2	
+Step 21: 	[1.0,-1.0]	[1.0,-1.0]	[1.0,Infinity]	
+===== G1 =====
+===== G1 (0) =====
+Variables: 	dummy	x1	x2	
+Step 1: 	[1.0,-1.0]	[1.0,Infinity]	[1.0,-1.0]	
+
+
+#################  Final abstract values  ###############
+===== G2 =====
+===== G2 (0) =====
+Variables: 	dummy	x1	x2	
+Step 21: 	[-0.0,0.0]	[-0.0,0.0]	[-0.0,Infinity]	
+Tran 22: 	[-0.0,0.0]	[-0.0,Infinity]	[1.0,Infinity]	
+Tran 21: 	[-0.0,0.0]	[-0.0,Infinity]	[1.0,Infinity]	
+Step 22: 	[-0.0,0.0]	[-0.0,Infinity]	[1.0,Infinity]	
+===== G1 =====
+===== G1 (0) =====
+Variables: 	dummy	x1	x2	
+Tran 2: 	[-0.0,0.0]	[1.0,Infinity]	[1.0,Infinity]	
+Step 1: 	[-0.0,0.0]	[-0.0,Infinity]	[-0.0,Infinity]	
+Tran 1: 	[-0.0,0.0]	[1.0,Infinity]	[-0.0,Infinity]	
+Step 2: 	[-0.0,0.0]	[1.0,Infinity]	[5.0,Infinity]	
