@@ -1,0 +1,19 @@
+Reachability and Concurrency analysis: 
+
+Partial Grafcet de.hsu.grafcet.staticAnalysis.hypergraf.Subgraf@60c30cf3
+ Dependency: GRAFCETChart - with initialization type initialStep: 
+reachable steps: [4, 1, 5, 2, 3]
+concurrent steps: 
+4: [1, 2, 3]
+1: [4, 5]
+5: [1, 2, 3]
+2: [4, 5]
+3: [4, 5]
+
+
+ global Concurrncy:
+4:  [1, 2, 3]
+2:  [4, 5]
+3:  [4, 5]
+5:  [1, 2, 3]
+1:  [4, 5]

@@ -1,0 +1,19 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 21 always fires.
+ERROR: Transition 21 never fires.
+ERROR: Transition 21 always fires.
+ERROR: Transition 4 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+The following conflicts between hierarchies were detected: 
+Hierarchy forced associated to step 5 is in conflict with enclosed associated to step 6
+
+
+== Results RaceConditionDetecter: ==
+No race conditions detected
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [3, 2, 5, 6]

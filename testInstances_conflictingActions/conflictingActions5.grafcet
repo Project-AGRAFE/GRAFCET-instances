@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://www.example.org/grafcet" xmlns:terms="http://www.example.org/terms">
+  <variableDeclarationContainer>
+    <variableDeclarations name="dummy" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9001"/>
+    </variableDeclarations>
+    <variableDeclarations name="x" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9007"/>
+    </variableDeclarations>
+  </variableDeclarationContainer>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G1">
+    <steps xsi:type="grafcet:Step" id="1" initial="true"/>
+    <steps xsi:type="grafcet:Step" id="2"/>
+    <steps xsi:type="grafcet:Step" id="3"/>
+    <transitions id="1">
+      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.0/@transitions.0/@term/@output" id="11" value="true">
+        <output xsi:type="terms:Bool" id="111"/>
+      </term>
+    </transitions>
+    <transitions id="2">
+      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.0/@transitions.1/@term/@output" id="21" value="true">
+        <output xsi:type="terms:Bool" id="211"/>
+      </term>
+    </transitions>
+    <arcs source="//@partialGrafcets.0/@steps.0" target="//@partialGrafcets.0/@transitions.0"/>
+    <arcs source="//@partialGrafcets.0/@transitions.0" target="//@partialGrafcets.0/@steps.1"/>
+    <arcs source="//@partialGrafcets.0/@steps.1" target="//@partialGrafcets.0/@transitions.1"/>
+    <arcs source="//@partialGrafcets.0/@transitions.1" target="//@partialGrafcets.0/@steps.2"/>
+    <actionTypes xsi:type="grafcet:StoredAction" id="1">
+      <variable id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+      <value xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.0/@actionTypes.0/@value/@output" id="12" value="2">
+        <output xsi:type="terms:Integer" id="121"/>
+      </value>
+    </actionTypes>
+    <actionTypes xsi:type="grafcet:StoredAction" id="1" storedActionType="deactivation">
+      <variable id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+      <value xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.0/@actionTypes.1/@value/@output" id="12" value="1">
+        <output xsi:type="terms:Integer" id="121"/>
+      </value>
+    </actionTypes>
+    <actionLinks step="//@partialGrafcets.0/@steps.1" actionType="//@partialGrafcets.0/@actionTypes.1"/>
+    <actionLinks step="//@partialGrafcets.0/@steps.2" actionType="//@partialGrafcets.0/@actionTypes.0"/>
+  </partialGrafcets>
+</grafcet:Grafcet>

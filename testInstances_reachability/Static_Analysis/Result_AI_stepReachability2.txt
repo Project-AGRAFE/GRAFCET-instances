@@ -1,0 +1,17 @@
+
+
+
+#################  Final interfaces  ###############
+===== GRAFCETChart =====
+===== GRAFCETChart (0) =====
+Variables: 	dummy	
+
+
+#################  Final abstract values  ###############
+===== GRAFCETChart =====
+===== GRAFCETChart (0) =====
+Variables: 	dummy	
+Step 2: 	[-0.0,0.0]	
+Tran 1: 	[-0.0,0.0]	
+Step 3: 	[1.0,-1.0]	
+Step 1: 	[-0.0,0.0]	

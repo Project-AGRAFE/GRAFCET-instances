@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://www.example.org/grafcet" xmlns:terms="http://www.example.org/terms">
+  <variableDeclarationContainer>
+    <variableDeclarations name="dummy" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9001"/>
+    </variableDeclarations>
+    <variableDeclarations name="x" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9007"/>
+    </variableDeclarations>
+  </variableDeclarationContainer>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G1">
+    <steps xsi:type="grafcet:Step" id="1" initial="true"/>
+    <steps xsi:type="grafcet:Step" id="2"/>
+    <steps xsi:type="grafcet:Step" id="3"/>
+    <steps xsi:type="grafcet:Step" id="4"/>
+    <steps xsi:type="grafcet:Step" id="5"/>
+    <synchronizations/>
+    <actionTypes xsi:type="grafcet:StoredAction" id="1">
+      <variable id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+      <value xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.0/@actionTypes.0/@value/@output" id="12" value="2">
+        <output xsi:type="terms:Integer" id="121"/>
+      </value>
+    </actionTypes>
+    <actionTypes xsi:type="grafcet:StoredAction" id="1">
+      <variable id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+      <value xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.0/@actionTypes.1/@value/@output" id="12" value="1">
+        <output xsi:type="terms:Integer" id="121"/>
+      </value>
+    </actionTypes>
+  </partialGrafcets>
+</grafcet:Grafcet>

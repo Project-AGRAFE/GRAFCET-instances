@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://www.example.org/grafcet" xmlns:terms="http://www.example.org/terms">
+  <variableDeclarationContainer>
+    <variableDeclarations name="dummy" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9001"/>
+    </variableDeclarations>
+    <variableDeclarations name="x" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9007"/>
+    </variableDeclarations>
+  </variableDeclarationContainer>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G1">
+    <steps xsi:type="grafcet:Step" id="1" initial="true"/>
+    <steps xsi:type="grafcet:Step" id="2"/>
+    <transitions id="1">
+      <term xsi:type="terms:LessThan" sort="//@partialGrafcets.0/@transitions.0/@term/@output" id="11" input="//@partialGrafcets.0/@transitions.0/@term/@subterm.1/@output">
+        <subterm xsi:type="terms:Variable" id="112" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.0/@transitions.0/@term/@subterm.1/@output" id="113" value="5">
+          <output xsi:type="terms:Integer" id="1131"/>
+        </subterm>
+        <output xsi:type="terms:Bool" id="111"/>
+      </term>
+    </transitions>
+    <transitions id="2">
+      <term xsi:type="terms:GreaterThan" sort="//@partialGrafcets.0/@transitions.1/@term/@output" id="21" input="//@partialGrafcets.0/@transitions.1/@term/@subterm.1/@output">
+        <subterm xsi:type="terms:Variable" id="212" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.0/@transitions.1/@term/@subterm.1/@output" id="213" value="4">
+          <output xsi:type="terms:Integer" id="2131"/>
+        </subterm>
+        <output xsi:type="terms:Bool" id="211"/>
+      </term>
+    </transitions>
+    <transitions id="3">
+      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.0/@transitions.2/@term/@output" id="31" value="true">
+        <output xsi:type="terms:Bool" id="311"/>
+      </term>
+    </transitions>
+    <arcs source="//@partialGrafcets.0/@steps.0" target="//@partialGrafcets.0/@transitions.0"/>
+    <arcs source="//@partialGrafcets.0/@steps.0" target="//@partialGrafcets.0/@transitions.1"/>
+    <arcs source="//@partialGrafcets.0/@transitions.0" target="//@partialGrafcets.0/@steps.1"/>
+    <arcs source="//@partialGrafcets.0/@steps.1" target="//@partialGrafcets.0/@transitions.2"/>
+    <arcs source="//@partialGrafcets.0/@transitions.2" target="//@partialGrafcets.0/@steps.0"/>
+    <actionTypes xsi:type="grafcet:StoredAction" id="1">
+      <variable id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+      <value xsi:type="terms:Addition" sort="//@partialGrafcets.0/@actionTypes.0/@value/@output" id="12" input="//@partialGrafcets.0/@actionTypes.0/@value/@subterm.1/@output">
+        <subterm xsi:type="terms:Variable" id="122" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.0/@actionTypes.0/@value/@subterm.1/@output" id="123" value="1">
+          <output xsi:type="terms:Integer" id="1231"/>
+        </subterm>
+        <output xsi:type="terms:Integer" id="121"/>
+      </value>
+    </actionTypes>
+    <actionTypes xsi:type="grafcet:StoredAction" id="2">
+      <variable id="21" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+      <value xsi:type="terms:Substraction" sort="//@partialGrafcets.0/@actionTypes.1/@value/@output" id="22" input="//@partialGrafcets.0/@actionTypes.1/@value/@subterm.1/@output">
+        <subterm xsi:type="terms:Variable" id="222" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.0/@actionTypes.1/@value/@subterm.1/@output" id="223" value="1">
+          <output xsi:type="terms:Integer" id="2231"/>
+        </subterm>
+        <output xsi:type="terms:Integer" id="221"/>
+      </value>
+    </actionTypes>
+    <actionLinks step="//@partialGrafcets.0/@steps.0" actionType="//@partialGrafcets.0/@actionTypes.0"/>
+    <actionLinks step="//@partialGrafcets.0/@steps.1" actionType="//@partialGrafcets.0/@actionTypes.1"/>
+  </partialGrafcets>
+</grafcet:Grafcet>

@@ -1,0 +1,75 @@
+ 
+
+ ========  iteration 1 ======== 
+
+
+=== GRAFCETChart ===
+
+===== after initialization =====
+===== after initialization (0) =====
+Variables: 	k	
+Tran 3: 	[1.0,-1.0]	
+Tran 1: 	[1.0,-1.0]	
+Step 4: 	[1.0,-1.0]	
+Step 1: 	[-0.0,0.0]	
+Tran 2: 	[1.0,-1.0]	
+Step 2: 	[1.0,-1.0]	
+Step 3: 	[1.0,-1.0]	
+Step 5: 	[1.0,-1.0]	
+
+===== interface =====
+===== interface (0) =====
+Variables: 	k	
+Int   : 	[1.0,-1.0]	
+
+===== termination - result =====
+===== termination - result (0) =====
+Variables: 	k	
+Tran 3: 	[-0.0,0.0]	
+Tran 1: 	[-0.0,0.0]	
+Step 4: 	[1.0,-1.0]	
+Step 1: 	[-0.0,0.0]	
+Tran 2: 	[-0.0,0.0]	
+Step 2: 	[-0.0,0.0]	
+Step 3: 	[-0.0,0.0]	
+Step 5: 	[-0.0,0.0]	
+
+
+ ---- 
+
+ ========  iteration 2 ======== 
+
+
+=== GRAFCETChart ===
+
+===== after initialization =====
+===== after initialization (0) =====
+Variables: 	k	
+Tran 3: 	[1.0,-1.0]	
+Tran 1: 	[1.0,-1.0]	
+Step 4: 	[1.0,-1.0]	
+Step 1: 	[-0.0,0.0]	
+Tran 2: 	[1.0,-1.0]	
+Step 2: 	[1.0,-1.0]	
+Step 3: 	[1.0,-1.0]	
+Step 5: 	[1.0,-1.0]	
+
+===== interface =====
+===== interface (0) =====
+Variables: 	k	
+Int   : 	[1.0,-1.0]	
+
+===== termination - result =====
+===== termination - result (0) =====
+Variables: 	k	
+Tran 3: 	[-0.0,0.0]	
+Tran 1: 	[-0.0,0.0]	
+Step 4: 	[1.0,-1.0]	
+Step 1: 	[-0.0,0.0]	
+Tran 2: 	[-0.0,0.0]	
+Step 2: 	[-0.0,0.0]	
+Step 3: 	[-0.0,0.0]	
+Step 5: 	[-0.0,0.0]	
+
+
+ ----

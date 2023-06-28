@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://www.example.org/grafcet" xmlns:terms="http://www.example.org/terms">
+  <variableDeclarationContainer>
+    <variableDeclarations name="X1" variableDeclarationType="step" step="//@partialGrafcets.0/@steps.0">
+      <sort xsi:type="terms:Bool" id="9001"/>
+    </variableDeclarations>
+    <variableDeclarations name="X2" variableDeclarationType="step" step="//@partialGrafcets.0/@steps.1">
+      <sort xsi:type="terms:Bool" id="9002"/>
+    </variableDeclarations>
+    <variableDeclarations name="a">
+      <sort xsi:type="terms:Bool" id="9003"/>
+    </variableDeclarations>
+    <variableDeclarations name="X3" variableDeclarationType="step" step="//@partialGrafcets.1/@steps.0">
+      <sort xsi:type="terms:Bool" id="9004"/>
+    </variableDeclarations>
+    <variableDeclarations name="X4" variableDeclarationType="step" step="//@partialGrafcets.1/@steps.1">
+      <sort xsi:type="terms:Bool" id="9005"/>
+    </variableDeclarations>
+    <variableDeclarations name="X5" variableDeclarationType="step" step="//@partialGrafcets.1/@steps.2">
+      <sort xsi:type="terms:Bool" id="9006"/>
+    </variableDeclarations>
+    <variableDeclarations name="dummy" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer" id="9007"/>
+    </variableDeclarations>
+  </variableDeclarationContainer>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G1">
+    <steps xsi:type="grafcet:Step" id="1" initial="true"/>
+    <steps xsi:type="grafcet:Step" id="2"/>
+    <transitions id="1">
+      <term xsi:type="terms:Variable" id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+    </transitions>
+    <transitions id="2">
+      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.0/@transitions.1/@term/@output" id="21" value="true">
+        <output xsi:type="terms:Bool" id="211"/>
+      </term>
+    </transitions>
+    <arcs source="//@partialGrafcets.0/@steps.0" target="//@partialGrafcets.0/@transitions.0"/>
+    <arcs source="//@partialGrafcets.0/@transitions.0" target="//@partialGrafcets.0/@steps.1"/>
+    <arcs source="//@partialGrafcets.0/@steps.1" target="//@partialGrafcets.0/@transitions.1"/>
+    <arcs source="//@partialGrafcets.0/@transitions.1" target="//@partialGrafcets.0/@steps.0"/>
+    <actionTypes xsi:type="grafcet:ForcingOrder" id="1" partialGrafcet="//@partialGrafcets.1" forcingOrderType="initialSituation"/>
+    <actionLinks step="//@partialGrafcets.0/@steps.1" actionType="//@partialGrafcets.0/@actionTypes.0"/>
+  </partialGrafcets>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G2">
+    <steps xsi:type="grafcet:Step" id="3" initial="true"/>
+    <steps xsi:type="grafcet:Step" id="4"/>
+    <steps xsi:type="grafcet:Step" id="5"/>
+    <transitions id="3">
+      <term xsi:type="terms:Variable" id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+    </transitions>
+    <transitions id="4">
+      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.1/@transitions.1/@term/@output" id="21" value="true">
+        <output xsi:type="terms:Bool" id="211"/>
+      </term>
+    </transitions>
+    <arcs source="//@partialGrafcets.1/@steps.0" target="//@partialGrafcets.1/@transitions.0"/>
+    <arcs source="//@partialGrafcets.1/@transitions.0" target="//@partialGrafcets.1/@steps.1"/>
+    <arcs source="//@partialGrafcets.1/@steps.1" target="//@partialGrafcets.1/@transitions.1"/>
+    <arcs source="//@partialGrafcets.1/@transitions.1" target="//@partialGrafcets.1/@steps.2"/>
+  </partialGrafcets>
+</grafcet:Grafcet>

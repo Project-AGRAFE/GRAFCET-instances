@@ -1,0 +1,22 @@
+Reachability and Concurrency analysis: 
+
+Partial Grafcet de.hsu.grafcet.staticAnalysis.hypergraf.Subgraf@45df039d
+ Dependency: G1 - with initialization type enclosed: 
+reachable steps: [11]
+concurrent steps: 
+Partial Grafcet de.hsu.grafcet.staticAnalysis.hypergraf.Subgraf@41e08ffe
+ Dependency: G2 - with initialization type enclosed: 
+reachable steps: [12]
+concurrent steps: 
+Partial Grafcet de.hsu.grafcet.staticAnalysis.hypergraf.Subgraf@4b18e48e
+ Dependency: G0 - with initialization type initialStep: 
+reachable steps: [1, 2, 3]
+concurrent steps: 
+
+
+ global Concurrncy:
+3:  []
+2:  []
+1:  []
+12:  []
+11:  []

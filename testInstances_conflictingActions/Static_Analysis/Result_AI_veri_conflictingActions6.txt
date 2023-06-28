@@ -1,0 +1,16 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 1 always fires.
+ERROR: Transition 3 never fires.
+ERROR: Transition 3 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+No race conditions detected
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [3, 2]

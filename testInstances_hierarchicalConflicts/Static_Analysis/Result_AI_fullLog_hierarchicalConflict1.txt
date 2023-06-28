@@ -1,0 +1,171 @@
+ 
+
+ ========  iteration 1 ======== 
+
+
+=== G2 ===
+
+===== after initialization =====
+===== after initialization (0) =====
+Variables: 	dummy	x	
+Step 21: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 22: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 21: 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== interface =====
+===== interface (0) =====
+Variables: 	dummy	x	
+Int   : 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== termination - result =====
+===== termination - result (0) =====
+Variables: 	dummy	x	
+Step 21: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 22: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 21: 	[1.0,-1.0]	[1.0,-1.0]	
+
+
+ ----
+=== G2 ===
+
+===== after initialization =====
+===== after initialization (0) =====
+Variables: 	dummy	x	
+Step 21: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 22: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 21: 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== interface =====
+===== interface (0) =====
+Variables: 	dummy	x	
+Int   : 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== termination - result =====
+===== termination - result (0) =====
+Variables: 	dummy	x	
+Step 21: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 22: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 21: 	[-0.0,0.0]	[-0.0,0.0]	
+
+
+ ----
+=== G1 ===
+
+===== after initialization =====
+===== after initialization (0) =====
+Variables: 	dummy	x	
+Tran 1: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 3: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 2: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 5: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 3: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 6: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 1: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 4: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 2: 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== interface =====
+===== interface (0) =====
+Variables: 	dummy	x	
+Int   : 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== termination - result =====
+===== termination - result (0) =====
+Variables: 	dummy	x	
+Tran 1: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 3: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 2: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 5: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 3: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 6: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 1: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 4: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 2: 	[-0.0,0.0]	[-0.0,0.0]	
+
+
+ ---- 
+
+ ========  iteration 2 ======== 
+
+
+=== G2 ===
+
+===== after initialization =====
+===== after initialization (0) =====
+Variables: 	dummy	x	
+Step 21: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 22: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 21: 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== interface =====
+===== interface (0) =====
+Variables: 	dummy	x	
+Int   : 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== termination - result =====
+===== termination - result (0) =====
+Variables: 	dummy	x	
+Step 21: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 22: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 21: 	[1.0,-1.0]	[1.0,-1.0]	
+
+
+ ----
+=== G2 ===
+
+===== after initialization =====
+===== after initialization (0) =====
+Variables: 	dummy	x	
+Step 21: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 22: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 21: 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== interface =====
+===== interface (0) =====
+Variables: 	dummy	x	
+Int   : 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== termination - result =====
+===== termination - result (0) =====
+Variables: 	dummy	x	
+Step 21: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 22: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 21: 	[-0.0,0.0]	[-0.0,0.0]	
+
+
+ ----
+=== G1 ===
+
+===== after initialization =====
+===== after initialization (0) =====
+Variables: 	dummy	x	
+Tran 1: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 3: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 2: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 5: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 3: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 6: 	[1.0,-1.0]	[1.0,-1.0]	
+Step 1: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 4: 	[1.0,-1.0]	[1.0,-1.0]	
+Tran 2: 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== interface =====
+===== interface (0) =====
+Variables: 	dummy	x	
+Int   : 	[1.0,-1.0]	[1.0,-1.0]	
+
+===== termination - result =====
+===== termination - result (0) =====
+Variables: 	dummy	x	
+Tran 1: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 3: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 2: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 5: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 3: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 6: 	[-0.0,0.0]	[-0.0,0.0]	
+Step 1: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 4: 	[-0.0,0.0]	[-0.0,0.0]	
+Tran 2: 	[-0.0,0.0]	[-0.0,0.0]	
+
+
+ ----

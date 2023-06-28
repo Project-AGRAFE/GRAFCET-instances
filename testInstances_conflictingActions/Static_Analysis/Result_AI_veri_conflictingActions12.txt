@@ -1,0 +1,15 @@
+
+
+== Results FlawedTransitionDetecter: ==
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+The following race conditions were detected: 
+Action StAction [activation, val=IntegerConstantImpl, var=x, in=G2] is in conflict with StAction [activation, val=IntegerConstantImpl, var=x, in=G1]
+
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+No transient steps detected.
