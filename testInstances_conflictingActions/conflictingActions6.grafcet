@@ -52,7 +52,7 @@
         <output xsi:type="terms:Bool" id="311"/>
       </term>
     </transitions>
-    <transitions id="3">
+    <transitions id="2">
       <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.0/@transitions.2/@term/@output" id="31" value="true">
         <output xsi:type="terms:Bool" id="311"/>
       </term>

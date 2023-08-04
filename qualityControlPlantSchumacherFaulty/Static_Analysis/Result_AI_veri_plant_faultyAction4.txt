@@ -1,0 +1,23 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 13 never fires.
+ERROR: Transition 17 never fires.
+ERROR: Transition 301 always fires.
+ERROR: Transition 301 never fires.
+ERROR: Transition 307 never fires.
+ERROR: Transition 514 always fires.
+ERROR: Transition 515 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+The following race conditions were detected: 
+Action StAction [activation, val=terms.impl.AdditionImpl, var=K2, in=G2] is in conflict with StAction [activation, val=terms.impl.AdditionImpl, var=K2, in=G3]
+Action StAction [activation, val=terms.impl.AdditionImpl, var=K2, in=G3] is in conflict with StAction [activation, val=IntegerConstantImpl, var=K2, in=G2]
+
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [16, 103, 20, 506, 106, 107, 305, 704, 17, 707, 301, 706, 503, 510, 201, 505, 104, 105, 711, 13, 501, 202, 306, 14, 10, 702, 110, 703, 304, 709, 512, 203, 710, 508, 602, 18, 102, 204, 701, 4, 11, 101, 2, 509, 1, 108, 511, 708, 22, 502, 19, 504, 507, 705, 12, 603, 601, 15, 109, 3, 21, 513, 302, 303]

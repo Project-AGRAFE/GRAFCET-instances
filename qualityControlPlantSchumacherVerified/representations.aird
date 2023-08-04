@@ -13,7 +13,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_bRBAIPu0Ee20oezyDzkB1w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_fMwc8Pu0Ee20oezyDzkB1w" name="qualityControlSchumacherVerified" repPath="#_fLyMkPu0Ee20oezyDzkB1w" changeId="52d7bbcd-ffb1-4ca9-911b-adc407ffd4c5">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_fMwc8Pu0Ee20oezyDzkB1w" name="qualityControlSchumacherVerified" repPath="#_fLyMkPu0Ee20oezyDzkB1w" changeId="22a9d2a9-1537-455b-998c-53254bc0314f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']"/>
         <target xmi:type="grafcet:Grafcet" href="plant.grafcet#/"/>
       </ownedRepresentationDescriptors>
@@ -21036,13 +21036,13 @@
                     <styles xmi:type="notation:FilteringStyle" xmi:id="_gAPIWvu0Ee20oezyDzkB1w"/>
                   </children>
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_gAPIVfu0Ee20oezyDzkB1w" fontName="Ubuntu" fontHeight="12"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gAPIVvu0Ee20oezyDzkB1w" x="211" y="30" height="10"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gAPIVvu0Ee20oezyDzkB1w" x="211" y="30" height="80"/>
                 </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_f-RZefu0Ee20oezyDzkB1w"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_f-RZevu0Ee20oezyDzkB1w"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_f-RZdfu0Ee20oezyDzkB1w" fontName="Ubuntu" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f-RZdvu0Ee20oezyDzkB1w" x="443" y="741" height="10"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f-RZdvu0Ee20oezyDzkB1w" x="443" y="741" height="116"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_f-SAgPu0Ee20oezyDzkB1w" type="3007" element="_fenB8Pu0Ee20oezyDzkB1w">
               <children xmi:type="notation:Node" xmi:id="_f-SAg_u0Ee20oezyDzkB1w" type="5003">
@@ -27760,7 +27760,7 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_gJ4zlPu0Ee20oezyDzkB1w" fontName="Ubuntu" fontHeight="12"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gJ4zlfu0Ee20oezyDzkB1w" points="[0, 0, -3, 60]$[0, -60, -3, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gJ4znPu0Ee20oezyDzkB1w" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gJ4znfu0Ee20oezyDzkB1w" id="(0.5057471264367817,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gJ4znfu0Ee20oezyDzkB1w" id="(0.5057471264367817,0.21929824561403513)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_gJ4znvu0Ee20oezyDzkB1w" type="4001" element="_fh2jQfu0Ee20oezyDzkB1w" source="_gB_b0Pu0Ee20oezyDzkB1w" target="_gAeY5Pu0Ee20oezyDzkB1w">
           <children xmi:type="notation:Node" xmi:id="_gJ5aoPu0Ee20oezyDzkB1w" type="6001">
@@ -30278,7 +30278,7 @@
             </ownedStyle>
             <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='StoredActionContainer']/@subContainerMappings[name='ValueContainer']/@subContainerMappings[name='SubTermContainer']"/>
           </ownedDiagramElements>
-          <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_fegUQfu0Ee20oezyDzkB1w" name="3" width="3" height="1">
+          <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_fegUQfu0Ee20oezyDzkB1w" name="1" width="3" height="1">
             <target xmi:type="terms:IntegerConstant" href="plant.grafcet#//@partialGrafcets.4/@actionTypes.6/@value/@subterm.1"/>
             <semanticElements xmi:type="terms:IntegerConstant" href="plant.grafcet#//@partialGrafcets.4/@actionTypes.6/@value/@subterm.1"/>
             <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_fegUQvu0Ee20oezyDzkB1w" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
@@ -30430,7 +30430,7 @@
             </ownedStyle>
             <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='TermContainer']/@subContainerMappings[name='SubTermContainer']"/>
           </ownedDiagramElements>
-          <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_fema4_u0Ee20oezyDzkB1w" name="0" height="1">
+          <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_fema4_u0Ee20oezyDzkB1w" name="5" height="1">
             <target xmi:type="terms:IntegerConstant" href="plant.grafcet#//@partialGrafcets.4/@transitions.6/@term/@subterm.1/@subterm.1"/>
             <semanticElements xmi:type="terms:IntegerConstant" href="plant.grafcet#//@partialGrafcets.4/@transitions.6/@term/@subterm.1/@subterm.1"/>
             <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_fema5Pu0Ee20oezyDzkB1w" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">

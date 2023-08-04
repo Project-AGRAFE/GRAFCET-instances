@@ -1,0 +1,20 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 13 never fires.
+ERROR: Transition 17 never fires.
+ERROR: Transition 301 always fires.
+ERROR: Transition 301 never fires.
+ERROR: Transition 307 never fires.
+ERROR: Transition 514 always fires.
+ERROR: Transition 515 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+No race conditions detected
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [12, 21, 710, 304, 104, 13, 503, 202, 110, 4, 20, 109, 704, 204, 502, 708, 105, 504, 14, 602, 201, 103, 17, 707, 702, 108, 3, 19, 303, 1, 11, 302, 15, 510, 107, 706, 18, 501, 507, 512, 306, 705, 101, 10, 508, 709, 106, 102, 305, 509, 2, 505, 301, 701, 22, 703, 513, 601, 16, 603, 506, 511, 203, 711]

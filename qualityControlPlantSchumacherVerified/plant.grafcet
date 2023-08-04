@@ -106,7 +106,7 @@
     <variableDeclarations name="Eindruecken2" variableDeclarationType="output">
       <sort xsi:type="terms:Bool" id="90034"/>
     </variableDeclarations>
-    <variableDeclarations name="2s/X202" variableDeclarationType="internal">
+    <variableDeclarations name="2s/X202">
       <sort xsi:type="terms:Bool" id="90035"/>
     </variableDeclarations>
     <variableDeclarations name="SpannenOben3">
@@ -805,7 +805,7 @@
         <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.39/@sort" id="30712" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.39"/>
         <subterm xsi:type="terms:Equality" sort="//@partialGrafcets.4/@transitions.6/@term/@subterm.1/@output" id="30713" input="//@variableDeclarationContainer/@variableDeclarations.45/@sort //@partialGrafcets.4/@transitions.6/@term/@subterm.1/@subterm.1/@output">
           <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.45/@sort" id="307132" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.45"/>
-          <subterm xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.4/@transitions.6/@term/@subterm.1/@subterm.1/@output" id="307133">
+          <subterm xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.4/@transitions.6/@term/@subterm.1/@subterm.1/@output" id="307133" value="5">
             <output xsi:type="terms:Integer" id="3071331"/>
           </subterm>
           <output xsi:type="terms:Bool" id="307131"/>
@@ -864,7 +864,7 @@
       <variable sort="//@variableDeclarationContainer/@variableDeclarations.45/@sort" id="81" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.45"/>
       <value xsi:type="terms:Addition" sort="//@partialGrafcets.4/@actionTypes.6/@value/@output" id="82" input="//@variableDeclarationContainer/@variableDeclarations.45/@sort //@partialGrafcets.4/@actionTypes.6/@value/@subterm.1/@output">
         <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.45/@sort" id="822" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.45"/>
-        <subterm xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.4/@actionTypes.6/@value/@subterm.1/@output" id="823" value="3">
+        <subterm xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.4/@actionTypes.6/@value/@subterm.1/@output" id="823" value="1">
           <output xsi:type="terms:Integer" id="8231"/>
         </subterm>
         <output xsi:type="terms:Integer" id="821"/>
