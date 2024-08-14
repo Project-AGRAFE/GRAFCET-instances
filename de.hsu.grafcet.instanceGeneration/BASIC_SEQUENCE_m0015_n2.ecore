@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="ASCII"?>
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://www.example.org/grafcet" xmlns:terms="http://www.example.org/terms">
+  <variableDeclarationContainer>
+    <variableDeclarations name="testDummy" variableDeclarationType="internal">
+      <sort xsi:type="terms:Integer"/>
+    </variableDeclarations>
+    <variableDeclarations name="in1">
+      <sort xsi:type="terms:Bool"/>
+    </variableDeclarations>
+    <variableDeclarations name="in2">
+      <sort xsi:type="terms:Bool"/>
+    </variableDeclarations>
+    <variableDeclarations name="in3">
+      <sort xsi:type="terms:Bool"/>
+    </variableDeclarations>
+    <variableDeclarations name="in4">
+      <sort xsi:type="terms:Bool"/>
+    </variableDeclarations>
+  </variableDeclarationContainer>
+  <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G1">
+    <steps xsi:type="grafcet:Step" id="1" initial="true"/>
+    <steps xsi:type="grafcet:Step" id="2"/>
+    <steps xsi:type="grafcet:Step" id="3"/>
+    <steps xsi:type="grafcet:Step" id="4"/>
+    <steps xsi:type="grafcet:Step" id="5"/>
+    <steps xsi:type="grafcet:Step" id="6"/>
+    <steps xsi:type="grafcet:Step" id="7"/>
+    <steps xsi:type="grafcet:Step" id="8"/>
+    <steps xsi:type="grafcet:Step" id="9"/>
+    <steps xsi:type="grafcet:Step" id="10"/>
+    <steps xsi:type="grafcet:Step" id="11"/>
+    <steps xsi:type="grafcet:Step" id="12"/>
+    <steps xsi:type="grafcet:Step" id="13"/>
+    <steps xsi:type="grafcet:Step" id="14"/>
+    <steps xsi:type="grafcet:Step" id="15"/>
+    <transitions id="1">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="2">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Not">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        </subterm>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="3">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Not">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          </subterm>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="4">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Not">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        </subterm>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Not">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          </subterm>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="5">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            </subterm>
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="6">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Not">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        </subterm>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            </subterm>
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="7">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Not">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          </subterm>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            </subterm>
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="8">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Not">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        </subterm>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Not">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          </subterm>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            </subterm>
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="9">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+            </subterm>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="10">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Not">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        </subterm>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+            </subterm>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="11">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Not">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          </subterm>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+            </subterm>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="12">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Not">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        </subterm>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Not">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          </subterm>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+            </subterm>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="13">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            </subterm>
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+            </subterm>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="14">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Not">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        </subterm>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            </subterm>
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+            </subterm>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <transitions id="15">
+      <term xsi:type="terms:And">
+        <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.1"/>
+        <subterm xsi:type="terms:And">
+          <subterm xsi:type="terms:Not">
+            <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.2"/>
+          </subterm>
+          <subterm xsi:type="terms:And">
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.3"/>
+            </subterm>
+            <subterm xsi:type="terms:Not">
+              <subterm xsi:type="terms:Variable" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
+            </subterm>
+          </subterm>
+        </subterm>
+      </term>
+    </transitions>
+    <arcs source="//@partialGrafcets.0/@steps.0" target="//@partialGrafcets.0/@transitions.0"/>
+    <arcs source="//@partialGrafcets.0/@transitions.0" target="//@partialGrafcets.0/@steps.1"/>
+    <arcs source="//@partialGrafcets.0/@steps.1" target="//@partialGrafcets.0/@transitions.1"/>
+    <arcs source="//@partialGrafcets.0/@transitions.1" target="//@partialGrafcets.0/@steps.2"/>
+    <arcs source="//@partialGrafcets.0/@steps.2" target="//@partialGrafcets.0/@transitions.2"/>
+    <arcs source="//@partialGrafcets.0/@transitions.2" target="//@partialGrafcets.0/@steps.3"/>
+    <arcs source="//@partialGrafcets.0/@steps.3" target="//@partialGrafcets.0/@transitions.3"/>
+    <arcs source="//@partialGrafcets.0/@transitions.3" target="//@partialGrafcets.0/@steps.4"/>
+    <arcs source="//@partialGrafcets.0/@steps.4" target="//@partialGrafcets.0/@transitions.4"/>
+    <arcs source="//@partialGrafcets.0/@transitions.4" target="//@partialGrafcets.0/@steps.5"/>
+    <arcs source="//@partialGrafcets.0/@steps.5" target="//@partialGrafcets.0/@transitions.5"/>
+    <arcs source="//@partialGrafcets.0/@transitions.5" target="//@partialGrafcets.0/@steps.6"/>
+    <arcs source="//@partialGrafcets.0/@steps.6" target="//@partialGrafcets.0/@transitions.6"/>
+    <arcs source="//@partialGrafcets.0/@transitions.6" target="//@partialGrafcets.0/@steps.7"/>
+    <arcs source="//@partialGrafcets.0/@steps.7" target="//@partialGrafcets.0/@transitions.7"/>
+    <arcs source="//@partialGrafcets.0/@transitions.7" target="//@partialGrafcets.0/@steps.8"/>
+    <arcs source="//@partialGrafcets.0/@steps.8" target="//@partialGrafcets.0/@transitions.8"/>
+    <arcs source="//@partialGrafcets.0/@transitions.8" target="//@partialGrafcets.0/@steps.9"/>
+    <arcs source="//@partialGrafcets.0/@steps.9" target="//@partialGrafcets.0/@transitions.9"/>
+    <arcs source="//@partialGrafcets.0/@transitions.9" target="//@partialGrafcets.0/@steps.10"/>
+    <arcs source="//@partialGrafcets.0/@steps.10" target="//@partialGrafcets.0/@transitions.10"/>
+    <arcs source="//@partialGrafcets.0/@transitions.10" target="//@partialGrafcets.0/@steps.11"/>
+    <arcs source="//@partialGrafcets.0/@steps.11" target="//@partialGrafcets.0/@transitions.11"/>
+    <arcs source="//@partialGrafcets.0/@transitions.11" target="//@partialGrafcets.0/@steps.12"/>
+    <arcs source="//@partialGrafcets.0/@steps.12" target="//@partialGrafcets.0/@transitions.12"/>
+    <arcs source="//@partialGrafcets.0/@transitions.12" target="//@partialGrafcets.0/@steps.13"/>
+    <arcs source="//@partialGrafcets.0/@steps.13" target="//@partialGrafcets.0/@transitions.13"/>
+    <arcs source="//@partialGrafcets.0/@transitions.13" target="//@partialGrafcets.0/@steps.14"/>
+    <arcs source="//@partialGrafcets.0/@steps.14" target="//@partialGrafcets.0/@transitions.14"/>
+    <arcs source="//@partialGrafcets.0/@transitions.14" target="//@partialGrafcets.0/@steps.0"/>
+  </partialGrafcets>
+</grafcet:Grafcet>

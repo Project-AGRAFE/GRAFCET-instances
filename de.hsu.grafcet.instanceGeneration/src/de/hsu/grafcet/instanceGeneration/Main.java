@@ -8,8 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 //		serializeInstance(2, 2, GrafcetSerializerInstanceType.BASIC_PARALLEL);
-		serializeInstances(225, 300, 2);
-		
+		serializeInstances(200, 320, 1, 20);
 		
 		
 		
@@ -21,8 +20,8 @@ public class Main {
 		Grafcet g = serializer.getGrafcet();
 		XMISerializer.serilizeGrafcetToXMI(g, type.toString() + "_m" + String.format("%04d", m) + "_n" + n);
 	}
-	private static void serializeInstances(int start_m, int end_m, int n) {
-		for(int i = start_m ; i <= end_m ; i = i + 25) {
+	private static void serializeInstances(int start_m, int end_m, int n, int step) {
+		for(int i = start_m ; i <= end_m ; i = i + step) {
 			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_SEQUENCE);
 //			serializeInstance(n, i, GrafcetSerializerInstanceType.BASIC_PARALLEL);
 //			serializeInstance(i, n, GrafcetSerializerInstanceType.BASIC_VARIABLES);
