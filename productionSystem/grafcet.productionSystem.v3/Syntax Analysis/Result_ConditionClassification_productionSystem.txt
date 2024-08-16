@@ -1,0 +1,4 @@
+Result of condition classification check for GRAFCET-File productionSystem:
+
+(0) Condition terms.impl.RisingEdgeImpl@760bc329 (id: 122) is of type EVENT
+(1) Condition terms.impl.NotImpl@5509cb16 (id: 142) is of type NOEVENT

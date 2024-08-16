@@ -1,0 +1,4 @@
+
+
+Result of check for connected Grafcets for GRAFCET-File productionSystem:
+

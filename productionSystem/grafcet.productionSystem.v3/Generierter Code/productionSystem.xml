@@ -1165,15 +1165,6 @@
 		  	  	  </initialValue>
 		  	  	</variable>
 		  	  	
-		  	  	<variable name="T_404">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
 		  	  	<variable name="T_405">
 		  	  	  <type>
 		  	  		  <BOOL />
@@ -1336,6 +1327,15 @@
 		  	  	  </initialValue>
 		  	  	</variable>
 		  	  	
+		  	  	<variable name="T_404">
+		  	  	  <type>
+		  	  		  <BOOL />
+		  	  	  </type>
+		  	  	  <initialValue>
+		  	  		<simpleValue value="false" />
+		  	  	  </initialValue>
+		  	  	</variable>
+		  	  	
 		  	  	<variable name="T_411">
 		  	  	  <type>
 		  	  		  <BOOL />
@@ -1364,12 +1364,6 @@
 		  	  	</variable>
 		  	  	
 		  	  	<variable name="TbAct_T_411">
-		  	  	  <type>
-		  	  		  <derived name="TimeBasedAction" />
-		  	  	  </type>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="TbAct_T_412">
 		  	  	  <type>
 		  	  		  <derived name="TimeBasedAction" />
 		  	  	  </type>
@@ -1601,7 +1595,6 @@
 		  				T_401 := (Step_401)AND(Freeze=FALSE);
 		  				T_402 := (Step_402)AND(Freeze=FALSE);
 		  				T_403 := (Step_403)AND(Freeze=FALSE);
-		  				T_404 := (Step_404)AND(Freeze=FALSE);
 		  				T_405 := (Step_405)AND(Freeze=FALSE);
 		  				T_406 := (Step_405)AND(Freeze=FALSE);
 		  				T_407 := (Step_405)AND(Freeze=FALSE);
@@ -1620,6 +1613,7 @@
 		  				T_423 := (Step_420)AND(Freeze=FALSE);
 		  				T_424 := (Step_421)AND(Freeze=FALSE);
 		  				T_425 := (Step_422)AND(Freeze=FALSE);
+		  				T_404 := (Step_404)AND(Freeze=FALSE);
 		  				T_411 := (Step_409)AND(Freeze=FALSE);
 		  				T_412 := (Step_410)AND(Freeze=FALSE);
 		  				T_413 := (Step_411)AND(Freeze=FALSE);
@@ -1661,15 +1655,6 @@
 		  					Step_404 := true;
 		  					actStep_404 := true;
 		  					deactStep_404 := false;
-		  				END_IF
-		  				IF ((iEAtConvExit)AND(T_404)) THEN
-		  					StableState := true;
-		  					Step_404 := false;
-		  					actStep_404 := false;
-		  					deactStep_404 := true;
-		  					Step_405 := true;
-		  					actStep_405 := true;
-		  					deactStep_405 := false;
 		  				END_IF
 		  				IF (((kE = 1) AND iEAt1L)AND(T_405)) THEN
 		  					StableState := true;
@@ -1833,7 +1818,16 @@
 		  					actStep_421 := true;
 		  					deactStep_421 := false;
 		  				END_IF
-		  				TbAct_T_411(TERM := Step_409, DelayTime := t#1s, ResetTime := t#0s);
+		  				IF ((( NOT iEAtConvIn0) AND iEAtConvEntry)AND(T_404)) THEN
+		  					StableState := true;
+		  					Step_404 := false;
+		  					actStep_404 := false;
+		  					deactStep_404 := true;
+		  					Step_405 := true;
+		  					actStep_405 := true;
+		  					deactStep_405 := false;
+		  				END_IF
+		  				TbAct_T_411(TERM :=  NOT iEAtConvIn1, DelayTime := t#1s, ResetTime := t#0s);
 		  				IF ((TbAct_T_411().Q)AND(T_411)) THEN
 		  					StableState := true;
 		  					Step_409 := false;
@@ -1843,8 +1837,7 @@
 		  					actStep_412 := true;
 		  					deactStep_412 := false;
 		  				END_IF
-		  				TbAct_T_412(TERM := Step_410, DelayTime := t#1s, ResetTime := t#0s);
-		  				IF ((TbAct_T_412().Q)AND(T_412)) THEN
+		  				IF (( NOT iEAtConvIn2)AND(T_412)) THEN
 		  					StableState := true;
 		  					Step_410 := false;
 		  					actStep_410 := false;
@@ -1853,7 +1846,7 @@
 		  					actStep_412 := true;
 		  					deactStep_412 := false;
 		  				END_IF
-		  				TbAct_T_413(TERM := Step_411, DelayTime := t#1s, ResetTime := t#0s);
+		  				TbAct_T_413(TERM :=  NOT iEAtConvIn3, DelayTime := t#1s, ResetTime := t#0s);
 		  				IF ((TbAct_T_413().Q)AND(T_413)) THEN
 		  					StableState := true;
 		  					Step_411 := false;
@@ -1928,13 +1921,11 @@
 		  				IF Step_406 THEN
 		  					oESlow := true;
 		  					oEUp := true;
-		  					oEConvIn1 := true;
 		  				END_IF
 		  				IF deactStep_406 THEN
 		  					deactStep_406 := false;
 		  					oESlow := false;
 		  					oEUp := false;
-		  					oEConvIn1 := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_407)OR(Step_407)OR(deactStep_407) THEN
@@ -1944,13 +1935,11 @@
 		  				IF Step_407 THEN
 		  					oEUp := true;
 		  					oESlow := true;
-		  					oEConvIn2 := true;
 		  				END_IF
 		  				IF deactStep_407 THEN
 		  					deactStep_407 := false;
 		  					oEUp := false;
 		  					oESlow := false;
-		  					oEConvIn2 := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_408)OR(Step_408)OR(deactStep_408) THEN
@@ -1960,13 +1949,11 @@
 		  				IF Step_408 THEN
 		  					oEUp := true;
 		  					oESlow := true;
-		  					oEConvIn3 := true;
 		  				END_IF
 		  				IF deactStep_408 THEN
 		  					deactStep_408 := false;
 		  					oEUp := false;
 		  					oESlow := false;
-		  					oEConvIn3 := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_409)OR(Step_409)OR(deactStep_409) THEN
@@ -1974,9 +1961,11 @@
 		  					actStep_409 := false;
 		  				END_IF
 		  				IF Step_409 THEN
+		  					oEConvIn1 := true;
 		  				END_IF
 		  				IF deactStep_409 THEN
 		  					deactStep_409 := false;
+		  					oEConvIn1 := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_410)OR(Step_410)OR(deactStep_410) THEN
@@ -1984,9 +1973,11 @@
 		  					actStep_410 := false;
 		  				END_IF
 		  				IF Step_410 THEN
+		  					oEConvIn2 := true;
 		  				END_IF
 		  				IF deactStep_410 THEN
 		  					deactStep_410 := false;
+		  					oEConvIn2 := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_411)OR(Step_411)OR(deactStep_411) THEN
@@ -1994,9 +1985,11 @@
 		  					actStep_411 := false;
 		  				END_IF
 		  				IF Step_411 THEN
+		  					oEConvIn3 := true;
 		  				END_IF
 		  				IF deactStep_411 THEN
 		  					deactStep_411 := false;
+		  					oEConvIn3 := false;
 		  				END_IF
 		  			END_IF
 		  			IF (actStep_412)OR(Step_412)OR(deactStep_412) THEN
@@ -2493,7 +2486,7 @@
 		  					oPRemovePallet := FALSE;
 		  				END_IF
 		  				IF Step_503 THEN
-		  					oPConv6 := true;
+		  					oPConv6 :=  NOT (iPAtConv6Exit AND iPAtConv6Part);
 		  				END_IF
 		  				IF deactStep_503 THEN
 		  					deactStep_503 := false;
@@ -2541,7 +2534,7 @@
 		  					oPXSetPoint := 2;
 		  				END_IF
 		  				IF Step_508 THEN
-		  					RTrig_A12_1(CLK := iPXPosition &gt; 4);
+		  					RTrig_A12_1(CLK := iPXPosition &lt; 4);
 		  					IF RTrig_A12_1.Q THEN
 		  						oPRemovePallet := TRUE;
 		  					END_IF
@@ -3295,7 +3288,7 @@
 		  				IF actStep_604 THEN
 		  					actStep_604 := false;
 		  					oMConvIn := FALSE;
-		  					wheelSortOccup := FALSE;
+		  					wheelSortOccup := TRUE;
 		  				END_IF
 		  				IF Step_604 THEN
 		  				END_IF
@@ -3482,514 +3475,6 @@
 		  				IF deactStep_619 THEN
 		  					deactStep_619 := false;
 		  					oMConv5 := false;
-		  				END_IF
-		  			END_IF
-		  			END_WHILE;
-		  		END_IF
-		  		
-		  	  </xhtml>
-		  	</ST>
-		    </body>  	  <addData>
-		<data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-	  	  <ObjectId>bb10cf5f-d44b-48bf-ad52-f1059f71047f</ObjectId>
-		</data>
-  	  </addData>
-	  </pou>
-		  <pou name="G6" pouType="functionBlock">
-		    <interface>
-		  	  <inputVars>
-		  	  	<variable name="Enable">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="Init">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="End">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="Activate">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="Freeze">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	    </inputVars>
-		  	  <localVars>
-		  	  	<variable name="StableState">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="TranLoops">
-		  	  	  <type>
-		  	  		  <INT />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="0" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="NumTran">
-		  	  	  <type>
-		  	  		  <INT />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="11" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_601">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_602">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_603">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_604">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_607">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_608">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_609">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_610">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_611">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_605">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	  	<variable name="T_606">
-		  	  	  <type>
-		  	  		  <BOOL />
-		  	  	  </type>
-		  	  	  <initialValue>
-		  	  		<simpleValue value="false" />
-		  	  	  </initialValue>
-		  	  	</variable>
-		  	  	
-		  	    </localVars>
-		  	
-		    </interface>
-		    <body>
-		  	<ST>
-		  	  <xhtml xmlns="http://www.w3.org/1999/xhtml">
-		  		IF Init THEN
-		  			Step_601 := true;
-		  			actStep_601 := false;
-		  			deactStep_601 := false;
-		  			Step_602 := false;
-		  			actStep_602 := false;
-		  			deactStep_602 := false;
-		  			Step_603 := false;
-		  			actStep_603 := false;
-		  			deactStep_603 := false;
-		  			Step_604 := false;
-		  			actStep_604 := false;
-		  			deactStep_604 := false;
-		  			Step_605 := false;
-		  			actStep_605 := false;
-		  			deactStep_605 := false;
-		  			Step_606 := false;
-		  			actStep_606 := false;
-		  			deactStep_606 := false;
-		  			Step_607 := false;
-		  			actStep_607 := false;
-		  			deactStep_607 := false;
-		  			Step_608 := false;
-		  			actStep_608 := false;
-		  			deactStep_608 := false;
-		  			Step_609 := false;
-		  			actStep_609 := false;
-		  			deactStep_609 := false;
-		  		END_IF
-		  		IF Activate THEN
-		  			Step_601 := false;
-		  			actStep_601 := false;
-		  			deactStep_601 := false;
-		  			Step_602 := false;
-		  			actStep_602 := false;
-		  			deactStep_602 := false;
-		  			Step_603 := false;
-		  			actStep_603 := false;
-		  			deactStep_603 := false;
-		  			Step_604 := false;
-		  			actStep_604 := false;
-		  			deactStep_604 := false;
-		  			Step_605 := false;
-		  			actStep_605 := false;
-		  			deactStep_605 := false;
-		  			Step_606 := false;
-		  			actStep_606 := false;
-		  			deactStep_606 := false;
-		  			Step_607 := false;
-		  			actStep_607 := false;
-		  			deactStep_607 := false;
-		  			Step_608 := false;
-		  			actStep_608 := false;
-		  			deactStep_608 := false;
-		  			Step_609 := false;
-		  			actStep_609 := false;
-		  			deactStep_609 := false;
-		  		END_IF
-		  		IF End THEN
-		  			Step_601 := false;
-		  			actStep_601 := false;
-		  			deactStep_601 := false;
-		  			Step_602 := false;
-		  			actStep_602 := false;
-		  			deactStep_602 := false;
-		  			Step_603 := false;
-		  			actStep_603 := false;
-		  			deactStep_603 := false;
-		  			Step_604 := false;
-		  			actStep_604 := false;
-		  			deactStep_604 := false;
-		  			Step_605 := false;
-		  			actStep_605 := false;
-		  			deactStep_605 := false;
-		  			Step_606 := false;
-		  			actStep_606 := false;
-		  			deactStep_606 := false;
-		  			Step_607 := false;
-		  			actStep_607 := false;
-		  			deactStep_607 := false;
-		  			Step_608 := false;
-		  			actStep_608 := false;
-		  			deactStep_608 := false;
-		  			Step_609 := false;
-		  			actStep_609 := false;
-		  			deactStep_609 := false;
-		  		END_IF
-		  		IF (Enable) THEN
-		  			TranLoops := (0);
-		  			StableState := true;
-		  			WHILE ((StableState)AND(TranLoops&lt;NumTran)) DO
-		  			StableState := false;
-		  			TranLoops := (TranLoops+1);
-		  			IF ((INIT=FALSE)AND(END=FALSE)) THEN
-		  				T_601 := (Step_601)AND(Freeze=FALSE);
-		  				T_602 := (Step_602)AND(Freeze=FALSE);
-		  				T_603 := (Step_603)AND(Freeze=FALSE);
-		  				T_604 := (Step_604)AND(Freeze=FALSE);
-		  				T_607 := (Step_605)AND(Freeze=FALSE);
-		  				T_608 := (Step_606)AND(Freeze=FALSE);
-		  				T_609 := (Step_607)AND(Freeze=FALSE);
-		  				T_610 := (Step_608)AND(Freeze=FALSE);
-		  				T_611 := (Step_609)AND(Freeze=FALSE);
-		  				T_605 := (Step_604)AND(Freeze=FALSE);
-		  				T_606 := (Step_604)AND(Freeze=FALSE);
-		  				IF ((Step_33)AND(T_601)) THEN
-		  					StableState := true;
-		  					Step_601 := false;
-		  					actStep_601 := false;
-		  					deactStep_601 := true;
-		  					Step_602 := true;
-		  					actStep_602 := true;
-		  					deactStep_602 := false;
-		  				END_IF
-		  				IF ((TRUE)AND(T_602)) THEN
-		  					StableState := true;
-		  					Step_602 := false;
-		  					actStep_602 := false;
-		  					deactStep_602 := true;
-		  					Step_603 := true;
-		  					actStep_603 := true;
-		  					deactStep_603 := false;
-		  				END_IF
-		  				IF (( NOT (iMVision1 = 0))AND(T_603)) THEN
-		  					StableState := true;
-		  					Step_603 := false;
-		  					actStep_603 := false;
-		  					deactStep_603 := true;
-		  					Step_604 := true;
-		  					actStep_604 := true;
-		  					deactStep_604 := false;
-		  				END_IF
-		  				IF (((iMVision1 = 1) AND ( NOT iMAtConv3))AND(T_604)) THEN
-		  					StableState := true;
-		  					Step_604 := false;
-		  					actStep_604 := false;
-		  					deactStep_604 := true;
-		  					Step_605 := true;
-		  					actStep_605 := true;
-		  					deactStep_605 := false;
-		  				END_IF
-		  				IF ((iMVision1 = 0)AND(T_607)) THEN
-		  					StableState := true;
-		  					Step_605 := false;
-		  					actStep_605 := false;
-		  					deactStep_605 := true;
-		  					Step_603 := true;
-		  					actStep_603 := true;
-		  					deactStep_603 := false;
-		  				END_IF
-		  				IF ((iMVision1 = 0)AND(T_608)) THEN
-		  					StableState := true;
-		  					Step_606 := false;
-		  					actStep_606 := false;
-		  					deactStep_606 := true;
-		  					Step_603 := true;
-		  					actStep_603 := true;
-		  					deactStep_603 := false;
-		  				END_IF
-		  				IF ((iMVision1 = 0)AND(T_609)) THEN
-		  					StableState := true;
-		  					Step_607 := false;
-		  					actStep_607 := false;
-		  					deactStep_607 := true;
-		  					Step_603 := true;
-		  					actStep_603 := true;
-		  					deactStep_603 := false;
-		  				END_IF
-		  				IF ((iMAtConv5)AND(T_610)) THEN
-		  					StableState := true;
-		  					Step_608 := false;
-		  					actStep_608 := false;
-		  					deactStep_608 := true;
-		  					Step_609 := true;
-		  					actStep_609 := true;
-		  					deactStep_609 := false;
-		  				END_IF
-		  				IF (( NOT iMAtConv5)AND(T_611)) THEN
-		  					StableState := true;
-		  					Step_609 := false;
-		  					actStep_609 := false;
-		  					deactStep_609 := true;
-		  					Step_608 := true;
-		  					actStep_608 := true;
-		  					deactStep_608 := false;
-		  				END_IF
-		  				IF (((iMVision1 = 4) AND ( NOT iMAtConv4))AND(T_605)) THEN
-		  					StableState := true;
-		  					Step_604 := false;
-		  					actStep_604 := false;
-		  					deactStep_604 := true;
-		  					Step_606 := true;
-		  					actStep_606 := true;
-		  					deactStep_606 := false;
-		  				END_IF
-		  				IF (((iMVision1 = 7) AND ( NOT iMAtConv5))AND(T_606)) THEN
-		  					StableState := true;
-		  					Step_604 := false;
-		  					actStep_604 := false;
-		  					deactStep_604 := true;
-		  					Step_607 := true;
-		  					actStep_607 := true;
-		  					deactStep_607 := false;
-		  				END_IF
-		  			END_IF
-		  			IF (actStep_601)OR(Step_601)OR(deactStep_601) THEN
-		  				IF actStep_601 THEN
-		  					actStep_601 := false;
-		  				END_IF
-		  				IF Step_601 THEN
-		  				END_IF
-		  				IF deactStep_601 THEN
-		  					deactStep_601 := false;
-		  				END_IF
-		  			END_IF
-		  			IF (actStep_602)OR(Step_602)OR(deactStep_602) THEN
-		  				IF actStep_602 THEN
-		  					actStep_602 := false;
-		  					oMConvIn := TRUE;
-		  				END_IF
-		  				IF Step_602 THEN
-		  				END_IF
-		  				IF deactStep_602 THEN
-		  					deactStep_602 := false;
-		  				END_IF
-		  			END_IF
-		  			IF (actStep_603)OR(Step_603)OR(deactStep_603) THEN
-		  				IF actStep_603 THEN
-		  					actStep_603 := false;
-		  					wheelSortOccup := FALSE;
-		  				END_IF
-		  				IF Step_603 THEN
-		  					oMWSortOn := true;
-		  				END_IF
-		  				IF deactStep_603 THEN
-		  					deactStep_603 := false;
-		  					oMWSortOn := false;
-		  				END_IF
-		  			END_IF
-		  			IF (actStep_604)OR(Step_604)OR(deactStep_604) THEN
-		  				IF actStep_604 THEN
-		  					actStep_604 := false;
-		  					oMConvIn := FALSE;
-		  				END_IF
-		  				IF Step_604 THEN
-		  				END_IF
-		  				IF deactStep_604 THEN
-		  					deactStep_604 := false;
-		  				END_IF
-		  			END_IF
-		  			IF (actStep_605)OR(Step_605)OR(deactStep_605) THEN
-		  				IF actStep_605 THEN
-		  					actStep_605 := false;
-		  					oMConvIn := TRUE;
-		  				END_IF
-		  				IF Step_605 THEN
-		  					oMWSortOn := true;
-		  					oMWSortL := true;
-		  				END_IF
-		  				IF deactStep_605 THEN
-		  					deactStep_605 := false;
-		  					oMWSortOn := false;
-		  					oMWSortL := false;
-		  				END_IF
-		  			END_IF
-		  			IF (actStep_606)OR(Step_606)OR(deactStep_606) THEN
-		  				IF actStep_606 THEN
-		  					actStep_606 := false;
-		  					oMConvIn := TRUE;
-		  				END_IF
-		  				IF Step_606 THEN
-		  					oMWSortOn := true;
-		  				END_IF
-		  				IF deactStep_606 THEN
-		  					deactStep_606 := false;
-		  					oMWSortOn := false;
-		  				END_IF
-		  			END_IF
-		  			IF (actStep_607)OR(Step_607)OR(deactStep_607) THEN
-		  				IF actStep_607 THEN
-		  					actStep_607 := false;
-		  					oMConvIn := TRUE;
-		  				END_IF
-		  				IF Step_607 THEN
-		  					oMWSortOn := true;
-		  					oMWSortR := true;
-		  				END_IF
-		  				IF deactStep_607 THEN
-		  					deactStep_607 := false;
-		  					oMWSortOn := false;
-		  					oMWSortR := false;
-		  				END_IF
-		  			END_IF
-		  			IF (actStep_608)OR(Step_608)OR(deactStep_608) THEN
-		  				IF actStep_608 THEN
-		  					actStep_608 := false;
-		  				END_IF
-		  				IF Step_608 THEN
-		  					oMConv5 := true;
-		  				END_IF
-		  				IF deactStep_608 THEN
-		  					deactStep_608 := false;
-		  					oMConv5 := false;
-		  				END_IF
-		  			END_IF
-		  			IF (actStep_609)OR(Step_609)OR(deactStep_609) THEN
-		  				IF actStep_609 THEN
-		  					actStep_609 := false;
-		  				END_IF
-		  				IF Step_609 THEN
-		  				END_IF
-		  				IF deactStep_609 THEN
-		  					deactStep_609 := false;
 		  				END_IF
 		  			END_IF
 		  			END_WHILE;
@@ -5360,249 +4845,6 @@
 			    </initialValue>
 			  </variable>
 			  
-			  <variable name="actStep_601">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="deactStep_601">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="Step_601">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="actStep_602">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="deactStep_602">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="Step_602">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="actStep_603">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="deactStep_603">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="Step_603">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="actStep_604">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="deactStep_604">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="Step_604">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="actStep_605">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="deactStep_605">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="Step_605">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="actStep_606">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="deactStep_606">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="Step_606">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="actStep_607">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="deactStep_607">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="Step_607">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="actStep_608">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="deactStep_608">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="Step_608">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="actStep_609">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="deactStep_609">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
-			  <variable name="Step_609">
-			    <type>
-			  	  <BOOL />
-			    </type>
-			    <initialValue>
-			  	<simpleValue value="false" />
-			    </initialValue>
-			  </variable>
-			  
 			  <variable name="actStep_610">
 			    <type>
 			  	  <BOOL />
@@ -6638,6 +5880,15 @@
 			    </initialValue>
 			  </variable>
 			  
+			  <variable name="iEAtConvEntry">
+			    <type>
+			  	  <BOOL />
+			    </type>
+			    <initialValue>
+			  	<simpleValue value="false" />
+			    </initialValue>
+			  </variable>
+			  
               <addData>
               	<data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
                   <ObjectId>1d145e5f-1b71-4724-a8b2-1526a73ee712</ObjectId>
@@ -6696,12 +5947,6 @@
 			    </type>
 			  </variable>
 			  
-			  <variable name="PartialGrafcet_G6">
-			    <type>
-			  	  <derived name="G6" />
-			    </type>
-			  </variable>
-			  
               <addData>
               	<data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
                   <ObjectId>1d145e5f-1b71-4724-a8b2-1526a73ee712</ObjectId>
@@ -6731,8 +5976,6 @@
 		  <Object Name="G4" ObjectId="bb10cf5f-d44b-48bf-ad52-f1059f71047f" />
 
 		  <Object Name="G5" ObjectId="bb10cf5f-d44b-48bf-ad52-f1059f71047f" />
-
-		  <Object Name="G6" ObjectId="bb10cf5f-d44b-48bf-ad52-f1059f71047f" />
 
 		  <Object Name="G6" ObjectId="bb10cf5f-d44b-48bf-ad52-f1059f71047f" />
 

@@ -1,0 +1,5 @@
+
+
+Result of partial order check:
+Partial order of Grafcet contains no cycles. 
+Partial order of Grafcet: [([G6<4>, G7<2>, G5<4>, G2<2>, G3<3>, G1<1>, G4<4>], [(G1<1> : G2<2> : FORCING_ORDER)=(G1<1>,G2<2>), (G1<1> : G3<3> : FORCING_ORDER)=(G1<1>,G3<3>), (G1<1> : G7<2> : FORCING_ORDER)=(G1<1>,G7<2>), (G2<2> : G3<3> : FORCING_ORDER)=(G2<2>,G3<3>), (G3<3> : G4<4> : FORCING_ORDER)=(G3<3>,G4<4>), (G3<3> : G5<4> : FORCING_ORDER)=(G3<3>,G5<4>), (G3<3> : G6<4> : FORCING_ORDER)=(G3<3>,G6<4>)])]
