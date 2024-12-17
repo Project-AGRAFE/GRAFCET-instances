@@ -1256,9 +1256,7 @@
       <term xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.17/@sort" id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.17"/>
     </transitions>
     <transitions id="602">
-      <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.6/@transitions.1/@term/@output" id="21" value="true">
-        <output xsi:type="terms:Bool" id="211"/>
-      </term>
+      <term xsi:type="terms:Variable" id="6021" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.49"/>
     </transitions>
     <transitions id="603">
       <term xsi:type="terms:Not" sort="//@partialGrafcets.6/@transitions.2/@term/@output" id="31" input="//@partialGrafcets.6/@transitions.2/@term/@subterm.0/@output">

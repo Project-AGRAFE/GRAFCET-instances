@@ -1,0 +1,40 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 21 always fires.
+ERROR: Transition 401 always fires.
+ERROR: Transition 402 always fires.
+ERROR: Transition 501 always fires.
+ERROR: Transition 502 always fires.
+ERROR: Transition 509 always fires.
+ERROR: Transition 505 always fires.
+ERROR: Transition 601 always fires.
+ERROR: Transition 602 always fires.
+ERROR: Transition 603 always fires.
+ERROR: Transition 617 always fires.
+ERROR: Transition 619 always fires.
+ERROR: Transition 621 always fires.
+ERROR: Transition 11 always fires.
+ERROR: Transition 21 always fires.
+ERROR: Transition 401 always fires.
+ERROR: Transition 402 always fires.
+ERROR: Transition 501 always fires.
+ERROR: Transition 502 always fires.
+ERROR: Transition 509 always fires.
+ERROR: Transition 505 always fires.
+ERROR: Transition 601 always fires.
+ERROR: Transition 602 always fires.
+ERROR: Transition 603 always fires.
+ERROR: Transition 617 always fires.
+ERROR: Transition 619 always fires.
+ERROR: Transition 621 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+No race conditions detected
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [s32, s21, s507, s613, s604, s607, s405, s407, s403, s608, s611, s406, s419, s415, s71, s505, s31, s414, s408, s402, s619, s417, s409, s612, s614, s24, s605, s617, s616, s503, s12, s509, s404, s422, s421, s602, s11, s618, s504, s23, s411, s610, s606, s418, s609, s412, s416, s410, s603, s420, s508, s33, s413, s72, s22, s502, s615]

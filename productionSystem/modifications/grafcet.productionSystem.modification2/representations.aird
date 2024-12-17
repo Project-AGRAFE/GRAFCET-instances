@@ -2,11 +2,9 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:grafcet="http://www.example.org/grafcet" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:terms="http://www.example.org/terms" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_Oy7NAFMbEe-adoqHM2NfNg" selectedViews="_baDFkFMbEe-adoqHM2NfNg" version="15.0.0.202201261500">
     <semanticResources>productionSystem.grafcet</semanticResources>
-    <semanticResources>PlcModels/gen_productionSystem.xmi</semanticResources>
-    <semanticResources>Generierter%20Code/productionSystem.xml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_baDFkFMbEe-adoqHM2NfNg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_crYxoFMbEe-adoqHM2NfNg" name="productionSystemv3" repPath="#_cq5pcFMbEe-adoqHM2NfNg" changeId="582b3f7f-2c8b-410c-a661-d82de6c2b87b">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_crYxoFMbEe-adoqHM2NfNg" name="productionSystemM2" repPath="#_cq5pcFMbEe-adoqHM2NfNg" changeId="f26b2ba6-a0e3-4333-a567-772bb283d614">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']"/>
         <target xmi:type="grafcet:Grafcet" href="productionSystem.grafcet#/"/>
       </ownedRepresentationDescriptors>
@@ -12259,7 +12257,7 @@
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='StoredActionContainer']/@conditionnalStyles.0/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='StoredActionContainer']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_8ABxBFMpEe-adoqHM2NfNg" name="false">
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_8ABxBFMpEe-adoqHM2NfNg" name="true">
           <target xmi:type="terms:BooleanConstant" href="productionSystem.grafcet#//@partialGrafcets.2/@actionTypes.3/@value"/>
           <semanticElements xmi:type="terms:BooleanConstant" href="productionSystem.grafcet#//@partialGrafcets.2/@actionTypes.3/@value"/>
           <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_8ACX8FMpEe-adoqHM2NfNg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
@@ -12409,7 +12407,7 @@
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='StoredActionContainer']/@conditionnalStyles.0/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='StoredActionContainer']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_h3bOuFrcEe-GGZ1uGIUU7g" name="true">
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_h3bOuFrcEe-GGZ1uGIUU7g" name="false">
           <target xmi:type="terms:BooleanConstant" href="productionSystem.grafcet#//@partialGrafcets.2/@actionTypes.4/@value"/>
           <semanticElements xmi:type="terms:BooleanConstant" href="productionSystem.grafcet#//@partialGrafcets.2/@actionTypes.4/@value"/>
           <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_h3bOuVrcEe-GGZ1uGIUU7g" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">

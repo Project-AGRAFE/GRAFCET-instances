@@ -2,11 +2,9 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:grafcet="http://www.example.org/grafcet" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:terms="http://www.example.org/terms" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_Oy7NAFMbEe-adoqHM2NfNg" selectedViews="_baDFkFMbEe-adoqHM2NfNg" version="15.0.0.202201261500">
     <semanticResources>productionSystem.grafcet</semanticResources>
-    <semanticResources>PlcModels/gen_productionSystem.xmi</semanticResources>
-    <semanticResources>Generierter%20Code/productionSystem.xml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_baDFkFMbEe-adoqHM2NfNg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_crYxoFMbEe-adoqHM2NfNg" name="productionSystemv3" repPath="#_cq5pcFMbEe-adoqHM2NfNg" changeId="582b3f7f-2c8b-410c-a661-d82de6c2b87b">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_crYxoFMbEe-adoqHM2NfNg" name="productionSystemM" repPath="#_cq5pcFMbEe-adoqHM2NfNg" changeId="582b3f7f-2c8b-410c-a661-d82de6c2b87b">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']"/>
         <target xmi:type="grafcet:Grafcet" href="productionSystem.grafcet#/"/>
       </ownedRepresentationDescriptors>

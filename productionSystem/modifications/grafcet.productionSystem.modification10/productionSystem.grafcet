@@ -925,12 +925,6 @@
         <output xsi:type="terms:Integer" id="1721"/>
       </value>
     </actionTypes>
-    <actionTypes xsi:type="grafcet:StoredAction" id="18">
-      <variable sort="//@variableDeclarationContainer/@variableDeclarations.20/@sort" id="181" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.20"/>
-      <value xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.4/@actionTypes.17/@value/@output" id="182" value="1">
-        <output xsi:type="terms:Integer" id="1821"/>
-      </value>
-    </actionTypes>
     <actionTypes xsi:type="grafcet:ContinuousAction" id="19">
       <variable sort="//@variableDeclarationContainer/@variableDeclarations.32/@sort" id="191" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.32"/>
     </actionTypes>
@@ -957,11 +951,10 @@
     <actionLinks step="//@partialGrafcets.4/@steps.12" actionType="//@partialGrafcets.4/@actionTypes.13"/>
     <actionLinks step="//@partialGrafcets.4/@steps.12" actionType="//@partialGrafcets.4/@actionTypes.14"/>
     <actionLinks step="//@partialGrafcets.4/@steps.13" actionType="//@partialGrafcets.4/@actionTypes.15"/>
-    <actionLinks step="//@partialGrafcets.4/@steps.1" actionType="//@partialGrafcets.4/@actionTypes.17"/>
-    <actionLinks step="//@partialGrafcets.4/@steps.14" actionType="//@partialGrafcets.4/@actionTypes.18"/>
-    <actionLinks step="//@partialGrafcets.4/@steps.16" actionType="//@partialGrafcets.4/@actionTypes.19"/>
-    <actionLinks step="//@partialGrafcets.4/@steps.18" actionType="//@partialGrafcets.4/@actionTypes.20"/>
-    <actionLinks step="//@partialGrafcets.4/@steps.20" actionType="//@partialGrafcets.4/@actionTypes.21"/>
+    <actionLinks step="//@partialGrafcets.4/@steps.14" actionType="//@partialGrafcets.4/@actionTypes.17"/>
+    <actionLinks step="//@partialGrafcets.4/@steps.16" actionType="//@partialGrafcets.4/@actionTypes.18"/>
+    <actionLinks step="//@partialGrafcets.4/@steps.18" actionType="//@partialGrafcets.4/@actionTypes.19"/>
+    <actionLinks step="//@partialGrafcets.4/@steps.20" actionType="//@partialGrafcets.4/@actionTypes.20"/>
     <actionLinks step="//@partialGrafcets.4/@steps.8" actionType="//@partialGrafcets.4/@actionTypes.9"/>
     <actionLinks step="//@partialGrafcets.4/@steps.9" actionType="//@partialGrafcets.4/@actionTypes.10"/>
     <actionLinks step="//@partialGrafcets.4/@steps.10" actionType="//@partialGrafcets.4/@actionTypes.11"/>

@@ -2,11 +2,9 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:grafcet="http://www.example.org/grafcet" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:terms="http://www.example.org/terms" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_Oy7NAFMbEe-adoqHM2NfNg" selectedViews="_baDFkFMbEe-adoqHM2NfNg" version="15.0.0.202201261500">
     <semanticResources>productionSystem.grafcet</semanticResources>
-    <semanticResources>PlcModels/gen_productionSystem.xmi</semanticResources>
-    <semanticResources>Generierter%20Code/productionSystem.xml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_baDFkFMbEe-adoqHM2NfNg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_crYxoFMbEe-adoqHM2NfNg" name="productionSystemv3" repPath="#_cq5pcFMbEe-adoqHM2NfNg" changeId="582b3f7f-2c8b-410c-a661-d82de6c2b87b">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_crYxoFMbEe-adoqHM2NfNg" name="productionSystemM3" repPath="#_cq5pcFMbEe-adoqHM2NfNg" changeId="5687a9ff-d824-4a88-9f1d-aa6d9248402f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']"/>
         <target xmi:type="grafcet:Grafcet" href="productionSystem.grafcet#/"/>
       </ownedRepresentationDescriptors>
@@ -389,6 +387,10 @@
             <children xmi:type="notation:Node" xmi:id="_7waL0FsREe-GGZ1uGIUU7g" type="3010" element="_7v6ckFsREe-GGZ1uGIUU7g">
               <styles xmi:type="notation:FontStyle" xmi:id="_7waL0VsREe-GGZ1uGIUU7g" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_7waL0lsREe-GGZ1uGIUU7g"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5EvtIHT3Ee-NW5RKdsNoQA" type="3010" element="_5APAkHT3Ee-NW5RKdsNoQA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_5EvtIXT3Ee-NW5RKdsNoQA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_5EvtInT3Ee-NW5RKdsNoQA"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_cvGM8VMbEe-adoqHM2NfNg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_cvGM8lMbEe-adoqHM2NfNg"/>
@@ -11262,6 +11264,14 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
       </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_5APAkHT3Ee-NW5RKdsNoQA" name="X31">
+        <target xmi:type="terms:VariableDeclaration" href="productionSystem.grafcet#//@variableDeclarationContainer/@variableDeclarations.93"/>
+        <semanticElements xmi:type="terms:VariableDeclaration" href="productionSystem.grafcet#//@variableDeclarationContainer/@variableDeclarations.93"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_5AWVUHT3Ee-NW5RKdsNoQA" labelSize="12" showIcon="false" labelPosition="node">
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@containerMappings[name='DeclarationsContainer']/@subNodeMappings[name='VariableDeclarationNode']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_jm6ZUFMbEe-adoqHM2NfNg" name="G1">
       <target xmi:type="grafcet:PartialGrafcet" href="productionSystem.grafcet#//@partialGrafcets.0"/>
@@ -13443,7 +13453,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='TransitionNode']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_LFC9UFMsEe-adoqHM2NfNg" name="X33" incomingEdges="_LFEygFMsEe-adoqHM2NfNg" height="1">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_LFC9UFMsEe-adoqHM2NfNg" name="X31" incomingEdges="_LFEygFMsEe-adoqHM2NfNg" height="1">
         <target xmi:type="terms:Variable" href="productionSystem.grafcet#//@partialGrafcets.4/@transitions.0/@term"/>
         <semanticElements xmi:type="terms:Variable" href="productionSystem.grafcet#//@partialGrafcets.4/@transitions.0/@term"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>

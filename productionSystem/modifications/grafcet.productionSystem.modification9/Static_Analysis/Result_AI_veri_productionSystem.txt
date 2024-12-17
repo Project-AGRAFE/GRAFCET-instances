@@ -1,0 +1,42 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 21 always fires.
+ERROR: Transition 401 always fires.
+ERROR: Transition 402 always fires.
+ERROR: Transition 501 always fires.
+ERROR: Transition 502 always fires.
+ERROR: Transition 509 always fires.
+ERROR: Transition 505 always fires.
+ERROR: Transition 601 always fires.
+ERROR: Transition 602 always fires.
+ERROR: Transition 603 always fires.
+ERROR: Transition 617 always fires.
+ERROR: Transition 619 always fires.
+ERROR: Transition 621 always fires.
+ERROR: Transition 11 always fires.
+ERROR: Transition 21 always fires.
+ERROR: Transition 401 always fires.
+ERROR: Transition 402 always fires.
+ERROR: Transition 501 always fires.
+ERROR: Transition 502 always fires.
+ERROR: Transition 509 always fires.
+ERROR: Transition 505 always fires.
+ERROR: Transition 601 always fires.
+ERROR: Transition 602 always fires.
+ERROR: Transition 603 always fires.
+ERROR: Transition 617 always fires.
+ERROR: Transition 619 always fires.
+ERROR: Transition 621 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+The following race conditions were detected: 
+Action StAction [activation, val=terms.impl.AdditionImpl, var=kE, in=G4] is in conflict with StAction [activation, val=IntegerConstantImpl, var=kE, in=G4]
+
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [s33, s610, s31, s606, s609, s419, s602, s405, s12, s22, s403, s417, s615, s411, s508, s619, s608, s605, s412, s509, s507, s415, s422, s11, s24, s421, s408, s21, s504, s402, s618, s410, s413, s416, s418, s502, s23, s407, s72, s414, s71, s420, s614, s503, s505, s409, s404, s611, s607, s603, s406, s617, s616, s32, s613, s604, s612]

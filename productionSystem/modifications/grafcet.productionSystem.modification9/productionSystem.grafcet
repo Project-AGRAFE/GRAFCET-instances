@@ -629,7 +629,7 @@
   </partialGrafcets>
   <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G4">
     <steps xsi:type="grafcet:Step" id="401" initial="true"/>
-    <steps xsi:type="grafcet:Step" id="402"/>
+    <steps xsi:type="grafcet:Step" id="402" initial="true"/>
     <steps xsi:type="grafcet:Step" id="403"/>
     <steps xsi:type="grafcet:Step" id="404"/>
     <steps xsi:type="grafcet:Step" id="405"/>

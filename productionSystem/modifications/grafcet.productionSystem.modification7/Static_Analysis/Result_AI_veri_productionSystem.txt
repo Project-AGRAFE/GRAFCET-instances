@@ -1,0 +1,66 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 21 always fires.
+ERROR: Transition 401 always fires.
+ERROR: Transition 402 always fires.
+ERROR: Transition 501 always fires.
+ERROR: Transition 502 always fires.
+ERROR: Transition 509 always fires.
+ERROR: Transition 505 always fires.
+ERROR: Transition 601 always fires.
+ERROR: Transition 602 never fires.
+ERROR: Transition 603 always fires.
+ERROR: Transition 603 never fires.
+ERROR: Transition 604 always fires.
+ERROR: Transition 604 never fires.
+ERROR: Transition 607 always fires.
+ERROR: Transition 607 never fires.
+ERROR: Transition 608 always fires.
+ERROR: Transition 608 never fires.
+ERROR: Transition 609 always fires.
+ERROR: Transition 609 never fires.
+ERROR: Transition 605 always fires.
+ERROR: Transition 605 never fires.
+ERROR: Transition 606 always fires.
+ERROR: Transition 606 never fires.
+ERROR: Transition 617 always fires.
+ERROR: Transition 619 always fires.
+ERROR: Transition 621 always fires.
+ERROR: Transition 11 always fires.
+ERROR: Transition 21 always fires.
+ERROR: Transition 401 always fires.
+ERROR: Transition 402 always fires.
+ERROR: Transition 501 always fires.
+ERROR: Transition 502 always fires.
+ERROR: Transition 509 always fires.
+ERROR: Transition 505 always fires.
+ERROR: Transition 601 always fires.
+ERROR: Transition 602 never fires.
+ERROR: Transition 603 always fires.
+ERROR: Transition 603 never fires.
+ERROR: Transition 604 always fires.
+ERROR: Transition 604 never fires.
+ERROR: Transition 607 always fires.
+ERROR: Transition 607 never fires.
+ERROR: Transition 608 always fires.
+ERROR: Transition 608 never fires.
+ERROR: Transition 609 always fires.
+ERROR: Transition 609 never fires.
+ERROR: Transition 605 always fires.
+ERROR: Transition 605 never fires.
+ERROR: Transition 606 always fires.
+ERROR: Transition 606 never fires.
+ERROR: Transition 617 always fires.
+ERROR: Transition 619 always fires.
+ERROR: Transition 621 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+No race conditions detected
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [s611, s417, s615, s71, s503, s410, s603, s505, s608, s612, s409, s23, s509, s613, s12, s414, s422, s617, s405, s407, s606, s610, s618, s614, s607, s404, s412, s24, s616, s418, s32, s502, s508, s609, s411, s604, s605, s413, s507, s31, s402, s72, s419, s408, s33, s415, s421, s602, s420, s619, s21, s403, s406, s504, s11, s416, s22]

@@ -1,0 +1,86 @@
+
+
+== Results FlawedTransitionDetecter: ==
+ERROR: Transition 21 always fires.
+ERROR: Transition 401 always fires.
+ERROR: Transition 402 always fires.
+ERROR: Transition 405 never fires.
+ERROR: Transition 406 never fires.
+ERROR: Transition 407 never fires.
+ERROR: Transition 408 always fires.
+ERROR: Transition 408 never fires.
+ERROR: Transition 409 always fires.
+ERROR: Transition 409 never fires.
+ERROR: Transition 410 always fires.
+ERROR: Transition 410 never fires.
+ERROR: Transition 414 always fires.
+ERROR: Transition 414 never fires.
+ERROR: Transition 415 always fires.
+ERROR: Transition 415 never fires.
+ERROR: Transition 416 always fires.
+ERROR: Transition 416 never fires.
+ERROR: Transition 417 always fires.
+ERROR: Transition 417 never fires.
+ERROR: Transition 411 always fires.
+ERROR: Transition 411 never fires.
+ERROR: Transition 412 always fires.
+ERROR: Transition 412 never fires.
+ERROR: Transition 413 always fires.
+ERROR: Transition 413 never fires.
+ERROR: Transition 501 always fires.
+ERROR: Transition 502 always fires.
+ERROR: Transition 509 always fires.
+ERROR: Transition 505 always fires.
+ERROR: Transition 601 always fires.
+ERROR: Transition 602 always fires.
+ERROR: Transition 603 always fires.
+ERROR: Transition 617 always fires.
+ERROR: Transition 619 always fires.
+ERROR: Transition 621 always fires.
+ERROR: Transition 11 always fires.
+ERROR: Transition 21 always fires.
+ERROR: Transition 401 always fires.
+ERROR: Transition 402 always fires.
+ERROR: Transition 405 never fires.
+ERROR: Transition 406 never fires.
+ERROR: Transition 407 never fires.
+ERROR: Transition 408 always fires.
+ERROR: Transition 408 never fires.
+ERROR: Transition 409 always fires.
+ERROR: Transition 409 never fires.
+ERROR: Transition 410 always fires.
+ERROR: Transition 410 never fires.
+ERROR: Transition 414 always fires.
+ERROR: Transition 414 never fires.
+ERROR: Transition 415 always fires.
+ERROR: Transition 415 never fires.
+ERROR: Transition 416 always fires.
+ERROR: Transition 416 never fires.
+ERROR: Transition 417 always fires.
+ERROR: Transition 417 never fires.
+ERROR: Transition 411 always fires.
+ERROR: Transition 411 never fires.
+ERROR: Transition 412 always fires.
+ERROR: Transition 412 never fires.
+ERROR: Transition 413 always fires.
+ERROR: Transition 413 never fires.
+ERROR: Transition 501 always fires.
+ERROR: Transition 502 always fires.
+ERROR: Transition 509 always fires.
+ERROR: Transition 505 always fires.
+ERROR: Transition 601 always fires.
+ERROR: Transition 602 always fires.
+ERROR: Transition 603 always fires.
+ERROR: Transition 617 always fires.
+ERROR: Transition 619 always fires.
+ERROR: Transition 621 always fires.
+
+== Results HierarchicalConflictDetecter: ==
+No race conditions detected
+
+== Results RaceConditionDetecter: ==
+No race conditions detected
+
+== Results TransientRunDetecter: ==
+Caution: Results might be unsound.
+The following steps might be transient: [s418, s502, s509, s505, s403, s22, s33, s72, s407, s612, s412, s415, s420, s507, s23, s617, s422, s615, s404, s12, s609, s413, s603, s616, s607, s21, s504, s406, s405, s605, s11, s419, s414, s610, s408, s602, s410, s409, s619, s503, s614, s402, s32, s613, s411, s606, s421, s618, s417, s508, s611, s416, s24, s31, s71, s604, s608]

@@ -512,13 +512,13 @@
     <actionTypes xsi:type="grafcet:ForcingOrder" id="3" partialGrafcet="//@partialGrafcets.6" forcingOrderType="initialSituation"/>
     <actionTypes xsi:type="grafcet:StoredAction" id="4">
       <variable sort="//@variableDeclarationContainer/@variableDeclarations.4/@sort" id="41" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
-      <value xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.2/@actionTypes.3/@value/@output" id="42">
+      <value xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.2/@actionTypes.3/@value/@output" id="42" value="true">
         <output xsi:type="terms:Bool" id="421"/>
       </value>
     </actionTypes>
     <actionTypes xsi:type="grafcet:StoredAction" id="5">
       <variable sort="//@variableDeclarationContainer/@variableDeclarations.4/@sort" id="51" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.4"/>
-      <value xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.2/@actionTypes.4/@value/@output" id="52" value="true">
+      <value xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.2/@actionTypes.4/@value/@output" id="52">
         <output xsi:type="terms:Bool" id="521"/>
       </value>
     </actionTypes>

@@ -280,6 +280,9 @@
     <variableDeclarations name="iEAtConvEntry">
       <sort xsi:type="terms:Bool" id="90093"/>
     </variableDeclarations>
+    <variableDeclarations name="X31" variableDeclarationType="step" step="//@partialGrafcets.2/@steps.0">
+      <sort xsi:type="terms:Bool" id="90094"/>
+    </variableDeclarations>
   </variableDeclarationContainer>
   <partialGrafcets xsi:type="grafcet:PartialGrafcet" name="G1">
     <steps xsi:type="grafcet:Step" id="11" initial="true"/>
@@ -651,7 +654,7 @@
     <steps xsi:type="grafcet:Step" id="421"/>
     <steps xsi:type="grafcet:Step" id="422"/>
     <transitions id="401">
-      <term xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.17/@sort" id="4011" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.17"/>
+      <term xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.93/@sort" id="4011" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.93"/>
     </transitions>
     <transitions id="402">
       <term xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.4/@transitions.1/@term/@output" id="21" value="true">

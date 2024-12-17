@@ -2,11 +2,9 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:grafcet="http://www.example.org/grafcet" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:terms="http://www.example.org/terms" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_Oy7NAFMbEe-adoqHM2NfNg" selectedViews="_baDFkFMbEe-adoqHM2NfNg" version="15.0.0.202201261500">
     <semanticResources>productionSystem.grafcet</semanticResources>
-    <semanticResources>PlcModels/gen_productionSystem.xmi</semanticResources>
-    <semanticResources>Generierter%20Code/productionSystem.xml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_baDFkFMbEe-adoqHM2NfNg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_crYxoFMbEe-adoqHM2NfNg" name="productionSystemv3" repPath="#_cq5pcFMbEe-adoqHM2NfNg" changeId="582b3f7f-2c8b-410c-a661-d82de6c2b87b">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_crYxoFMbEe-adoqHM2NfNg" name="productionSystemM9" repPath="#_cq5pcFMbEe-adoqHM2NfNg" changeId="e69c5b4c-d822-443f-bc7e-1ca9a75ea811">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']"/>
         <target xmi:type="grafcet:Grafcet" href="productionSystem.grafcet#/"/>
       </ownedRepresentationDescriptors>
@@ -1854,9 +1852,9 @@
               <children xmi:type="notation:Node" xmi:id="_cDusAFMsEe-adoqHM2NfNg" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_cDusAVMsEe-adoqHM2NfNg" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_cDv6IFMsEe-adoqHM2NfNg" type="3005" element="_cDkT8VMsEe-adoqHM2NfNg">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_cDv6IVMsEe-adoqHM2NfNg" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cDv6IlMsEe-adoqHM2NfNg"/>
+              <children xmi:type="notation:Node" xmi:id="_gEDFMHW6Ee-rC9UiJKMWLQ" type="3005" element="_gDiH43W6Ee-rC9UiJKMWLQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_gEDFMXW6Ee-rC9UiJKMWLQ" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gEDFMnW6Ee-rC9UiJKMWLQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_cDuE8VMsEe-adoqHM2NfNg" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cDuE8lMsEe-adoqHM2NfNg" x="163" y="242" width="50" height="50"/>
@@ -12997,8 +12995,8 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_cDkT8VMsEe-adoqHM2NfNg" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/de.hsu.grafcet.design/icons_svg/Step.svg">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='StepNode']/@style"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_gDiH43W6Ee-rC9UiJKMWLQ" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/de.hsu.grafcet.design/icons_svg/StepInitial.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='StepNode']/@conditionnalStyles.0/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.hsu.grafcet.design/description/grafcet.odesign#//@ownedViewpoints[name='grafcet_chart']/@ownedRepresentations[name='Grafcet_diagram']/@defaultLayer/@nodeMappings[name='StepNode']"/>
       </ownedDiagramElements>

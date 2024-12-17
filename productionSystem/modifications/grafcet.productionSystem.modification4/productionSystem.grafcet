@@ -1169,7 +1169,7 @@
     </actionTypes>
     <actionTypes xsi:type="grafcet:StoredAction" id="3">
       <variable sort="//@variableDeclarationContainer/@variableDeclarations.40/@sort" id="31" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.40"/>
-      <value xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.5/@actionTypes.7/@value/@output" id="32" value="4">
+      <value xsi:type="terms:IntegerConstant" sort="//@partialGrafcets.5/@actionTypes.7/@value/@output" id="32" value="9">
         <output xsi:type="terms:Integer" id="321"/>
       </value>
     </actionTypes>

@@ -1,18 +1,7 @@
 
 
 == Results FlawedTransitionDetecter: ==
-ERROR: Transition 12 never fires.
-ERROR: Transition 17 never fires.
-ERROR: Transition 201 always fires.
-ERROR: Transition 201 never fires.
-ERROR: Transition 202 never fires.
-ERROR: Transition 206 never fires.
-ERROR: Transition 203 always fires.
-ERROR: Transition 203 never fires.
-ERROR: Transition 204 always fires.
-ERROR: Transition 204 never fires.
-ERROR: Transition 205 always fires.
-ERROR: Transition 205 never fires.
+ERROR: Transition 17 always fires.
 ERROR: Transition 514 always fires.
 ERROR: Transition 515 always fires.
 
@@ -24,4 +13,4 @@ No race conditions detected
 
 == Results TransientRunDetecter: ==
 Caution: Results might be unsound.
-The following steps might be transient: [10, 109, 511, 702, 603, 303, 302, 706, 505, 708, 2, 18, 110, 203, 304, 101, 502, 507, 710, 509, 17, 512, 701, 1, 3, 202, 22, 513, 108, 105, 503, 12, 506, 11, 21, 305, 104, 4, 107, 14, 106, 704, 102, 501, 602, 510, 201, 301, 306, 705, 601, 13, 15, 16, 703, 711, 204, 508, 20, 504, 103, 709, 19, 707]
+The following steps might be transient: [s704, s10, s201, s506, s510, s709, s501, s204, s706, s711, s21, s103, s105, s14, s603, s202, s102, s17, s708, s701, s306, s13, s16, s512, s504, s710, s3, s602, s20, s303, s107, s509, s302, s508, s702, s104, s109, s505, s22, s513, s18, s12, s203, s2, s15, s703, s502, s1, s106, s705, s707, s601, s4, s511, s507, s108, s110, s301, s304, s101, s503, s11, s305, s19]

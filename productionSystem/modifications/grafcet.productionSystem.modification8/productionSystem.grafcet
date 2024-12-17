@@ -486,27 +486,21 @@
         <output xsi:type="terms:Bool" id="3111"/>
       </term>
     </transitions>
-    <transitions id="32">
-      <term xsi:type="terms:And" sort="//@partialGrafcets.2/@transitions.1/@term/@output" id="321" input="//@variableDeclarationContainer/@variableDeclarations.14/@sort //@variableDeclarationContainer/@variableDeclarations.15/@sort">
-        <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.14/@sort" id="3212" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.14"/>
-        <subterm xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.15/@sort" id="3213" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.15"/>
-        <output xsi:type="terms:Bool" id="3211"/>
-      </term>
-    </transitions>
     <transitions id="33">
       <term xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.16/@sort" id="331" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.16"/>
     </transitions>
     <transitions id="34">
       <term xsi:type="terms:Variable" sort="//@variableDeclarationContainer/@variableDeclarations.16/@sort" id="341" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.16"/>
     </transitions>
+    <synchronizations/>
     <arcs source="//@partialGrafcets.2/@steps.0" target="//@partialGrafcets.2/@transitions.0"/>
-    <arcs source="//@partialGrafcets.2/@transitions.0" target="//@partialGrafcets.2/@steps.1"/>
-    <arcs source="//@partialGrafcets.2/@steps.1" target="//@partialGrafcets.2/@transitions.2"/>
+    <arcs source="//@partialGrafcets.2/@steps.1" target="//@partialGrafcets.2/@transitions.1"/>
+    <arcs source="//@partialGrafcets.2/@transitions.1" target="//@partialGrafcets.2/@steps.0"/>
+    <arcs source="//@partialGrafcets.2/@steps.2" target="//@partialGrafcets.2/@transitions.2"/>
     <arcs source="//@partialGrafcets.2/@transitions.2" target="//@partialGrafcets.2/@steps.0"/>
-    <arcs source="//@partialGrafcets.2/@steps.0" target="//@partialGrafcets.2/@transitions.1"/>
-    <arcs source="//@partialGrafcets.2/@transitions.1" target="//@partialGrafcets.2/@steps.2"/>
-    <arcs source="//@partialGrafcets.2/@steps.2" target="//@partialGrafcets.2/@transitions.3"/>
-    <arcs source="//@partialGrafcets.2/@transitions.3" target="//@partialGrafcets.2/@steps.0"/>
+    <arcs source="//@partialGrafcets.2/@transitions.0" target="//@partialGrafcets.2/@synchronizations.0"/>
+    <arcs source="//@partialGrafcets.2/@synchronizations.0" target="//@partialGrafcets.2/@steps.2"/>
+    <arcs source="//@partialGrafcets.2/@synchronizations.0" target="//@partialGrafcets.2/@steps.1"/>
     <actionTypes xsi:type="grafcet:ForcingOrder" id="1" partialGrafcet="//@partialGrafcets.4" forcingOrderType="initialSituation"/>
     <actionTypes xsi:type="grafcet:ForcingOrder" id="2" partialGrafcet="//@partialGrafcets.5" forcingOrderType="initialSituation"/>
     <actionTypes xsi:type="grafcet:ForcingOrder" id="3" partialGrafcet="//@partialGrafcets.6" forcingOrderType="initialSituation"/>

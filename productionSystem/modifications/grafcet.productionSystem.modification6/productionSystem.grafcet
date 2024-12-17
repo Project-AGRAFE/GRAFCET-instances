@@ -1434,9 +1434,6 @@
     <arcs source="//@partialGrafcets.6/@steps.5" target="//@partialGrafcets.6/@transitions.5"/>
     <arcs source="//@partialGrafcets.6/@transitions.3" target="//@partialGrafcets.6/@steps.4"/>
     <arcs source="//@partialGrafcets.6/@steps.4" target="//@partialGrafcets.6/@transitions.4"/>
-    <arcs source="//@partialGrafcets.6/@transitions.4" target="//@partialGrafcets.6/@steps.2"/>
-    <arcs source="//@partialGrafcets.6/@transitions.5" target="//@partialGrafcets.6/@steps.2"/>
-    <arcs source="//@partialGrafcets.6/@transitions.6" target="//@partialGrafcets.6/@steps.2"/>
     <arcs source="//@partialGrafcets.6/@steps.7" target="//@partialGrafcets.6/@transitions.7"/>
     <arcs source="//@partialGrafcets.6/@transitions.7" target="//@partialGrafcets.6/@steps.8"/>
     <arcs source="//@partialGrafcets.6/@steps.8" target="//@partialGrafcets.6/@transitions.8"/>
@@ -1469,6 +1466,9 @@
     <arcs source="//@partialGrafcets.6/@synchronizations.0" target="//@partialGrafcets.6/@steps.14"/>
     <arcs source="//@partialGrafcets.6/@synchronizations.0" target="//@partialGrafcets.6/@steps.15"/>
     <arcs source="//@partialGrafcets.6/@synchronizations.0" target="//@partialGrafcets.6/@steps.18"/>
+    <arcs source="//@partialGrafcets.6/@transitions.4" target="//@partialGrafcets.6/@steps.3"/>
+    <arcs source="//@partialGrafcets.6/@transitions.5" target="//@partialGrafcets.6/@steps.3"/>
+    <arcs source="//@partialGrafcets.6/@transitions.6" target="//@partialGrafcets.6/@steps.3"/>
     <actionTypes xsi:type="grafcet:StoredAction" id="1">
       <variable sort="//@variableDeclarationContainer/@variableDeclarations.50/@sort" id="11" variableDeclaration="//@variableDeclarationContainer/@variableDeclarations.50"/>
       <value xsi:type="terms:BooleanConstant" sort="//@partialGrafcets.6/@actionTypes.0/@value/@output" id="12" value="true">
